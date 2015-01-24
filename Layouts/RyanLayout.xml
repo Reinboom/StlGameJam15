@@ -58,11 +58,11 @@
                         <x>772</x>
                         <y>217</y>
                         <z>0</z>
-                        <width>250</width>
-                        <height>250</height>
+                        <width>119.791664124</width>
+                        <height>81.25</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.239130437</hotspotX>
+                        <hotspotY>0.15384616</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
