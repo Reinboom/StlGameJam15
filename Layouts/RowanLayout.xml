@@ -47,7 +47,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="ground01" uid="5">
+                <instance type="ground01" uid="3">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -76,7 +76,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ground01" uid="6">
+                <instance type="ground01" uid="4">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -105,7 +105,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ground01" uid="7">
+                <instance type="ground01" uid="5">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -134,7 +134,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ground01" uid="8">
+                <instance type="ground01" uid="6">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -163,7 +163,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ground01" uid="9">
+                <instance type="ground01" uid="7">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -229,16 +229,13 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="PlayerA" uid="10">
+                <instance type="PlayerA" uid="8">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
-                    <instance-variables>
-                        <attack>false</attack>
-                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
                             <properties>
@@ -261,11 +258,11 @@
                         <x>315</x>
                         <y>580</y>
                         <z>0</z>
-                        <width>92</width>
-                        <height>52</height>
+                        <width>210</width>
+                        <height>220</height>
                         <depth>0</depth>
-                        <hotspotX>0.239130437</hotspotX>
-                        <hotspotY>0.15384616</hotspotY>
+                        <hotspotX>0.347619057</hotspotX>
+                        <hotspotY>0.981818199</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -325,7 +322,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="PlayerB" uid="14">
+                <instance type="PlayerB" uid="9">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
