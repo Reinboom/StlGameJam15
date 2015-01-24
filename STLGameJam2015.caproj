@@ -54,6 +54,9 @@
             <object-type name="HUD_P2energy" sid="180202042700913">
                 <plugin id="Text" />
             </object-type>
+            <object-type name="Timer" sid="4879787006889489">
+                <plugin id="Text" />
+            </object-type>
         </object-folder>
         <object-folder name="Players">
             <object-type name="P1attack01" sid="5274650518786536">

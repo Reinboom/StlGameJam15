@@ -3,8 +3,9 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>MasterEvent</name>
     <events>
+        <variable constant="0" name="Timer" sid="5099190665228987" static="0" type="number">0</variable>
         <variable constant="0" name="P1energy" sid="3874536787699269" static="0" type="number">10000</variable>
-        <variable constant="0" name="P2energy" sid="7875450304951391" static="0" type="number">1000</variable>
+        <variable constant="0" name="P2energy" sid="7875450304951391" static="0" type="number">10000</variable>
         <variable constant="0" name="Active" sid="1061668562272985" static="0" type="number">0</variable>
         <variable constant="1" name="EVENT_TICKTIMER" sid="4940678777472776" static="0" type="number">2</variable>
         <variable constant="1" name="Event_StartTimer" sid="8397428748328552" static="0" type="number">1</variable>
@@ -12,6 +13,19 @@
         <variable constant="0" name="CountdownValue" sid="9366589685244386" static="0" type="number">5</variable>
         <include>RyanEvent</include>
         <include>RowanEvent</include>
+        <event-group description="" sid="5464605505791358" title="Cleanup">
+            <sub-events>
+                <event-block sid="2493231037579446">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="9669566269981626" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="9340259046633882" type="P1attack01" />
+                        <action id="-9" name="Destroy" sid="3604510652311234" type="P2attack01" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-block sid="3562958665195552">
             <conditions>
                 <condition id="-1" name="Every tick" sid="7489735751296178" type="System" />
@@ -109,19 +123,60 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="9013425251336627">
+        <event-block sid="8928606867176312">
             <conditions>
-                <condition id="-1" name="Every tick" sid="1002711958268487" type="System" />
+                <condition id="-1" name="Every tick" sid="7516637691965721" type="System" />
             </conditions>
             <actions>
-                <action id="0" name="Set text" sid="5233147776763342" type="HUD_P1energy">
-                    <param id="0" name="Text">P1energy</param>
-                </action>
-                <action id="-4" name="Set position to another object" sid="7262137682725052" type="P1attack01">
+                <action id="-4" name="Set position to another object" sid="5044227038562855" type="P1attack01">
                     <param id="0" name="Object">PlayerA</param>
                     <param id="1" name="Image point (optional)">1</param>
                 </action>
             </actions>
         </event-block>
+        <event-group description="" sid="3177899177115972" title="Energy system">
+            <sub-events>
+                <event-block sid="9013425251336627">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="1002711958268487" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="5233147776763342" type="HUD_P1energy">
+                            <param id="0" name="Text">P1energy</param>
+                        </action>
+                        <action id="0" name="Set text" sid="7400790597298569" type="HUD_P2energy">
+                            <param id="0" name="Text">P2energy</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="6721657475607907" title="Timer">
+            <sub-events>
+                <event-block sid="1486349347674258">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="6567574354922856" type="System">
+                            <param id="0" name="Interval (seconds)">0.1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="6455221599639263" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Value">0.1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5445222547397631">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="7994849816988524" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="7200733918554643" type="Timer">
+                            <param id="0" name="Text">Timer</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
