@@ -126,6 +126,30 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Manticore" sid="7218164520279914">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="140345854083964">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4896847853491811" speed="5">
+                    <frame duration="1" hotspotX="0.502222" hotspotY="0.502283" original-source="C:\Users\rgiuliany\Dropbox2\Dropbox\STLGameJam2015\Ryan\Sprites\manticore.png">
+                        <collision-poly>
+                            <point x="0.173333" y="0.178082" />
+                            <point x="0.497778" y="0.0410959" />
+                            <point x="0.582222" y="0.429224" />
+                            <point x="0.968889" y="0.497717" />
+                            <point x="0.768889" y="0.762557" />
+                            <point x="0.497778" y="0.936073" />
+                            <point x="0.262222" y="0.730594" />
+                            <point x="0.0755556" y="0.497717" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
