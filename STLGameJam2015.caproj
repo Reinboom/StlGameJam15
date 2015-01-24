@@ -19,7 +19,6 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
-        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
@@ -37,7 +36,7 @@
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
         <prop name="Enable WebGL">On</prop>
-        <prop name="Fullscreen in browser">Off</prop>
+        <prop name="Fullscreen in browser">Scale inner</prop>
         <prop name="Fullscreen scaling">High quality</prop>
         <prop name="Loader style">Progress bar &amp; logo</prop>
         <prop name="Orientations">Landscape</prop>
@@ -48,19 +47,62 @@
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder>
-        <object-type name="PlayerA" sid="1082018742492392">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Platform" sid="2901010418280508">
-                    <behavior id="Platform" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1804788812696061" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
+        <object-folder name="HUD">
+            <object-type name="HUD_P1energy" sid="280241306412675">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="HUD_P2energy" sid="180202042700913">
+                <plugin id="Text" />
+            </object-type>
+        </object-folder>
+        <object-folder name="Players">
+            <object-type name="P1attack01" sid="5274650518786536">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3034872128475072" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="P2attack01" sid="4743493015442694">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1629740747769403" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="PlayerA" sid="1082018742492392">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Platform" sid="2901010418280508">
+                        <behavior id="Platform" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1804788812696061" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="front" x="1.6" y="0.5" />
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="PlayerB" sid="7519317373723151">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Platform" sid="1691247377141825">
+                        <behavior id="Platform" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8215025202150355" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="attack" x="1.6" y="0.5" />
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
         <object-type name="Mouse" sid="1937285734669108">
             <plugin id="Mouse" />
         </object-type>
@@ -100,9 +142,6 @@
                 <behavior-type name="Solid" sid="2460656132091636">
                     <behavior id="solid" />
                 </behavior-type>
-                <behavior-type name="Physics" sid="3300005980765201">
-                    <behavior id="Physics" />
-                </behavior-type>
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="824777666906427" speed="5">
@@ -113,24 +152,19 @@
         <object-type name="Gamepad" sid="3382766601424018">
             <plugin id="gamepad" />
         </object-type>
-        <object-type name="PlayerB" sid="7519317373723151">
+        <object-type name="HEX_ASSET_" sid="1128830915805012">
             <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Platform" sid="1691247377141825">
-                    <behavior id="Platform" />
-                </behavior-type>
-            </behaviors>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8215025202150355" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2093235406377165" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.50108" original-source="C:\Users\omomm_000\Desktop\HEX_ASSET_57.jpg" />
                 </animation>
             </animation-folder>
         </object-type>
     </object-folder>
     <families />
     <layout-folder>
-        <layout>RyanLayout.xml</layout>
         <layout>MasterLayout.xml</layout>
+        <layout>RyanLayout.xml</layout>
         <layout>RowanLayout.xml</layout>
         <layout>DanLayout.xml</layout>
     </layout-folder>

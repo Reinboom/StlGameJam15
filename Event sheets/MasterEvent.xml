@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>MasterEvent</name>
     <events>
+        <variable constant="0" name="P1energy" sid="3874536787699269" static="0" type="number">1000</variable>
+        <variable constant="0" name="P2energy" sid="7875450304951391" static="0" type="number">1000</variable>
         <variable constant="0" name="Active" sid="1061668562272985" static="0" type="number">0</variable>
         <variable constant="1" name="EVENT_TICKTIMER" sid="4940678777472776" static="0" type="number">2</variable>
         <variable constant="1" name="Event_StartTimer" sid="8397428748328552" static="0" type="number">1</variable>
@@ -107,5 +109,15 @@
                 </action>
             </actions>
         </event-block>
+        <event-group description="" sid="3135531069311066" title="Energy System">
+            <sub-events>
+                <event-block sid="9013425251336627">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="1002711958268487" type="System" />
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
