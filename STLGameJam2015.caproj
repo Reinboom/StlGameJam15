@@ -137,66 +137,6 @@
             </object-type>
         </object-folder>
         <object-folder name="Enemies">
-            <object-type name="Manticore" sid="7218164520279914">
-                <plugin id="Sprite" />
-                <instance-variables>
-                    <instance-variable name="Attacking" sid="463024889655174" type="boolean" />
-                </instance-variables>
-                <behaviors>
-                    <behavior-type name="Platform" sid="140345854083964">
-                        <behavior id="Platform" />
-                    </behavior-type>
-                </behaviors>
-                <animation-folder>
-                    <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="4896847853491811" speed="2">
-                        <frame duration="0" hotspotX="0.524444" hotspotY="0.520548" original-source="C:\Users\rgiuliany\Dropbox2\Dropbox\STLGameJam2015\Ryan\Sprites\manticore.png">
-                            <image-point name="Mouth" x="0.982222" y="0.680365" />
-                            <collision-poly>
-                                <point x="0.173333" y="0.178082" />
-                                <point x="0.497778" y="0.0410959" />
-                                <point x="0.582222" y="0.429224" />
-                                <point x="0.968889" y="0.497717" />
-                                <point x="0.768889" y="0.762557" />
-                                <point x="0.497778" y="0.936073" />
-                                <point x="0.262222" y="0.730594" />
-                                <point x="0.0755556" y="0.497717" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                    <animation framecount="1" loop="0" name="Attack" pingpong="0" repeatcount="0" repeatto="0" sid="252840253292289" speed="4">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.502164" original-source="C:\git\StlGameJam15\Sprites\manticore_attack1.png">
-                            <image-point name="Mouth" x="0.991667" y="0.645022" />
-                            <collision-poly>
-                                <point x="0.8625" y="0.497835" />
-                                <point x="0.754167" y="0.744589" />
-                                <point x="0.5" y="0.883117" />
-                                <point x="0.191667" y="0.800866" />
-                                <point x="0.0416667" y="0.497835" />
-                                <point x="0.1875" y="0.194805" />
-                                <point x="0.5" y="0.424242" />
-                                <point x="0.795833" y="0.212121" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="ManticoreFire" sid="3380044802626812">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6467778175896285" speed="5">
-                        <frame duration="1" hotspotX="-0.0119048" hotspotY="0.525424" original-source="C:\Users\rgiuliany\Dropbox2\Dropbox\STLGameJam2015\Ryan\Sprites\manticore_fire.png">
-                            <collision-poly>
-                                <point x="0.964286" y="0.474576" />
-                                <point x="0.72619" y="0.830508" />
-                                <point x="0.333333" y="0.677966" />
-                                <point x="0.0357143" y="0.474576" />
-                                <point x="0.285714" y="0.20339" />
-                                <point x="0.714286" y="0.135593" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                </animation-folder>
-            </object-type>
             <object-type name="Fly" sid="839627992619516">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -239,6 +179,92 @@
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
                                 <point x="0" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ManticoreFire" sid="3380044802626812">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6467778175896285" speed="5">
+                        <frame duration="1" hotspotX="0.196429" hotspotY="0.486111" original-source="C:\git\StlGameJam15\Sprites\manticore_fire.png">
+                            <collision-poly>
+                                <point x="0.963011" y="0.506356" />
+                                <point x="0.680697" y="0.875706" />
+                                <point x="0.238095" y="0.747175" />
+                                <point x="0.0816326" y="0.5758" />
+                                <point x="0.188775" y="0.213042" />
+                                <point x="0.838011" y="0.118879" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Manticore" sid="7218164520279914">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Attacking" sid="463024889655174" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Platform" sid="140345854083964">
+                        <behavior id="Platform" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="4896847853491811" speed="5">
+                        <frame duration="1" hotspotX="0.439153" hotspotY="0.669231" original-source="C:\git\StlGameJam15\Sprites\manticore_base.png">
+                            <image-point name="Mouth" x="0.997355" y="0.728205" />
+                            <collision-poly>
+                                <point x="0" y="0.230874" />
+                                <point x="0.404468" y="0.0552512" />
+                                <point x="0.516167" y="0.552851" />
+                                <point x="1" y="0.640663" />
+                                <point x="0.763081" y="0.980201" />
+                                <point x="0.409759" y="0.976923" />
+                                <point x="0.0955317" y="0.952044" />
+                                <point x="0" y="0.640663" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.508393" hotspotY="0.64011" original-source="C:\git\StlGameJam15\Sprites\manticore_walk1.png">
+                            <image-point name="Mouth" x="0.992806" y="0.706044" />
+                            <collision-poly>
+                                <point x="0.100719" y="0.195055" />
+                                <point x="0.46283" y="0.0192308" />
+                                <point x="0.642686" y="0.403846" />
+                                <point x="0.920863" y="0.60989" />
+                                <point x="0.760192" y="0.950549" />
+                                <point x="0.48681" y="0.947802" />
+                                <point x="0.227818" y="0.925824" />
+                                <point x="0.119904" y="0.60989" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="2" loop="0" name="Attack" pingpong="0" repeatcount="0" repeatto="0" sid="252840253292289" speed="4">
+                        <frame duration="1" hotspotX="0.303621" hotspotY="0.717224" original-source="C:\git\StlGameJam15\Sprites\manticore_attack1.png">
+                            <image-point name="Mouth" x="0.966574" y="0.195373" />
+                            <collision-poly>
+                                <point x="0.78273" y="0.417799" />
+                                <point x="0.600119" y="0.750643" />
+                                <point x="0.254027" y="0.935733" />
+                                <point x="0.116992" y="0.904884" />
+                                <point x="0.0584958" y="0.705717" />
+                                <point x="0" y="0.210217" />
+                                <point x="0.120126" y="0.0102828" />
+                                <point x="0.95626" y="0.207977" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.417411" hotspotY="0.779614" original-source="C:\git\StlGameJam15\Sprites\manticore_attack2.png">
+                            <image-point name="Mouth" x="0.973214" y="0.630854" />
+                            <collision-poly>
+                                <point x="0.0237737" y="0.224347" />
+                                <point x="0.416416" y="0" />
+                                <point x="0.757718" y="0.41808" />
+                                <point x="0.987091" y="0.626832" />
+                                <point x="0.819358" y="0.980716" />
+                                <point x="0.436101" y="0.972452" />
+                                <point x="0.205868" y="0.958678" />
+                                <point x="0.026463" y="0.778347" />
                             </collision-poly>
                         </frame>
                     </animation>
