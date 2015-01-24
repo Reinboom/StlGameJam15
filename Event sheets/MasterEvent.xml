@@ -119,6 +119,10 @@
                         <action id="0" name="Set text" sid="5233147776763342" type="HUD_P1energy">
                             <param id="0" name="Text">P1energy</param>
                         </action>
+                        <action id="-4" name="Set position to another object" sid="7262137682725052" type="P1attack01">
+                            <param id="0" name="Object">PlayerA</param>
+                            <param id="1" name="Image point (optional)">1</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
