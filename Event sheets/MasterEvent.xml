@@ -109,23 +109,19 @@
                 </action>
             </actions>
         </event-block>
-        <event-group description="" sid="3135531069311066" title="Energy System">
-            <sub-events>
-                <event-block sid="9013425251336627">
-                    <conditions>
-                        <condition id="-1" name="Every tick" sid="1002711958268487" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Set text" sid="5233147776763342" type="HUD_P1energy">
-                            <param id="0" name="Text">P1energy</param>
-                        </action>
-                        <action id="-4" name="Set position to another object" sid="7262137682725052" type="P1attack01">
-                            <param id="0" name="Object">PlayerA</param>
-                            <param id="1" name="Image point (optional)">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
+        <event-block sid="9013425251336627">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="1002711958268487" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="5233147776763342" type="HUD_P1energy">
+                    <param id="0" name="Text">P1energy</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="7262137682725052" type="P1attack01">
+                    <param id="0" name="Object">PlayerA</param>
+                    <param id="1" name="Image point (optional)">1</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
