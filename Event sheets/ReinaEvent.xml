@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ReinaEvent</name>
+    <events>
+        <event-block sid="192841242738236">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="4074783463375436" type="Fly">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="X co-ordinate">abs(PlayerA.X-Self.X)&lt;abs(PlayerB.X-Self.X)?PlayerA.X:PlayerB.X</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="781713191089636" type="Fly">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Physics" id="2" name="Apply force at angle" sid="3659009963419898" type="Fly">
+                    <param id="0" name="Force">10</param>
+                    <param id="1" name="Angle">180</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="779409911855977">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="2465113687491725" type="Fly">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="X co-ordinate">abs(PlayerA.X-Self.X)&lt;abs(PlayerB.X-Self.X)?PlayerA.X:PlayerB.X</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="5019315362690738" type="Fly">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Physics" id="2" name="Apply force at angle" sid="1195252998723121" type="Fly">
+                    <param id="0" name="Force">10</param>
+                    <param id="1" name="Angle">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="6003701766789461" title="Fly Enemies">
+            <sub-events>
+                <event-block disabled="1" sid="7730730911771224">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="3248047993580997" type="System">
+                            <param id="0" name="Interval (seconds)">7</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="8957785876691869" type="Sprite2">
+                            <param id="0" name="Object">Fly</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="2864592858704174">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="6681411513449333" type="System">
+                    <param id="0" name="Interval (seconds)">0.8</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="27" name="Set enabled" sid="4856498845338498" type="Fly">
+                    <param id="0" name="Mode">1</param>
+                </action>
+                <action behavior="Physics" id="2" name="Apply force at angle" sid="4962072584048733" type="Fly">
+                    <param id="0" name="Force">(Fly.Y&lt;300?200:400)+(Fly.Y&gt;500?50:0)+(Fly.Y&gt;540?280:0)+(Fly.Y&gt;565?100:0)</param>
+                    <param id="1" name="Angle">270</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-11" name="Add to" sid="4621915400505776" type="Fly">
+                    <param id="0" name="Instance variable">Flaps</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
