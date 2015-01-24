@@ -103,6 +103,7 @@
                 </animation-folder>
             </object-type>
         </object-folder>
+        <object-folder name="Enemies" />
         <object-type name="Mouse" sid="1937285734669108">
             <plugin id="Mouse" />
         </object-type>
@@ -169,7 +170,7 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4896847853491811" speed="5">
-                    <frame duration="1" hotspotX="0.502222" hotspotY="0.502283" original-source="C:\Users\rgiuliany\Dropbox2\Dropbox\STLGameJam2015\Ryan\Sprites\manticore.png">
+                    <frame duration="1" hotspotX="-1" hotspotY="-1" original-source="C:\Users\rgiuliany\Dropbox2\Dropbox\STLGameJam2015\Ryan\Sprites\manticore.png">
                         <collision-poly>
                             <point x="0.173333" y="0.178082" />
                             <point x="0.497778" y="0.0410959" />
@@ -181,6 +182,14 @@
                             <point x="0.0755556" y="0.497717" />
                         </collision-poly>
                     </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="622749615826537">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3966772538388438" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -199,9 +208,9 @@
         <event-sheet>DanEvent.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="Mouse" uid="4" />
-        <global-instance type="Keyboard" uid="10" />
-        <global-instance type="Gamepad" uid="14">
+        <global-instance type="Mouse" uid="10" />
+        <global-instance type="Keyboard" uid="14" />
+        <global-instance type="Gamepad" uid="23">
             <properties>
                 <analog-deadzone>25</analog-deadzone>
             </properties>
