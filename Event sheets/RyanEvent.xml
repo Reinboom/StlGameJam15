@@ -85,8 +85,13 @@
                 </action>
                 <action id="0" name="Spawn another object" sid="9860095322179617" type="Manticore">
                     <param id="0" name="Object">ManticoreFire</param>
-                    <param id="1" name="Layer">2</param>
+                    <param id="1" name="Layer">0</param>
                     <param id="2" name="Image point">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="6170092618010059" type="ManticoreFire">
+                    <param id="0" name="Object">FireParticle</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
                 </action>
             </actions>
             <sub-events>
@@ -102,6 +107,7 @@
                             <param id="0" name="Seconds">0.75</param>
                         </action>
                         <action id="-9" name="Destroy" sid="9714614114240771" type="ManticoreFire" />
+                        <action id="-9" name="Destroy" sid="6343695374390463" type="FireParticle" />
                         <action id="-14" name="Toggle boolean" sid="5474515094626275" type="Manticore">
                             <param id="0" name="Instance variable">Attacking</param>
                         </action>
@@ -116,6 +122,7 @@
                             <param id="0" name="Seconds">0.75</param>
                         </action>
                         <action id="-9" name="Destroy" sid="3017049391679283" type="ManticoreFire" />
+                        <action id="-9" name="Destroy" sid="2332705682920858" type="FireParticle" />
                         <action id="-14" name="Toggle boolean" sid="7061158667038132" type="Manticore">
                             <param id="0" name="Instance variable">Attacking</param>
                         </action>

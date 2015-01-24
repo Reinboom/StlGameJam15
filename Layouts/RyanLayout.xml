@@ -153,12 +153,54 @@
                         <x>912.548278809</x>
                         <y>541.001342773</y>
                         <z>0</z>
-                        <width>57.801528931</width>
-                        <height>37.158126831</height>
+                        <width>103.217018127</width>
+                        <height>51.608509064</height>
                         <depth>0</depth>
-                        <hotspotX>0.196428567</hotspotX>
-                        <hotspotY>0.486111104</hotspotY>
+                        <hotspotX>0.194999993</hotspotX>
+                        <hotspotY>0.49000001</hotspotY>
                         <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="FireParticle" uid="27">
+                    <properties>
+                        <rate>20</rate>
+                        <spray-cone>30</spray-cone>
+                        <type>Continuous spray</type>
+                        <initial-particle-properties></initial-particle-properties>
+                        <speed>75</speed>
+                        <size>15</size>
+                        <opacity>50</opacity>
+                        <grow-rate>0</grow-rate>
+                        <x-randomiser>0</x-randomiser>
+                        <y-randomiser>0</y-randomiser>
+                        <speed-randomiser->0</speed-randomiser->
+                        <size-randomiser>0</size-randomiser>
+                        <grow-rate-randomiser>0</grow-rate-randomiser>
+                        <particle-lifetime-properties></particle-lifetime-properties>
+                        <acceleration>-20</acceleration>
+                        <gravity>0</gravity>
+                        <angle-randomiser>0</angle-randomiser>
+                        <speed-randomiser>150</speed-randomiser>
+                        <opacity-randomiser>0</opacity-randomiser>
+                        <destroy-mode>Fade to invisible</destroy-mode>
+                        <timeout>3</timeout>
+                    </properties>
+                    <effect-instances>
+                        <effect-instance type="Burn" />
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>2</effect-fallback>
+                    <world>
+                        <x>1006</x>
+                        <y>541</y>
+                        <z>0</z>
+                        <width>115.723808289</width>
+                        <height>115.723808289</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>-3.13902235</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
