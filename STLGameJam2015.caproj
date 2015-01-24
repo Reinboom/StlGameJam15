@@ -87,9 +87,72 @@
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1804788812696061" speed="5">
-                        <frame duration="1" hotspotX="0.23913" hotspotY="0.153846">
-                            <image-point name="front" x="0.923913" y="0.615385" />
+                    <animation framecount="1" loop="0" name="idle" pingpong="0" repeatcount="1" repeatto="0" sid="1850303890849743" speed="5">
+                        <frame duration="1" hotspotX="0.347619" hotspotY="0.981818" original-source="D:\Dropbox\Dropbox\STLGameJam2015\A_walk1.png">
+                            <collision-poly>
+                                <point x="0.242857" y="0.35" />
+                                <point x="0.471429" y="0.359091" />
+                                <point x="0.547619" y="0.472727" />
+                                <point x="0.466667" y="0.613636" />
+                                <point x="0.461905" y="0.772727" />
+                                <point x="0.480952" y="1" />
+                                <point x="0.2" y="1" />
+                                <point x="0.17619" y="0.518182" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="3" loop="1" name="walk" pingpong="0" repeatcount="1" repeatto="0" sid="1804788812696061" speed="5">
+                        <frame duration="1" hotspotX="0.347619" hotspotY="0.981818" original-source="D:\Dropbox\Dropbox\STLGameJam2015\A_walk1.png">
+                            <image-point name="front" x="0.938095" y="0.4" />
+                            <collision-poly>
+                                <point x="0.323857" y="0.334615" />
+                                <point x="0.523621" y="0.393357" />
+                                <point x="0.514097" y="0.514685" />
+                                <point x="0.452805" y="0.606644" />
+                                <point x="0.456954" y="1" />
+                                <point x="0.195521" y="1" />
+                                <point x="0.168505" y="0.455594" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.347619" hotspotY="0.981818" original-source="D:\Dropbox\Dropbox\STLGameJam2015\A_walk2.png">
+                            <image-point name="front" x="0.938095" y="0.4" />
+                            <collision-poly>
+                                <point x="0.276238" y="0.352797" />
+                                <point x="0.437907" y="0.356993" />
+                                <point x="0.562471" y="0.447203" />
+                                <point x="0.44743" y="0.614685" />
+                                <point x="0.476614" y="0.797552" />
+                                <point x="0.485526" y="1" />
+                                <point x="0.157426" y="1" />
+                                <point x="0.163744" y="0.455594" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.347619" hotspotY="0.981818" original-source="D:\Dropbox\Dropbox\STLGameJam2015\A_walk3.png">
+                            <image-point name="front" x="0.938095" y="0.4" />
+                            <collision-poly>
+                                <point x="0.142904" y="0.534615" />
+                                <point x="0.233145" y="0.366084" />
+                                <point x="0.462471" y="0.360839" />
+                                <point x="0.552193" y="0.423776" />
+                                <point x="0.448043" y="0.624825" />
+                                <point x="0.533145" y="1" />
+                                <point x="0.233616" y="1" />
+                                <point x="0.249458" y="0.751049" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="1" name="jump" pingpong="0" repeatcount="1" repeatto="0" sid="354190305510724" speed="5">
+                        <frame duration="1" hotspotX="0.347619" hotspotY="0.981818" original-source="D:\Dropbox\Dropbox\STLGameJam2015\A_jump.png">
+                            <collision-poly>
+                                <point x="0.161905" y="0.468182" />
+                                <point x="0.314286" y="0.331818" />
+                                <point x="0.547619" y="0.431818" />
+                                <point x="0.471429" y="0.595455" />
+                                <point x="0.471429" y="0.736363" />
+                                <point x="0.466667" y="1" />
+                                <point x="0.17619" y="1" />
+                                <point x="0.195238" y="0.731818" />
+                            </collision-poly>
                         </frame>
                     </animation>
                     <animation framecount="8" loop="0" name="Attack" pingpong="0" repeatcount="1" repeatto="0" sid="7794956096348113" speed="20">

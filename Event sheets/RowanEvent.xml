@@ -27,6 +27,10 @@
                                     <param id="0" name="Variable">P1energy</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
+                                <action id="4" name="Set animation" sid="2891876399434985" type="PlayerA">
+                                    <param id="0" name="Animation">&quot;walk&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="8225399583218624">
@@ -49,6 +53,10 @@
                                     <param id="0" name="Variable">P1energy</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
+                                <action id="4" name="Set animation" sid="6710127275149119" type="PlayerA">
+                                    <param id="0" name="Animation">&quot;walk&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="9585722316493501">
@@ -65,6 +73,14 @@
                                 <action id="-11" name="Subtract from" sid="4681639872506912" type="System">
                                     <param id="0" name="Variable">P1energy</param>
                                     <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="2678889795071525" type="PlayerA">
+                                    <param id="0" name="Animation">&quot;walk&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="1602323481516705" type="PlayerA">
+                                    <param id="0" name="Animation">&quot;jump&quot;</param>
+                                    <param id="1" name="From">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -92,6 +108,17 @@
                                     <param id="0" name="Object">P1attack01</param>
                                     <param id="1" name="Layer">3</param>
                                     <param id="2" name="Image point">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3595830879521634">
+                            <conditions>
+                                <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="4650302874951336" type="PlayerA" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="3259881535574963" type="PlayerA">
+                                    <param id="0" name="Animation">&quot;idle&quot;</param>
+                                    <param id="1" name="From">1</param>
                                 </action>
                             </actions>
                         </event-block>

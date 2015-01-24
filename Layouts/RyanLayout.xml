@@ -29,13 +29,16 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="PlayerA" uid="0">
+                <instance type="PlayerA" uid="2">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <attack>false</attack>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
                             <properties>
@@ -58,16 +61,16 @@
                         <x>772</x>
                         <y>217</y>
                         <z>0</z>
-                        <width>119.791664124</width>
-                        <height>81.25</height>
+                        <width>273.4375</width>
+                        <height>343.75</height>
                         <depth>0</depth>
-                        <hotspotX>0.239130437</hotspotX>
-                        <hotspotY>0.15384616</hotspotY>
+                        <hotspotX>0.347619057</hotspotX>
+                        <hotspotY>0.981818199</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Manticore" uid="2">
+                <instance type="Manticore" uid="3">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -137,7 +140,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ManticoreFire" uid="26">
+                <instance type="ManticoreFire" uid="4">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
