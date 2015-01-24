@@ -19,6 +19,7 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
@@ -258,10 +259,49 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Sprite2" sid="4600151454227879">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8808810692298688" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Fly" sid="839627992619516">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Flaps" sid="9506539849745386" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Physics" sid="1156260983870699">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="563403913587361" speed="5">
+                    <frame duration="1" hotspotX="0.537778" hotspotY="0.456621" original-source="C:\Users\rgiuliany\Dropbox2\Dropbox\STLGameJam2015\Ryan\Sprites\manticore.png">
+                        <collision-poly>
+                            <point x="0.173333" y="0.178082" />
+                            <point x="0.497778" y="0.0410959" />
+                            <point x="0.582222" y="0.429224" />
+                            <point x="0.968889" y="0.497717" />
+                            <point x="0.768889" y="0.762557" />
+                            <point x="0.497778" y="0.936073" />
+                            <point x="0.262222" y="0.730594" />
+                            <point x="0.0755556" y="0.497717" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="DebugOut" sid="8685092805807869">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
         <layout>MasterLayout.xml</layout>
+        <layout>ReinaLayout.xml</layout>
         <layout>RyanLayout.xml</layout>
         <layout>RowanLayout.xml</layout>
         <layout>DanLayout.xml</layout>
@@ -271,11 +311,12 @@
         <event-sheet>RowanEvent.xml</event-sheet>
         <event-sheet>RyanEvent.xml</event-sheet>
         <event-sheet>DanEvent.xml</event-sheet>
+        <event-sheet>ReinaEvent.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="Mouse" uid="10" />
-        <global-instance type="Keyboard" uid="14" />
-        <global-instance type="Gamepad" uid="23">
+        <global-instance type="Mouse" uid="14" />
+        <global-instance type="Keyboard" uid="23" />
+        <global-instance type="Gamepad" uid="41">
             <properties>
                 <analog-deadzone>25</analog-deadzone>
             </properties>
