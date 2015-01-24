@@ -3,13 +3,50 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>RyanEvent</name>
     <events>
-        <event-block sid="7106446495494941">
+        <event-block sid="9070134571685166">
             <conditions>
-                <condition id="0" name="On key pressed" sid="3552017032729322" type="Keyboard">
-                    <param id="0" name="Key">32 (Space)</param>
+                <condition id="-1" name="Compare X" sid="3746150746016347" type="Manticore">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="X co-ordinate">PlayerA.X</param>
                 </condition>
             </conditions>
-            <actions />
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="5515598726535937" type="Manticore">
+                    <param id="0" name="Control">0</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="7586243509638281" type="Manticore">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="778231321823881">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="6526313365017068" type="Manticore">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="X co-ordinate">PlayerA.X</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="2395740520297612" type="Manticore">
+                    <param id="0" name="Control">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="583730965249776" type="Manticore">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4574668216783125">
+            <conditions>
+                <condition id="-2" name="Compare Y" sid="1428582914243526" type="Manticore">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="Y co-ordinate">PlayerA.Y</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="3222356568413638" type="Manticore">
+                    <param id="0" name="Control">2</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>
