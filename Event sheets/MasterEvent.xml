@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>MasterEvent</name>
     <events>
+        <variable constant="0" name="WaveNumber" sid="9678532229130141" static="0" type="number">1</variable>
         <variable constant="0" name="Timer" sid="5099190665228987" static="0" type="number">0</variable>
         <variable constant="0" name="P1energy" sid="3874536787699269" static="0" type="number">10000</variable>
         <variable constant="0" name="P2energy" sid="7875450304951391" static="0" type="number">10000</variable>
@@ -11,9 +12,7 @@
         <variable constant="1" name="Event_StartTimer" sid="8397428748328552" static="0" type="number">1</variable>
         <variable constant="0" name="EventDispatcher" sid="7445380354857727" static="0" type="number">0</variable>
         <variable constant="0" name="CountdownValue" sid="9366589685244386" static="0" type="number">5</variable>
-        <include>RyanEvent</include>
-        <include>RowanEvent</include>
-        <event-group description="" sid="5464605505791358" title="Cleanup">
+        <event-group description="" sid="5464605505791358" title="Startup">
             <sub-events>
                 <event-block sid="2493231037579446">
                     <conditions>
@@ -178,6 +177,8 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <include>RyanEvent</include>
+        <include>RowanEvent</include>
         <include>ReinaEvent</include>
     </events>
 </c2eventsheet>

@@ -354,7 +354,7 @@
             <instances>
                 <instance type="HUD_P2energy" uid="22">
                     <properties>
-                        <text>Text</text>
+                        <text>P2energy</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-27,400,0</font>
                         <color>0,0,0</color>
@@ -367,10 +367,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>999</x>
+                        <x>1079</x>
                         <y>155</y>
                         <z>0</z>
-                        <width>260</width>
+                        <width>147</width>
                         <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -381,7 +381,7 @@
                 </instance>
                 <instance type="HUD_P1energy" uid="21">
                     <properties>
-                        <text>Text</text>
+                        <text>P1energy</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-27,400,0</font>
                         <color>0,0,0</color>
@@ -397,7 +397,7 @@
                         <x>27</x>
                         <y>152</y>
                         <z>0</z>
-                        <width>260</width>
+                        <width>135</width>
                         <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -408,7 +408,7 @@
                 </instance>
                 <instance type="Timer" uid="27">
                     <properties>
-                        <text>Text</text>
+                        <text>Timer</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-64,400,0</font>
                         <color>0,0,0</color>

@@ -98,14 +98,14 @@
                         <event-block sid="6708019874262093">
                             <conditions>
                                 <condition id="-11" name="For Each" sid="3857408024453704" type="System">
-                                    <param id="0" name="Object">Manticore</param>
+                                    <param id="0" name="Object">Enemies</param>
                                 </condition>
                             </conditions>
                             <actions />
                             <sub-events>
                                 <event-block sid="3168774545854836">
                                     <conditions>
-                                        <condition id="0" name="On collision with another object" sid="1198890913123632" type="Manticore">
+                                        <condition id="0" name="On collision with another object" sid="1198890913123632" type="Enemies">
                                             <param id="0" name="Object">P1attack01</param>
                                         </condition>
                                     </conditions>
