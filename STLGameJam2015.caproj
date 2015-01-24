@@ -12,6 +12,7 @@
     <used-plugins>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
@@ -19,11 +20,12 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
-        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
-    <used-effects />
+    <used-effects>
+        <effect author="Scirra" id="burn">Burn</effect>
+    </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
@@ -78,9 +80,6 @@
             </object-type>
             <object-type name="PlayerA" sid="1082018742492392">
                 <plugin id="Sprite" />
-                <instance-variables>
-                    <instance-variable name="attack" sid="7665206421932545" type="boolean" />
-                </instance-variables>
                 <behaviors>
                     <behavior-type name="Platform" sid="2901010418280508">
                         <behavior id="Platform" />
@@ -89,34 +88,18 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1804788812696061" speed="5">
                         <frame duration="1" hotspotX="0.23913" hotspotY="0.153846">
-                            <image-point name="front" x="0.923913" y="0.615385" />
+                            <image-point name="front" x="2.67391" y="0.692308" />
                         </frame>
                     </animation>
                     <animation framecount="8" loop="0" name="Attack" pingpong="0" repeatcount="1" repeatto="0" sid="7794956096348113" speed="20">
-                        <frame duration="1" hotspotX="0.154639" hotspotY="0.150943">
-                            <image-point name="front" x="0.876289" y="0.603774" />
-                        </frame>
-                        <frame duration="1" hotspotX="0.113402" hotspotY="0.150943">
-                            <image-point name="front" x="0.876289" y="0.603774" />
-                        </frame>
-                        <frame duration="1" hotspotX="0.0721649" hotspotY="0.150943">
-                            <image-point name="front" x="0.876289" y="0.603774" />
-                        </frame>
-                        <frame duration="1" hotspotX="0.0927835" hotspotY="0.150943">
-                            <image-point name="front" x="0.876289" y="0.603774" />
-                        </frame>
-                        <frame duration="1" hotspotX="0.154639" hotspotY="0.150943">
-                            <image-point name="front" x="0.876289" y="0.603774" />
-                        </frame>
-                        <frame duration="1" hotspotX="0.123711" hotspotY="0.153846">
-                            <image-point name="front" x="0.876289" y="0.596154" />
-                        </frame>
-                        <frame duration="1" hotspotX="0.114583" hotspotY="0.153846">
-                            <image-point name="front" x="0.875" y="0.596154" />
-                        </frame>
-                        <frame duration="1" hotspotX="0.23913" hotspotY="0.153846">
-                            <image-point name="front" x="0.880435" y="0.596154" />
-                        </frame>
+                        <frame duration="1" hotspotX="0.154639" hotspotY="0.150943" />
+                        <frame duration="1" hotspotX="0.113402" hotspotY="0.150943" />
+                        <frame duration="1" hotspotX="0.0721649" hotspotY="0.150943" />
+                        <frame duration="1" hotspotX="0.0927835" hotspotY="0.150943" />
+                        <frame duration="1" hotspotX="0.154639" hotspotY="0.150943" />
+                        <frame duration="1" hotspotX="0.123711" hotspotY="0.153846" />
+                        <frame duration="1" hotspotX="0.114583" hotspotY="0.153846" />
+                        <frame duration="1" hotspotX="0.23913" hotspotY="0.153846" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -316,13 +299,14 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite2" sid="4600151454227879">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8808810692298688" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
+        <object-type name="Particles" sid="4126001064748944">
+            <plugin id="Particles" />
+            <effects>
+                <effect-type name="Burn">
+                    <effect id="burn" />
+                </effect-type>
+            </effects>
+            <texture />
         </object-type>
         <object-type name="DebugOut" sid="8685092805807869">
             <plugin id="Text" />
@@ -338,7 +322,6 @@
     </families>
     <layout-folder>
         <layout>MasterLayout.xml</layout>
-        <layout>ReinaLayout.xml</layout>
         <layout>RyanLayout.xml</layout>
         <layout>RowanLayout.xml</layout>
         <layout>DanLayout.xml</layout>
@@ -348,9 +331,11 @@
         <event-sheet>RowanEvent.xml</event-sheet>
         <event-sheet>RyanEvent.xml</event-sheet>
         <event-sheet>DanEvent.xml</event-sheet>
-        <event-sheet>ReinaEvent.xml</event-sheet>
     </event-folder>
     <global-instances>
+        <global-instance type="Mouse" uid="10" />
+        <global-instance type="Keyboard" uid="14" />
+        <global-instance type="Gamepad" uid="23">
         <global-instance type="Mouse" uid="23" />
         <global-instance type="Keyboard" uid="41" />
         <global-instance type="Gamepad" uid="43">
