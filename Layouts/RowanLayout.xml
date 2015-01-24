@@ -47,7 +47,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="ground01" uid="2">
+                <instance type="ground01" uid="3">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -76,7 +76,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ground01" uid="3">
+                <instance type="ground01" uid="4">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -258,11 +258,11 @@
                         <x>315</x>
                         <y>580</y>
                         <z>0</z>
-                        <width>192</width>
-                        <height>160</height>
+                        <width>92</width>
+                        <height>52</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.239130437</hotspotX>
+                        <hotspotY>0.15384616</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

@@ -7,7 +7,7 @@
             <conditions>
                 <condition id="-1" name="Compare X" sid="3746150746016347" type="Manticore">
                     <param id="0" name="Comparison">5</param>
-                    <param id="1" name="X co-ordinate">PlayerA.X</param>
+                    <param id="1" name="X co-ordinate">abs(PlayerA.X-Self.X)&lt;abs(PlayerB.X-Self.X)?PlayerA.X:PlayerB.X</param>
                 </condition>
             </conditions>
             <actions>
@@ -23,7 +23,7 @@
             <conditions>
                 <condition id="-1" name="Compare X" sid="6526313365017068" type="Manticore">
                     <param id="0" name="Comparison">2</param>
-                    <param id="1" name="X co-ordinate">PlayerA.X</param>
+                    <param id="1" name="X co-ordinate">abs(PlayerA.X-Self.X)&lt;abs(PlayerB.X-Self.X)?PlayerA.X:PlayerB.X</param>
                 </condition>
             </conditions>
             <actions>
@@ -39,7 +39,7 @@
             <conditions>
                 <condition id="-2" name="Compare Y" sid="1428582914243526" type="Manticore">
                     <param id="0" name="Comparison">2</param>
-                    <param id="1" name="Y co-ordinate">PlayerA.Y</param>
+                    <param id="1" name="Y co-ordinate">abs(PlayerA.Y-Self.Y)&lt;abs(PlayerB.Y-Self.Y)?PlayerA.Y:PlayerB.Y</param>
                 </condition>
             </conditions>
             <actions>
