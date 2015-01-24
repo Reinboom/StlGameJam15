@@ -9,13 +9,7 @@
                     <param id="0" name="Key">32 (Space)</param>
                 </condition>
             </conditions>
-            <actions>
-                <action id="0" name="Spawn another object" sid="8359604660596988" type="PlayerB">
-                    <param id="0" name="Object">Shot</param>
-                    <param id="1" name="Layer">0</param>
-                    <param id="2" name="Image point">1</param>
-                </action>
-            </actions>
+            <actions />
         </event-block>
     </events>
 </c2eventsheet>
