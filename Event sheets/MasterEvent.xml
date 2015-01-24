@@ -178,5 +178,6 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <include>ReinaEvent</include>
     </events>
 </c2eventsheet>

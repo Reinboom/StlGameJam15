@@ -13,8 +13,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout order="0">MasterLayout</layout>
         <layout order="3">RyanLayout</layout>
         <event-sheet active="1" order="1">MasterEvent</event-sheet>
+        <layout order="7">ReinaLayout</layout>
+        <event-sheet order="1">MasterEvent</event-sheet>
         <event-sheet order="2">RowanEvent</event-sheet>
         <event-sheet order="4">RyanEvent</event-sheet>
+        <event-sheet order="5">DanEvent</event-sheet>
+        <event-sheet active="1" order="6">ReinaEvent</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -44,5 +48,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Manticore/" />
         <folder expanded="1" path="animation-folder/Sprite/" />
         <folder expanded="1" path="animation-folder/ManticoreFire/" />
+        <folder expanded="1" path="animation-folder/Sprite2/" />
+        <folder expanded="1" path="animation-folder/Fly/" />
     </folders-expanded>
 </c2uistate>
