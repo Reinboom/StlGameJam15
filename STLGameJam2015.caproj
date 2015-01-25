@@ -97,6 +97,9 @@
             <object-type name="P1bar" sid="3362967607292967">
                 <plugin id="progressbar" />
             </object-type>
+            <object-type name="WaveCount" sid="8188954054787074">
+                <plugin id="Text" />
+            </object-type>
         </object-folder>
         <object-folder name="Players">
             <object-type name="P1attack01" sid="5274650518786536">
