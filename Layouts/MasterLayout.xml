@@ -742,7 +742,7 @@
                         <text>Text</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Comic Sans MS,-48,400,0</font>
-                        <color>0,0,0</color>
+                        <color>0,153,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Top-left</hotspot>
@@ -806,7 +806,7 @@
                         <text>Timer</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Comic Sans MS,-35,400,0</font>
-                        <color>0,0,0</color>
+                        <color>0,153,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
