@@ -248,6 +248,14 @@
                     <param id="0" name="Instance variable">HasBurnedP2</param>
                     <param id="1" name="Value">1</param>
                 </action>
+                <action id="0" name="Spawn another object" sid="2190890070820398" type="PlayerB">
+                    <param id="0" name="Object">OnFire</param>
+                    <param id="1" name="Layer">4</param>
+                    <param id="2" name="Image point">4</param>
+                </action>
+                <action id="-8" name="Set angle" sid="6870436076192666" type="OnFire">
+                    <param id="0" name="Angle">270</param>
+                </action>
             </actions>
         </event-block>
     </events>
