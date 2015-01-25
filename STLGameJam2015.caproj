@@ -970,6 +970,10 @@
                 <member>Manticore</member>
                 <member>Shooter</member>
             </members>
+            <instance-variables>
+                <instance-variable name="HP" sid="1315837513817523" type="number" />
+                <instance-variable name="InvulDuration" sid="1516154107693714" type="number" />
+            </instance-variables>
         </family>
         <family name="Players" plugin-id="Sprite" sid="5106465466691916">
             <members>
