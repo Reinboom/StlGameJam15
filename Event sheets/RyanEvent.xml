@@ -57,9 +57,6 @@
                                     <param id="0" name="Variable">ManticoreRand</param>
                                     <param id="1" name="Value">random(0,1)</param>
                                 </action>
-                                <action behavior="Platform" id="11" name="Set enabled" sid="9002389990670825" type="Manticore">
-                                    <param id="0" name="State">1</param>
-                                </action>
                             </actions>
                             <sub-events>
                                 <event-block sid="6071190897242688">

@@ -7,7 +7,7 @@
         <variable constant="0" name="EnemyCount" sid="6421279941797086" static="0" type="number">0</variable>
         <event-block sid="6786632714463608">
             <conditions>
-                <condition id="-18" name="On created" sid="5391936381485645" type="Fly" />
+                <condition id="-18" name="On created" sid="5391936381485645" type="Enemies" />
             </conditions>
             <actions>
                 <action id="-10" name="Add to" sid="8487996543749086" type="System">
@@ -16,14 +16,25 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="3487079214791284">
+        <event-block sid="9335206368572776">
             <conditions>
-                <condition id="-19" name="On destroyed" sid="3750533459493648" type="Fly" />
+                <condition id="-19" name="On destroyed" sid="4377941641133224" type="Enemies" />
             </conditions>
             <actions>
-                <action id="-11" name="Subtract from" sid="8121641803431797" type="System">
+                <action id="-11" name="Subtract from" sid="4141566549000436" type="System">
                     <param id="0" name="Variable">EnemyCount</param>
                     <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2205679875763568">
+            <conditions>
+                <condition id="-18" name="On created" sid="8488733926375678" type="Fly" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="5067184574486049" type="Fly">
+                    <param id="0" name="Instance variable">HP</param>
+                    <param id="1" name="Value">10</param>
                 </action>
             </actions>
         </event-block>
@@ -32,29 +43,214 @@
                 <condition id="-18" name="On created" sid="5911656219660887" type="Manticore" />
             </conditions>
             <actions>
-                <action id="-10" name="Add to" sid="5264145285101309" type="System">
-                    <param id="0" name="Variable">EnemyCount</param>
-                    <param id="1" name="Value">1</param>
+                <action id="-10" name="Set value" sid="3853141575727876" type="Manticore">
+                    <param id="0" name="Instance variable">HP</param>
+                    <param id="1" name="Value">20</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="7177444536846356">
+        <event-block sid="4115133341201785">
             <conditions>
-                <condition id="-19" name="On destroyed" sid="4668868046038911" type="Manticore" />
+                <condition id="-18" name="On created" sid="9420477592393952" type="Shooter" />
             </conditions>
             <actions>
-                <action id="-11" name="Subtract from" sid="5913391434080757" type="System">
-                    <param id="0" name="Variable">EnemyCount</param>
-                    <param id="1" name="Value">1</param>
+                <action id="-10" name="Set value" sid="2156972817270807" type="Shooter">
+                    <param id="0" name="Instance variable">HP</param>
+                    <param id="1" name="Value">20</param>
                 </action>
             </actions>
         </event-block>
+        <variable constant="0" name="ToSpawn_Fly" sid="2340122482545027" static="0" type="number">0</variable>
+        <variable constant="0" name="ToSpawn_Mant" sid="8834963503542121" static="0" type="number">0</variable>
+        <variable constant="0" name="ToSpawn_Arch" sid="4132333155824671" static="0" type="number">0</variable>
+        <variable constant="0" name="Space_Fly" sid="7664205742967303" static="0" type="number">0</variable>
+        <variable constant="0" name="Space_Mant" sid="8194926097514989" static="0" type="number">0</variable>
+        <variable constant="0" name="Next_MS_Spawn" sid="5055714687910665" static="0" type="number">0</variable>
         <event-group description="" sid="5808336928145903" title="Spawner">
             <sub-events>
-                <variable constant="0" name="ToSpawn_Fly" sid="2340122482545027" static="0" type="number">0</variable>
-                <variable constant="0" name="ToSpawn_Mant" sid="8834963503542121" static="0" type="number">0</variable>
-                <variable constant="0" name="Space_Fly" sid="7664205742967303" static="0" type="number">0</variable>
-                <variable constant="0" name="Space_Mant" sid="8194926097514989" static="0" type="number">0</variable>
+                <event-block sid="7723931843178474">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="4598416848101251" type="System" />
+                        <condition id="-14" name="Compare variable" sid="6203312000653367" type="System">
+                            <param id="0" name="Variable">ToSpawn_Mant</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="4440104853560479" type="System">
+                            <param id="0" name="Variable">Active</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="3722279570277781" type="System">
+                            <param id="0" name="Variable">Next_MS_Spawn</param>
+                            <param id="1" name="Value">ToSpawn_Mant % 5</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="5077742792073896">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="9235046799803892" type="System">
+                                    <param id="0" name="Variable">Next_MS_Spawn</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="8848758152938786" type="MS01">
+                                    <param id="0" name="Instance variable">LastSpawnTime</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">time - 2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="6387293773181921" type="MS01">
+                                    <param id="0" name="Object">Manticore</param>
+                                    <param id="1" name="Layer">3</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="4143885877253428" type="Manticore">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="1632579854493268" type="MS01">
+                                    <param id="0" name="Instance variable">LastSpawnTime</param>
+                                    <param id="1" name="Value">time</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="5063188758731898" type="System">
+                                    <param id="0" name="Variable">ToSpawn_Mant</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9008379184439733">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="4784455180116302" type="System">
+                                    <param id="0" name="Variable">Next_MS_Spawn</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="3434741749381726" type="MS02">
+                                    <param id="0" name="Instance variable">LastSpawnTime</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">time - 2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="5896057650380548" type="MS02">
+                                    <param id="0" name="Object">Manticore</param>
+                                    <param id="1" name="Layer">3</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="6064870123862528" type="Manticore">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="4597739289994621" type="MS02">
+                                    <param id="0" name="Instance variable">LastSpawnTime</param>
+                                    <param id="1" name="Value">time</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="4268528694258639" type="System">
+                                    <param id="0" name="Variable">ToSpawn_Mant</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4763755292149792">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="9949854396745659" type="System">
+                                    <param id="0" name="Variable">Next_MS_Spawn</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="5075089796298101" type="MS03">
+                                    <param id="0" name="Instance variable">LastSpawnTime</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">time - 2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="5365714482107917" type="MS03">
+                                    <param id="0" name="Object">Manticore</param>
+                                    <param id="1" name="Layer">3</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="3494451177882134" type="Manticore">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="4722424974909881" type="MS03">
+                                    <param id="0" name="Instance variable">LastSpawnTime</param>
+                                    <param id="1" name="Value">time</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="8435605572916858" type="System">
+                                    <param id="0" name="Variable">ToSpawn_Mant</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8313417886639294">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="7766387151557154" type="System">
+                                    <param id="0" name="Variable">Next_MS_Spawn</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="2651028466274027" type="MS04">
+                                    <param id="0" name="Instance variable">LastSpawnTime</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">time - 2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="7303621821111957" type="MS04">
+                                    <param id="0" name="Object">Manticore</param>
+                                    <param id="1" name="Layer">3</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="3553647959623187" type="Manticore">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="9712639694721716" type="MS04">
+                                    <param id="0" name="Instance variable">LastSpawnTime</param>
+                                    <param id="1" name="Value">time</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="1585350734779135" type="System">
+                                    <param id="0" name="Variable">ToSpawn_Mant</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3218119776541299">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="7290486717668043" type="System">
+                                    <param id="0" name="Variable">Next_MS_Spawn</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="41024012161088" type="MS05">
+                                    <param id="0" name="Instance variable">LastSpawnTime</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">time - 2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="4093326907231585" type="MS05">
+                                    <param id="0" name="Object">Manticore</param>
+                                    <param id="1" name="Layer">3</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="6727278317172794" type="Manticore">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="897103740083794" type="MS05">
+                                    <param id="0" name="Instance variable">LastSpawnTime</param>
+                                    <param id="1" name="Value">time</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="5490547306157262" type="System">
+                                    <param id="0" name="Variable">ToSpawn_Mant</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
                 <event-block sid="7379573249331862">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="1642768926961716" type="System">
@@ -62,13 +258,13 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
-                        <condition id="-14" name="Compare variable" sid="5106204002431822" type="System">
-                            <param id="0" name="Variable">EnemyCount</param>
+                        <condition id="-14" name="Compare variable" sid="7962400230399955" type="System">
+                            <param id="0" name="Variable">EventDispatcher</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">0</param>
                         </condition>
-                        <condition id="-14" name="Compare variable" sid="7962400230399955" type="System">
-                            <param id="0" name="Variable">EventDispatcher</param>
+                        <condition id="-14" name="Compare variable" sid="5106204002431822" type="System">
+                            <param id="0" name="Variable">EnemyCount</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">0</param>
                         </condition>
@@ -84,41 +280,164 @@
                         </action>
                         <action id="-9" name="Set value" sid="8995114090235147" type="System">
                             <param id="0" name="Variable">ToSpawn_Mant</param>
-                            <param id="1" name="Value">ceil(WaveNumber/2)+2</param>
+                            <param id="1" name="Value">ceil(WaveNumber/2)</param>
                         </action>
                         <action id="-9" name="Set value" sid="3352325833949231" type="System">
                             <param id="0" name="Variable">ToSpawn_Fly</param>
-                            <param id="1" name="Value">WaveNumber&gt;1?(floor(WaveNumber/2)+1):0</param>
+                            <param id="1" name="Value">floor(WaveNumber/2)</param>
                         </action>
-                        <action id="-9" name="Set value" sid="9007912586331225" type="System">
-                            <param id="0" name="Variable">Space_Mant</param>
-                            <param id="1" name="Value">ceil(SPACE_AVAILABLE/ToSpawn_Mant)</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="4997611942621319" type="System">
-                            <param id="0" name="Variable">Space_Fly</param>
-                            <param id="1" name="Value">ceil(SPACE_AVAILABLE/ToSpawn_Fly)</param>
+                        <action id="-9" name="Set value" sid="9644874504419268" type="System">
+                            <param id="0" name="Variable">ToSpawn_Arch</param>
+                            <param id="1" name="Value">(WaveNumber&gt;8)?floor(WaveNumber/4):2</param>
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="5362319002415611">
+                        <event-block sid="7885399948354916">
                             <conditions>
-                                <condition id="-23" name="While" sid="3396015476599292" type="System" />
-                                <condition id="-14" name="Compare variable" sid="7288266068661111" type="System">
-                                    <param id="0" name="Variable">ToSpawn_Mant</param>
-                                    <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Value">0</param>
+                                <condition id="-8" name="Compare two values" sid="3080125162141361" type="System">
+                                    <param id="0" name="First value">WaveNumber</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">1</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-11" name="Subtract from" sid="2796491955559324" type="System">
+                                <action id="-9" name="Set value" sid="1617645130039579" type="System">
                                     <param id="0" name="Variable">ToSpawn_Mant</param>
+                                    <param id="1" name="Value">3</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="6736353815121627" type="System">
+                                    <param id="0" name="Variable">ToSpawn_Fly</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="9244483183845443" type="System">
+                                    <param id="0" name="Variable">ToSpawn_Arch</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7835209576413306">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="998606901173397" type="System">
+                                    <param id="0" name="First value">WaveNumber</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="1123736235939352" type="System">
+                                    <param id="0" name="Variable">ToSpawn_Mant</param>
+                                    <param id="1" name="Value">3</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="5459556212014386" type="System">
+                                    <param id="0" name="Variable">ToSpawn_Fly</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="1208344000978497" type="System">
+                                    <param id="0" name="Variable">ToSpawn_Arch</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="-3" name="Create object" sid="1197394511177912" type="System">
-                                    <param id="0" name="Object to create">Manticore</param>
-                                    <param id="1" name="Layer">2</param>
-                                    <param id="2" name="X">200+(ToSpawn_Mant*Space_Mant)</param>
-                                    <param id="3" name="Y">300</param>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8401799690954022">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="1717244483226483" type="System">
+                                    <param id="0" name="First value">WaveNumber</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="1763793520788954" type="System">
+                                    <param id="0" name="Variable">ToSpawn_Mant</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="9082465785163727" type="System">
+                                    <param id="0" name="Variable">ToSpawn_Fly</param>
+                                    <param id="1" name="Value">5</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="5352137715253336" type="System">
+                                    <param id="0" name="Variable">ToSpawn_Arch</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="850106541068958">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="6264718756240864" type="System">
+                                    <param id="0" name="First value">WaveNumber</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">7</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="2337539493610961" type="System">
+                                    <param id="0" name="Variable">ToSpawn_Mant</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="2803259227910612" type="System">
+                                    <param id="0" name="Variable">ToSpawn_Fly</param>
+                                    <param id="1" name="Value">20</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="1297918520229896" type="System">
+                                    <param id="0" name="Variable">ToSpawn_Arch</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7594445820562141">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="3863446447349461" type="System">
+                                    <param id="0" name="First value">ToSpawn_Mant</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="7249481041440289" type="System">
+                                    <param id="0" name="Variable">Space_Mant</param>
+                                    <param id="1" name="Value">ceil(SPACE_AVAILABLE/ToSpawn_Mant)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5829915159694169">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="3800150129062539" type="System">
+                                    <param id="0" name="First value">ToSpawn_Fly</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="461478535561248" type="System">
+                                    <param id="0" name="Variable">Space_Fly</param>
+                                    <param id="1" name="Value">ceil(SPACE_AVAILABLE/ToSpawn_Fly)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="155652614791114">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="2875050718527762" type="System">
+                                    <param id="0" name="First value">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="1433994226941116" type="System">
+                                    <param id="0" name="Variable">EventDispatcher</param>
+                                    <param id="1" name="Value">EVENT_STARTTIMER</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="3898340281612494" type="System">
+                                    <param id="0" name="Variable">HasEnemy_Arch</param>
+                                    <param id="1" name="Value">ToSpawn_Arch</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="2591217160091248" type="System">
+                                    <param id="0" name="Variable">HasEnemy_Fly</param>
+                                    <param id="1" name="Value">ToSpawn_Fly</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="5582383898109167" type="System">
+                                    <param id="0" name="Variable">HasEnemy_Mant</param>
+                                    <param id="1" name="Value">ToSpawn_Mant</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -144,18 +463,37 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="7594445820562141">
+                        <event-block sid="1307527334249175">
                             <conditions>
-                                <condition id="-8" name="Compare two values" sid="3863446447349461" type="System">
-                                    <param id="0" name="First value">0</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">0</param>
+                                <condition id="-8" name="Compare two values" sid="8566453515082624" type="System">
+                                    <param id="0" name="First value">ToSpawn_Arch</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">1</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Set value" sid="4640016064039346" type="System">
-                                    <param id="0" name="Variable">EventDispatcher</param>
-                                    <param id="1" name="Value">EVENT_STARTTIMER</param>
+                                <action id="-3" name="Create object" sid="8612388364266249" type="System">
+                                    <param id="0" name="Object to create">Shooter</param>
+                                    <param id="1" name="Layer">2</param>
+                                    <param id="2" name="X">78</param>
+                                    <param id="3" name="Y">160</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3985609133370225">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="8147122782700433" type="System">
+                                    <param id="0" name="First value">ToSpawn_Arch</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="4991274643135585" type="System">
+                                    <param id="0" name="Object to create">Shooter</param>
+                                    <param id="1" name="Layer">2</param>
+                                    <param id="2" name="X">1200</param>
+                                    <param id="3" name="Y">160</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -163,5 +501,9 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="3284801831836949">
+            <conditions />
+            <actions />
+        </event-block>
     </events>
 </c2eventsheet>

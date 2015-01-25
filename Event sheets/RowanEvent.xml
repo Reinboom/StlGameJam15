@@ -3,113 +3,266 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>RowanEvent</name>
     <events>
+        <variable constant="1" name="DELAYBETWEENVALIDATIONS" sid="3844916209078925" static="0" type="number">0.1</variable>
+        <variable constant="0" name="ValidDamageMoveP1" sid="9699880534858793" static="0" type="number">0</variable>
+        <variable constant="0" name="ValidDamageAttackP1" sid="534314246401222" static="0" type="number">0</variable>
+        <variable constant="0" name="ValidDamageMoveP2" sid="5141321776105938" static="0" type="number">0</variable>
+        <variable constant="0" name="ValidDamageAttackP2" sid="5505870164822597" static="0" type="number">0</variable>
         <event-group description="" sid="5276489665577781" title="Players">
             <sub-events>
+                <event-block sid="4710575267950932">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="8564449412751559" type="PlayerA">
+                            <param id="0" name="Object">Food</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="6628701582592378" type="Food" />
+                        <action id="-10" name="Add to" sid="2056334523873627" type="System">
+                            <param id="0" name="Variable">P1energy</param>
+                            <param id="1" name="Value">foodHPregen</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="5389357582292797" type="System">
+                            <param id="0" name="Variable">foodHPregen</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7386479662921756">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="9096722573910107" type="PlayerB">
+                            <param id="0" name="Object">Food</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="929191056905832" type="Food" />
+                        <action id="-10" name="Add to" sid="657430473409978" type="System">
+                            <param id="0" name="Variable">P2energy</param>
+                            <param id="1" name="Value">foodHPregen</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="1753698367694018" type="System">
+                            <param id="0" name="Variable">foodHPregen</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7320349071968795">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="5891147945941792" type="PlayerA">
+                            <param id="0" name="Object">player_food</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="2202651195475588" type="System">
+                            <param id="0" name="Variable">P1energy</param>
+                            <param id="1" name="Value">skullHPregen</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="3999790459505956" type="player_food" />
+                    </actions>
+                </event-block>
+                <event-block sid="6313365028730598">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="3835213188376757" type="PlayerB">
+                            <param id="0" name="Object">player_food</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="9339457997241915" type="System">
+                            <param id="0" name="Variable">P2energy</param>
+                            <param id="1" name="Value">skullHPregen</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="4347350288856094" type="player_food" />
+                    </actions>
+                </event-block>
                 <event-group description="" sid="3002114179264881" title="P1">
                     <sub-events>
-                        <event-block sid="1501192794354451">
+                        <event-block sid="3214810702464262">
                             <conditions>
-                                <condition id="5" name="Compare axis" sid="8641253728350165" type="Gamepad">
-                                    <param id="0" name="Gamepad">0</param>
-                                    <param id="1" name="Axis">0</param>
-                                    <param id="2" name="Comparison">4</param>
-                                    <param id="3" name="Value">0</param>
-                                </condition>
-                                <condition id="-14" name="Compare variable" sid="6195463339003224" type="System">
+                                <condition id="-14" name="Compare variable" sid="9772667630139622" type="System">
                                     <param id="0" name="Variable">Active</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">1</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action behavior="Platform" id="7" name="Simulate control" sid="7685068460528416" type="PlayerA">
-                                    <param id="0" name="Control">1</param>
-                                </action>
-                                <action id="7" name="Set mirrored" sid="2438781518181686" type="PlayerA">
-                                    <param id="0" name="State">1</param>
-                                </action>
-                                <action id="-11" name="Subtract from" sid="3894052817631705" type="System">
-                                    <param id="0" name="Variable">P1energy</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="8225399583218624">
-                            <conditions>
-                                <condition id="5" name="Compare axis" sid="1445963113213119" type="Gamepad">
-                                    <param id="0" name="Gamepad">0</param>
-                                    <param id="1" name="Axis">0</param>
-                                    <param id="2" name="Comparison">2</param>
-                                    <param id="3" name="Value">0</param>
-                                </condition>
-                                <condition id="-14" name="Compare variable" sid="2496960497741501" type="System">
-                                    <param id="0" name="Variable">Active</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Platform" id="7" name="Simulate control" sid="2029589053504767" type="PlayerA">
-                                    <param id="0" name="Control">0</param>
-                                </action>
-                                <action id="7" name="Set mirrored" sid="3440078662689403" type="PlayerA">
-                                    <param id="0" name="State">0</param>
-                                </action>
-                                <action id="-11" name="Subtract from" sid="3917556202926591" type="System">
-                                    <param id="0" name="Variable">P1energy</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="9585722316493501">
-                            <conditions>
-                                <condition id="3" name="Is button down" sid="5055749297543932" type="Gamepad">
-                                    <param id="0" name="Gamepad">0</param>
-                                    <param id="1" name="Button">0</param>
-                                </condition>
-                                <condition id="-14" name="Compare variable" sid="6757913403561075" type="System">
-                                    <param id="0" name="Variable">Active</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Platform" id="7" name="Simulate control" sid="5396403792967482" type="PlayerA">
-                                    <param id="0" name="Control">2</param>
-                                </action>
-                                <action id="-11" name="Subtract from" sid="4681639872506912" type="System">
-                                    <param id="0" name="Variable">P1energy</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="5824887992449244">
-                            <conditions>
-                                <condition id="6" name="On button pressed" sid="149715851912532" type="Gamepad">
-                                    <param id="0" name="Gamepad">0</param>
-                                    <param id="1" name="Button">2</param>
-                                </condition>
-                                <condition id="-14" name="Compare variable" sid="7540881782429318" type="System">
-                                    <param id="0" name="Variable">Active</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="4010421682680106" type="PlayerA">
-                                    <param id="0" name="Animation">&quot;Attack&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action id="-11" name="Subtract from" sid="9631748600508372" type="System">
-                                    <param id="0" name="Variable">P1energy</param>
-                                    <param id="1" name="Value">10</param>
-                                </action>
-                                <action id="0" name="Spawn another object" sid="3427694942365923" type="PlayerA">
-                                    <param id="0" name="Object">P1attack01</param>
-                                    <param id="1" name="Layer">3</param>
-                                    <param id="2" name="Image point">1</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="5824887992449244">
+                                    <conditions>
+                                        <condition id="6" name="On button pressed" sid="149715851912532" type="Gamepad">
+                                            <param id="0" name="Gamepad">0</param>
+                                            <param id="1" name="Button">2</param>
+                                        </condition>
+                                        <condition id="2" name="Key is down" sid="6630162526445529" type="Keyboard">
+                                            <param id="0" name="Key">77 (M)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="4010421682680106" type="PlayerA">
+                                            <param id="0" name="Animation">&quot;Attack&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="0" name="Spawn another object" sid="3427694942365923" type="PlayerA">
+                                            <param id="0" name="Object">P1attack01</param>
+                                            <param id="1" name="Layer">3</param>
+                                            <param id="2" name="Image point">1</param>
+                                        </action>
+                                        <action id="0" name="Spawn another object" sid="2115753368826954" type="PlayerA">
+                                            <param id="0" name="Object">P1attack02</param>
+                                            <param id="1" name="Layer">3</param>
+                                            <param id="2" name="Image point">2</param>
+                                        </action>
+                                        <action id="7" name="Play (by name)" sid="853690821705819" type="Audio">
+                                            <param id="0" name="Folder">0</param>
+                                            <param id="1" name="Audio file name">choose(&quot;player_attack_03&quot;,&quot;player_attack_04&quot;,&quot;player_attack_05&quot;)</param>
+                                            <param id="3" name="Loop">0</param>
+                                            <param id="4" name="Volume">-10</param>
+                                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="361224254910718">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="5005220774283639" type="System">
+                                                    <param id="0" name="Variable">ValidDamageAttackP1</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">time</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="7271422858959146" type="System">
+                                                    <param id="0" name="Variable">ValidDamageAttackP1</param>
+                                                    <param id="1" name="Value">time+DELAYBETWEENVALIDATIONS</param>
+                                                </action>
+                                                <action id="-11" name="Subtract from" sid="8884263382485883" type="System">
+                                                    <param id="0" name="Variable">P1energy</param>
+                                                    <param id="1" name="Value">20</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block any="1" sid="9585722316493501">
+                                    <conditions>
+                                        <condition id="3" name="Is button down" sid="5055749297543932" type="Gamepad">
+                                            <param id="0" name="Gamepad">0</param>
+                                            <param id="1" name="Button">0</param>
+                                        </condition>
+                                        <condition id="2" name="Key is down" sid="3196237970896955" type="Keyboard">
+                                            <param id="0" name="Key">38 (Up arrow)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="5396403792967482" type="PlayerA">
+                                            <param id="0" name="Control">2</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="403557610292692">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="4767895784636033" type="System">
+                                                    <param id="0" name="Variable">ValidDamageMoveP1</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">time</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="8576837086697057" type="System">
+                                                    <param id="0" name="Variable">ValidDamageMoveP1</param>
+                                                    <param id="1" name="Value">time+DELAYBETWEENVALIDATIONS</param>
+                                                </action>
+                                                <action id="-11" name="Subtract from" sid="7919420024732401" type="System">
+                                                    <param id="0" name="Variable">P1energy</param>
+                                                    <param id="1" name="Value">2</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block any="1" sid="8225399583218624">
+                                    <conditions>
+                                        <condition id="5" name="Compare axis" sid="1445963113213119" type="Gamepad">
+                                            <param id="0" name="Gamepad">0</param>
+                                            <param id="1" name="Axis">0</param>
+                                            <param id="2" name="Comparison">2</param>
+                                            <param id="3" name="Value">0</param>
+                                        </condition>
+                                        <condition id="2" name="Key is down" sid="8485234724415798" type="Keyboard">
+                                            <param id="0" name="Key">37 (Left arrow)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="2029589053504767" type="PlayerA">
+                                            <param id="0" name="Control">0</param>
+                                        </action>
+                                        <action id="7" name="Set mirrored" sid="3440078662689403" type="PlayerA">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="1372856075934806">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="1827047977068895" type="System">
+                                                    <param id="0" name="Variable">ValidDamageMoveP1</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">time</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="1312900687884822" type="System">
+                                                    <param id="0" name="Variable">ValidDamageMoveP1</param>
+                                                    <param id="1" name="Value">time+DELAYBETWEENVALIDATIONS</param>
+                                                </action>
+                                                <action id="-11" name="Subtract from" sid="1971452400051316" type="System">
+                                                    <param id="0" name="Variable">P1energy</param>
+                                                    <param id="1" name="Value">2</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block any="1" sid="1501192794354451">
+                                    <conditions>
+                                        <condition id="5" name="Compare axis" sid="8641253728350165" type="Gamepad">
+                                            <param id="0" name="Gamepad">0</param>
+                                            <param id="1" name="Axis">0</param>
+                                            <param id="2" name="Comparison">4</param>
+                                            <param id="3" name="Value">0</param>
+                                        </condition>
+                                        <condition id="2" name="Key is down" sid="8832747460630789" type="Keyboard">
+                                            <param id="0" name="Key">39 (Right arrow)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="7685068460528416" type="PlayerA">
+                                            <param id="0" name="Control">1</param>
+                                        </action>
+                                        <action id="7" name="Set mirrored" sid="2438781518181686" type="PlayerA">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="1359030469231432">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="3354122797867512" type="System">
+                                                    <param id="0" name="Variable">ValidDamageMoveP1</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">time</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="9096751157695209" type="System">
+                                                    <param id="0" name="Variable">ValidDamageMoveP1</param>
+                                                    <param id="1" name="Value">time+DELAYBETWEENVALIDATIONS</param>
+                                                </action>
+                                                <action id="-11" name="Subtract from" sid="3894052817631705" type="System">
+                                                    <param id="0" name="Variable">P1energy</param>
+                                                    <param id="1" name="Value">2</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="155685365746743">
                             <conditions>
@@ -119,6 +272,7 @@
                             </conditions>
                             <actions>
                                 <action id="-9" name="Destroy" sid="1905703113225717" type="P1attack01" />
+                                <action id="-9" name="Destroy" sid="2750848478588436" type="P1attack02" />
                                 <action id="4" name="Set animation" sid="4688014618970729" type="PlayerA">
                                     <param id="0" name="Animation">&quot;walk&quot;</param>
                                     <param id="1" name="From">1</param>
@@ -130,6 +284,8 @@
                                 <condition behavior="Platform" id="9" name="On landed" sid="491840344891178" type="PlayerA" />
                             </conditions>
                             <actions>
+                                <action id="-9" name="Destroy" sid="7834789732180783" type="P1attack01" />
+                                <action id="-9" name="Destroy" sid="6968570824958812" type="P1attack02" />
                                 <action id="4" name="Set animation" sid="7371410306105146" type="PlayerA">
                                     <param id="0" name="Animation">&quot;idle&quot;</param>
                                     <param id="1" name="From">1</param>
@@ -144,6 +300,8 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="-9" name="Destroy" sid="3131325465077174" type="P1attack01" />
+                                <action id="-9" name="Destroy" sid="2169574193028294" type="P1attack02" />
                                 <action id="4" name="Set animation" sid="8682554315320627" type="PlayerA">
                                     <param id="0" name="Animation">&quot;walk&quot;</param>
                                     <param id="1" name="From">1</param>
@@ -155,6 +313,8 @@
                                 <condition behavior="Platform" id="7" name="On stopped" sid="327320277744347" type="PlayerA" />
                             </conditions>
                             <actions>
+                                <action id="-9" name="Destroy" sid="6744841189078546" type="P1attack01" />
+                                <action id="-9" name="Destroy" sid="979455573690273" type="P1attack02" />
                                 <action id="4" name="Set animation" sid="3558692446216767" type="PlayerA">
                                     <param id="0" name="Animation">&quot;idle&quot;</param>
                                     <param id="1" name="From">1</param>
@@ -179,109 +339,197 @@
                 </event-group>
                 <event-group description="" sid="878026824111536" title="P2">
                     <sub-events>
-                        <event-block sid="3940913708660809">
+                        <event-block sid="6894322703434073">
                             <conditions>
-                                <condition id="5" name="Compare axis" sid="4400863547182596" type="Gamepad">
-                                    <param id="0" name="Gamepad">1</param>
-                                    <param id="1" name="Axis">0</param>
-                                    <param id="2" name="Comparison">4</param>
-                                    <param id="3" name="Value">0</param>
-                                </condition>
-                                <condition id="-14" name="Compare variable" sid="269025918524922" type="System">
+                                <condition id="-14" name="Compare variable" sid="526261566523564" type="System">
                                     <param id="0" name="Variable">Active</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">1</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action behavior="Platform" id="7" name="Simulate control" sid="9633053166585735" type="PlayerB">
-                                    <param id="0" name="Control">1</param>
-                                </action>
-                                <action id="7" name="Set mirrored" sid="139399939466355" type="PlayerB">
-                                    <param id="0" name="State">1</param>
-                                </action>
-                                <action id="-11" name="Subtract from" sid="7880598920490528" type="System">
-                                    <param id="0" name="Variable">P2energy</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="5025241984320216">
-                            <conditions>
-                                <condition id="5" name="Compare axis" sid="3201009137546904" type="Gamepad">
-                                    <param id="0" name="Gamepad">1</param>
-                                    <param id="1" name="Axis">0</param>
-                                    <param id="2" name="Comparison">2</param>
-                                    <param id="3" name="Value">0</param>
-                                </condition>
-                                <condition id="-14" name="Compare variable" sid="8163014999634277" type="System">
-                                    <param id="0" name="Variable">Active</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Platform" id="7" name="Simulate control" sid="2763790544928448" type="PlayerB">
-                                    <param id="0" name="Control">0</param>
-                                </action>
-                                <action id="7" name="Set mirrored" sid="5862768888458725" type="PlayerB">
-                                    <param id="0" name="State">0</param>
-                                </action>
-                                <action id="-11" name="Subtract from" sid="1211816771065098" type="System">
-                                    <param id="0" name="Variable">P2energy</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="7409232911976264">
-                            <conditions>
-                                <condition id="3" name="Is button down" sid="9157928351483122" type="Gamepad">
-                                    <param id="0" name="Gamepad">1</param>
-                                    <param id="1" name="Button">0</param>
-                                </condition>
-                                <condition id="-14" name="Compare variable" sid="5572395629013628" type="System">
-                                    <param id="0" name="Variable">Active</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Platform" id="7" name="Simulate control" sid="9463929030556773" type="PlayerB">
-                                    <param id="0" name="Control">2</param>
-                                </action>
-                                <action id="-11" name="Subtract from" sid="4909024068602667" type="System">
-                                    <param id="0" name="Variable">P2energy</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="9872003805273517">
-                            <conditions>
-                                <condition id="6" name="On button pressed" sid="1036022705142561" type="Gamepad">
-                                    <param id="0" name="Gamepad">1</param>
-                                    <param id="1" name="Button">2</param>
-                                </condition>
-                                <condition id="-14" name="Compare variable" sid="5586696042038546" type="System">
-                                    <param id="0" name="Variable">Active</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="9871916293306573" type="PlayerB">
-                                    <param id="0" name="Animation">&quot;Attack&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action id="0" name="Spawn another object" sid="597866222351613" type="PlayerB">
-                                    <param id="0" name="Object">P2attack01</param>
-                                    <param id="1" name="Layer">3</param>
-                                    <param id="2" name="Image point">1</param>
-                                </action>
-                                <action id="-11" name="Subtract from" sid="27042844409465" type="System">
-                                    <param id="0" name="Variable">P2energy</param>
-                                    <param id="1" name="Value">10</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="9872003805273517">
+                                    <conditions>
+                                        <condition id="6" name="On button pressed" sid="1036022705142561" type="Gamepad">
+                                            <param id="0" name="Gamepad">1</param>
+                                            <param id="1" name="Button">2</param>
+                                        </condition>
+                                        <condition id="2" name="Key is down" sid="6382013837356838" type="Keyboard">
+                                            <param id="0" name="Key">32 (Space)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="9871916293306573" type="PlayerB">
+                                            <param id="0" name="Animation">&quot;Attack&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="0" name="Spawn another object" sid="597866222351613" type="PlayerB">
+                                            <param id="0" name="Object">P2attack01</param>
+                                            <param id="1" name="Layer">3</param>
+                                            <param id="2" name="Image point">1</param>
+                                        </action>
+                                        <action id="0" name="Spawn another object" sid="7027820624667019" type="PlayerB">
+                                            <param id="0" name="Object">P2attack02</param>
+                                            <param id="1" name="Layer">3</param>
+                                            <param id="2" name="Image point">2</param>
+                                        </action>
+                                        <action id="7" name="Play (by name)" sid="7942390423392567" type="Audio">
+                                            <param id="0" name="Folder">0</param>
+                                            <param id="1" name="Audio file name">choose(&quot;player_attack_03&quot;,&quot;player_attack_04&quot;,&quot;player_attack_05&quot;)</param>
+                                            <param id="3" name="Loop">0</param>
+                                            <param id="4" name="Volume">-10</param>
+                                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="8362068684036313">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="7507939472025225" type="System">
+                                                    <param id="0" name="Variable">ValidDamageAttackP2</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">time</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="8584410067129281" type="System">
+                                                    <param id="0" name="Variable">ValidDamageAttackP2</param>
+                                                    <param id="1" name="Value">time+DELAYBETWEENVALIDATIONS</param>
+                                                </action>
+                                                <action id="-11" name="Subtract from" sid="4501729554703341" type="System">
+                                                    <param id="0" name="Variable">P2energy</param>
+                                                    <param id="1" name="Value">20</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block any="1" sid="7409232911976264">
+                                    <conditions>
+                                        <condition id="3" name="Is button down" sid="9157928351483122" type="Gamepad">
+                                            <param id="0" name="Gamepad">1</param>
+                                            <param id="1" name="Button">0</param>
+                                        </condition>
+                                        <condition id="2" name="Key is down" sid="4636581112454609" type="Keyboard">
+                                            <param id="0" name="Key">87 (W)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="9463929030556773" type="PlayerB">
+                                            <param id="0" name="Control">2</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="1967697281855888">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="887778883117588" type="System">
+                                                    <param id="0" name="Variable">ValidDamageMoveP2</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">time</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="7258143432565245" type="System">
+                                                    <param id="0" name="Variable">ValidDamageMoveP2</param>
+                                                    <param id="1" name="Value">time+DELAYBETWEENVALIDATIONS</param>
+                                                </action>
+                                                <action id="-11" name="Subtract from" sid="1983498148604428" type="System">
+                                                    <param id="0" name="Variable">P2energy</param>
+                                                    <param id="1" name="Value">2</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block any="1" sid="5025241984320216">
+                                    <conditions>
+                                        <condition id="5" name="Compare axis" sid="3201009137546904" type="Gamepad">
+                                            <param id="0" name="Gamepad">1</param>
+                                            <param id="1" name="Axis">0</param>
+                                            <param id="2" name="Comparison">2</param>
+                                            <param id="3" name="Value">0</param>
+                                        </condition>
+                                        <condition id="2" name="Key is down" sid="9870174397816908" type="Keyboard">
+                                            <param id="0" name="Key">65 (A)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="2763790544928448" type="PlayerB">
+                                            <param id="0" name="Control">0</param>
+                                        </action>
+                                        <action id="7" name="Set mirrored" sid="5862768888458725" type="PlayerB">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="5241895692688489">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="8692516231004605" type="System">
+                                                    <param id="0" name="Variable">ValidDamageMoveP2</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">time</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="8574065346989463" type="System">
+                                                    <param id="0" name="Variable">ValidDamageMoveP2</param>
+                                                    <param id="1" name="Value">time+DELAYBETWEENVALIDATIONS</param>
+                                                </action>
+                                                <action id="-11" name="Subtract from" sid="6421515419789134" type="System">
+                                                    <param id="0" name="Variable">P2energy</param>
+                                                    <param id="1" name="Value">2</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block any="1" sid="3940913708660809">
+                                    <conditions>
+                                        <condition id="5" name="Compare axis" sid="4400863547182596" type="Gamepad">
+                                            <param id="0" name="Gamepad">1</param>
+                                            <param id="1" name="Axis">0</param>
+                                            <param id="2" name="Comparison">4</param>
+                                            <param id="3" name="Value">0</param>
+                                        </condition>
+                                        <condition id="2" name="Key is down" sid="7393116505390142" type="Keyboard">
+                                            <param id="0" name="Key">68 (D)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="9633053166585735" type="PlayerB">
+                                            <param id="0" name="Control">1</param>
+                                        </action>
+                                        <action id="7" name="Set mirrored" sid="139399939466355" type="PlayerB">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-11" name="Subtract from" sid="7880598920490528" type="System">
+                                            <param id="0" name="Variable">P2energy</param>
+                                            <param id="1" name="Value">2</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="657765174688249">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="4504454281500908" type="System">
+                                                    <param id="0" name="Variable">ValidDamageMoveP2</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">time</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="767825235862981" type="System">
+                                                    <param id="0" name="Variable">ValidDamageMoveP2</param>
+                                                    <param id="1" name="Value">time+DELAYBETWEENVALIDATIONS</param>
+                                                </action>
+                                                <action id="-11" name="Subtract from" sid="8121096096937623" type="System">
+                                                    <param id="0" name="Variable">P2energy</param>
+                                                    <param id="1" name="Value">2</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="9153055984679123">
                             <conditions>
@@ -291,6 +539,7 @@
                             </conditions>
                             <actions>
                                 <action id="-9" name="Destroy" sid="5618796237337945" type="P2attack01" />
+                                <action id="-9" name="Destroy" sid="5036249676872616" type="P2attack02" />
                                 <action id="4" name="Set animation" sid="4353011121728213" type="PlayerB">
                                     <param id="0" name="Animation">&quot;walk&quot;</param>
                                     <param id="1" name="From">1</param>
@@ -302,6 +551,8 @@
                                 <condition behavior="Platform" id="9" name="On landed" sid="1758212229312679" type="PlayerB" />
                             </conditions>
                             <actions>
+                                <action id="-9" name="Destroy" sid="2928406383570125" type="P2attack01" />
+                                <action id="-9" name="Destroy" sid="5812506488008347" type="P2attack02" />
                                 <action id="4" name="Set animation" sid="5303227586721487" type="PlayerB">
                                     <param id="0" name="Animation">&quot;idle&quot;</param>
                                     <param id="1" name="From">1</param>
@@ -316,6 +567,8 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="-9" name="Destroy" sid="3568609923843428" type="P2attack01" />
+                                <action id="-9" name="Destroy" sid="1342900359350349" type="P2attack02" />
                                 <action id="4" name="Set animation" sid="4233818705712418" type="PlayerB">
                                     <param id="0" name="Animation">&quot;walk&quot;</param>
                                     <param id="1" name="From">1</param>
@@ -327,6 +580,8 @@
                                 <condition behavior="Platform" id="7" name="On stopped" sid="5082663875433273" type="PlayerB" />
                             </conditions>
                             <actions>
+                                <action id="-9" name="Destroy" sid="5249525213402597" type="P2attack01" />
+                                <action id="-9" name="Destroy" sid="5853781624570361" type="P2attack02" />
                                 <action id="4" name="Set animation" sid="386709379737922" type="PlayerB">
                                     <param id="0" name="Animation">&quot;idle&quot;</param>
                                     <param id="1" name="From">1</param>
@@ -353,35 +608,270 @@
         </event-group>
         <event-group description="" sid="1868374437622833" title="Enemy Damage">
             <sub-events>
-                <event-block sid="6367045574058267">
+                <event-block sid="8537621045365794">
                     <conditions>
-                        <condition id="-11" name="For Each" sid="9036304444477666" type="System">
-                            <param id="0" name="Object">Enemies</param>
+                        <condition id="-6" name="Every X seconds" sid="4067000821017138" type="System">
+                            <param id="0" name="Interval (seconds)">0.05</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="7028517572295139" type="Enemies">
+                            <param id="0" name="Instance variable">InvulDuration</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0.01</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="1861581984365808" type="System">
+                            <param id="0" name="Variable">Active</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="7157957730545073" type="Enemies">
+                            <param id="0" name="Instance variable">InvulDuration</param>
+                            <param id="1" name="Value">0.05</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="6190428304456147" type="Enemies">
+                            <param id="0" name="Opacity">Self.Opacity&gt;50?50:80</param>
+                        </action>
+                    </actions>
                     <sub-events>
-                        <event-block sid="864969436822926">
+                        <event-block sid="9126658119936879">
                             <conditions>
-                                <condition id="0" name="On collision with another object" sid="9649266626024167" type="Enemies">
-                                    <param id="0" name="Object">P1attack01</param>
+                                <condition id="-7" name="Compare instance variable" sid="6523939284318728" type="Enemies">
+                                    <param id="0" name="Instance variable">InvulDuration</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0.01</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="590310994531883" type="Enemies">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                                <action id="-12" name="Subtract from" sid="3419918200304355" type="Enemies">
+                                    <param id="0" name="Instance variable">InvulDuration</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="864969436822926">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="9649266626024167" type="Enemies">
+                            <param id="0" name="Object">PlayerAttack</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="6754123585768447" type="Enemies">
+                            <param id="0" name="Instance variable">InvulDuration</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0.01</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="7434764382860819" type="System">
+                            <param id="0" name="Variable">Active</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="2136665348752273" type="Enemies">
+                            <param id="0" name="Instance variable">HP</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="3299617667010413" type="Enemies">
+                            <param id="0" name="Instance variable">InvulDuration</param>
+                            <param id="1" name="Value">0.6</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="6493795384493763">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="5739691650671574" type="Enemies">
+                                    <param id="0" name="Instance variable">HP</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0.01</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="-9" name="Destroy" sid="5457278964073696" type="Enemies" />
                             </actions>
                         </event-block>
-                        <event-block sid="4996185267359087">
+                    </sub-events>
+                </event-block>
+                <event-block sid="3543209435114531">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="7463882473803056" type="System">
+                            <param id="0" name="Variable">Active</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="29849713058955">
                             <conditions>
-                                <condition id="0" name="On collision with another object" sid="2337993539818516" type="Enemies">
-                                    <param id="0" name="Object">P2attack01</param>
-                                </condition>
+                                <condition id="-19" name="On destroyed" sid="4482848598544649" type="Manticore" />
                             </conditions>
                             <actions>
-                                <action id="-9" name="Destroy" sid="90659590540585" type="Enemies" />
+                                <action id="0" name="Spawn another object" sid="4771860073998723" type="Manticore">
+                                    <param id="0" name="Object">Manticore_food</param>
+                                    <param id="1" name="Layer">3</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1670619093576317">
+                            <conditions>
+                                <condition id="-19" name="On destroyed" sid="2236876644361339" type="Fly" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="8673090261514754" type="Fly">
+                                    <param id="0" name="Object">Bat_food</param>
+                                    <param id="1" name="Layer">3</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2849034304058133">
+                            <conditions>
+                                <condition id="-19" name="On destroyed" sid="1695621347022637" type="Shooter" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="1881597371050256" type="Shooter">
+                                    <param id="0" name="Object">Archer_food</param>
+                                    <param id="1" name="Layer">3</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="11" name="Set collisions enabled" sid="4251248745871348" type="Archer_food">
+                                    <param id="0" name="Collisions">0</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="414559859572835">
+            <conditions>
+                <condition id="11" inverted="1" name="Collisions enabled" sid="1769514135159324" type="Archer_food" />
+                <condition id="-2" name="Compare Y" sid="7619780973876792" type="Archer_food">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="Y co-ordinate">280</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="11" name="Set collisions enabled" sid="5041475475578437" type="Archer_food">
+                    <param id="0" name="Collisions">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="4628823115743774" title="Player Damage">
+            <sub-events>
+                <event-block sid="488412273038886">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="7756430013458627" type="Enemies">
+                            <param id="0" name="Object">PlayerA</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="663770782598269" type="System">
+                            <param id="0" name="Variable">Active</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="5637018457321949" type="System">
+                            <param id="0" name="Variable">P1energy</param>
+                            <param id="1" name="Value">50</param>
+                        </action>
+                        <action id="7" name="Play (by name)" sid="8980514594139676" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">choose(&quot;player_hurt_01&quot;,&quot;player_hurt_03&quot;,&quot;player_hurt_04&quot;,&quot;player_hurt_05&quot;,&quot;player_hurt_06&quot;,&quot;player_hurt_07&quot;)</param>
+                            <param id="3" name="Loop">0</param>
+                            <param id="4" name="Volume">-10</param>
+                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="397786739385999">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="2829209675703458" type="Enemies">
+                            <param id="0" name="Object">PlayerB</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="3887769618163599" type="System">
+                            <param id="0" name="Variable">Active</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="9672147650607256" type="System">
+                            <param id="0" name="Variable">P2energy</param>
+                            <param id="1" name="Value">50</param>
+                        </action>
+                        <action id="7" name="Play (by name)" sid="5994405001445873" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">choose(&quot;player_hurt_01&quot;,&quot;player_hurt_03&quot;,&quot;player_hurt_04&quot;,&quot;player_hurt_05&quot;,&quot;player_hurt_06&quot;,&quot;player_hurt_07&quot;)</param>
+                            <param id="3" name="Loop">0</param>
+                            <param id="4" name="Volume">-10</param>
+                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5110728546208478">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="2452540358390996" type="System">
+                            <param id="0" name="Variable">P1energy</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="5941075014366812" type="PlayerA">
+                            <param id="0" name="Object">player_food</param>
+                            <param id="1" name="Layer">3</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="2782684783949619" type="PlayerA" />
+                        <action id="-9" name="Set value" sid="7683570862007549" type="System">
+                            <param id="0" name="Variable">skullHPregen</param>
+                            <param id="1" name="Value">150</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8687236793192411">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="8223721450932651" type="System">
+                            <param id="0" name="Variable">P2energy</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="5416868956743512" type="PlayerB">
+                            <param id="0" name="Object">player_food</param>
+                            <param id="1" name="Layer">3</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="9712806213897707" type="PlayerB" />
+                        <action id="-9" name="Set value" sid="2343483804414694" type="System">
+                            <param id="0" name="Variable">skullHPregen</param>
+                            <param id="1" name="Value">500</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1401573608808136">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="5691874769577392" type="System">
+                            <param id="0" name="Variable">P2energy</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="8011335866254914" type="System">
+                            <param id="0" name="Variable">P1energy</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Restart layout" sid="641883126996576" type="System" />
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>

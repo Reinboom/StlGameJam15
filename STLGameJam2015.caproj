@@ -10,6 +10,7 @@
     <unique-id>2m2oqhlgof90t</unique-id>
     <saved-with-version>19500</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
@@ -17,6 +18,7 @@
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
+        <plugin author="Scirra" id="progressbar" version="1">Progress bar</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
@@ -27,6 +29,7 @@
     <used-effects>
         <effect author="Scirra" id="burn">Burn</effect>
         <effect author="Scirra" id="tint">Tint</effect>
+        <effect author="Brad Larson" id="vignette">Vignette</effect>
         <effect author="Scirra" id="warpradial">Warp Radial</effect>
     </used-effects>
     <configurations>
@@ -62,6 +65,36 @@
             </object-type>
             <object-type name="Timer" sid="4879787006889489">
                 <plugin id="Text" />
+            </object-type>
+            <object-type name="ShooterSting" sid="2793402428605806">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9683841262445257" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dropbox\Dropbox\STLGameJam2015\archerSplash.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ManticoreSting" sid="8743203945768678">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6087793301509701" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dropbox\Dropbox\STLGameJam2015\manticore_splash.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="MutabatSting" sid="8611287465609231">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1307369791090668" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dropbox\Dropbox\STLGameJam2015\dread_bat_splash.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="P2bar" sid="7483075009389222">
+                <plugin id="progressbar" />
+            </object-type>
+            <object-type name="P1bar" sid="3362967607292967">
+                <plugin id="progressbar" />
             </object-type>
         </object-folder>
         <object-folder name="Players">
@@ -162,6 +195,7 @@
                     <animation framecount="8" loop="0" name="attack" pingpong="0" repeatcount="1" repeatto="0" sid="7794956096348113" speed="20">
                         <frame duration="1" hotspotX="0.328571" hotspotY="0.981818" original-source="D:\Dropbox\Dropbox\STLGameJam2015\A_attack5.png">
                             <image-point name="attack01" x="0.809524" y="0.609091" />
+                            <image-point name="attack02" x="0.82381" y="0.618182" />
                             <collision-poly>
                                 <point x="0.166667" y="0.5" />
                                 <point x="0.366667" y="0.322727" />
@@ -175,6 +209,7 @@
                         </frame>
                         <frame duration="1" hotspotX="0.328571" hotspotY="0.981818" original-source="D:\Dropbox\Dropbox\STLGameJam2015\A_attack2.png">
                             <image-point name="attack01" x="0.647619" y="0.318182" />
+                            <image-point name="attack02" x="0.685714" y="0.231818" />
                             <collision-poly>
                                 <point x="0.166667" y="0.5" />
                                 <point x="0.366667" y="0.322727" />
@@ -188,6 +223,7 @@
                         </frame>
                         <frame duration="1" hotspotX="0.328571" hotspotY="0.981818" original-source="D:\Dropbox\Dropbox\STLGameJam2015\A_attack1.png">
                             <image-point name="attack01" x="0.542857" y="0.254545" />
+                            <image-point name="attack02" x="0.557143" y="0.136364" />
                             <collision-poly>
                                 <point x="0.166667" y="0.5" />
                                 <point x="0.366667" y="0.322727" />
@@ -201,6 +237,7 @@
                         </frame>
                         <frame duration="1" hotspotX="0.328571" hotspotY="0.981818" original-source="D:\Dropbox\Dropbox\STLGameJam2015\A_attack2.png">
                             <image-point name="attack01" x="0.642857" y="0.309091" />
+                            <image-point name="attack02" x="0.690476" y="0.195455" />
                             <collision-poly>
                                 <point x="0.166667" y="0.5" />
                                 <point x="0.366667" y="0.322727" />
@@ -214,6 +251,7 @@
                         </frame>
                         <frame duration="1" hotspotX="0.328571" hotspotY="0.981818" original-source="D:\Dropbox\Dropbox\STLGameJam2015\A_attack3.png">
                             <image-point name="attack01" x="0.733333" y="0.395455" />
+                            <image-point name="attack02" x="0.804762" y="0.295455" />
                             <collision-poly>
                                 <point x="0.166667" y="0.5" />
                                 <point x="0.366667" y="0.322727" />
@@ -227,6 +265,7 @@
                         </frame>
                         <frame duration="1" hotspotX="0.328571" hotspotY="0.981818" original-source="D:\Dropbox\Dropbox\STLGameJam2015\A_attack4.png">
                             <image-point name="attack01" x="0.785714" y="0.495455" />
+                            <image-point name="attack02" x="0.885714" y="0.431818" />
                             <collision-poly>
                                 <point x="0.166667" y="0.5" />
                                 <point x="0.366667" y="0.322727" />
@@ -240,6 +279,7 @@
                         </frame>
                         <frame duration="1" hotspotX="0.328571" hotspotY="0.981818" original-source="D:\Dropbox\Dropbox\STLGameJam2015\A_attack5.png">
                             <image-point name="attack01" x="0.814286" y="0.609091" />
+                            <image-point name="attack02" x="0.847619" y="0.604545" />
                             <collision-poly>
                                 <point x="0.166667" y="0.5" />
                                 <point x="0.366667" y="0.322727" />
@@ -253,6 +293,7 @@
                         </frame>
                         <frame duration="1" hotspotX="0.328571" hotspotY="0.981818" original-source="D:\Dropbox\Dropbox\STLGameJam2015\A_attack6.png">
                             <image-point name="attack01" x="0.809524" y="0.722727" />
+                            <image-point name="attack02" x="0.838095" y="0.727273" />
                             <collision-poly>
                                 <point x="0.166667" y="0.5" />
                                 <point x="0.366667" y="0.322727" />
@@ -353,6 +394,7 @@
                     <animation framecount="8" loop="0" name="attack" pingpong="0" repeatcount="1" repeatto="0" sid="2599911728812066" speed="20">
                         <frame duration="1" hotspotX="0.333333" hotspotY="0.977273">
                             <image-point name="attack01" x="0.82381" y="0.609091" />
+                            <image-point name="attack02" x="0.82381" y="0.618182" />
                             <collision-poly>
                                 <point x="0.166667" y="0.5" />
                                 <point x="0.366667" y="0.322727" />
@@ -367,6 +409,7 @@
                         <frame duration="1" hotspotX="0.333333" hotspotY="0.977273">
                             <image-point name="front" x="0.652381" y="0.304545" />
                             <image-point name="attack01" x="0.82381" y="0.609091" />
+                            <image-point name="attack02" x="0.685714" y="0.231818" />
                             <collision-poly>
                                 <point x="0.166667" y="0.5" />
                                 <point x="0.366667" y="0.322727" />
@@ -381,6 +424,7 @@
                         <frame duration="1" hotspotX="0.333333" hotspotY="0.977273" original-source="D:\Dropbox\Dropbox\STLGameJam2015\A_attack1.png">
                             <image-point name="front" x="0.547619" y="0.254545" />
                             <image-point name="attack01" x="0.82381" y="0.609091" />
+                            <image-point name="attack02" x="0.557143" y="0.136364" />
                             <collision-poly>
                                 <point x="0.166667" y="0.5" />
                                 <point x="0.366667" y="0.322727" />
@@ -395,6 +439,7 @@
                         <frame duration="1" hotspotX="0.333333" hotspotY="0.977273" original-source="D:\Dropbox\Dropbox\STLGameJam2015\A_attack2.png">
                             <image-point name="front" x="0.647619" y="0.309091" />
                             <image-point name="attack01" x="0.82381" y="0.609091" />
+                            <image-point name="attack02" x="0.690476" y="0.195455" />
                             <collision-poly>
                                 <point x="0.166667" y="0.5" />
                                 <point x="0.366667" y="0.322727" />
@@ -409,6 +454,7 @@
                         <frame duration="1" hotspotX="0.333333" hotspotY="0.977273" original-source="D:\Dropbox\Dropbox\STLGameJam2015\A_attack3.png">
                             <image-point name="front" x="0.733333" y="0.386364" />
                             <image-point name="attack01" x="0.82381" y="0.609091" />
+                            <image-point name="attack02" x="0.804762" y="0.295455" />
                             <collision-poly>
                                 <point x="0.166667" y="0.5" />
                                 <point x="0.366667" y="0.322727" />
@@ -423,6 +469,7 @@
                         <frame duration="1" hotspotX="0.333333" hotspotY="0.977273" original-source="D:\Dropbox\Dropbox\STLGameJam2015\A_attack4.png">
                             <image-point name="front" x="0.804762" y="0.495455" />
                             <image-point name="attack01" x="0.82381" y="0.609091" />
+                            <image-point name="attack02" x="0.885714" y="0.431818" />
                             <collision-poly>
                                 <point x="0.166667" y="0.5" />
                                 <point x="0.366667" y="0.322727" />
@@ -437,6 +484,7 @@
                         <frame duration="1" hotspotX="0.333333" hotspotY="0.977273" original-source="D:\Dropbox\Dropbox\STLGameJam2015\A_attack5.png">
                             <image-point name="front" x="0.82381" y="0.6" />
                             <image-point name="attack01" x="0.82381" y="0.609091" />
+                            <image-point name="attack02" x="0.847619" y="0.604545" />
                             <collision-poly>
                                 <point x="0.166667" y="0.5" />
                                 <point x="0.366667" y="0.322727" />
@@ -451,6 +499,7 @@
                         <frame duration="1" hotspotX="0.333333" hotspotY="0.977273" original-source="D:\Dropbox\Dropbox\STLGameJam2015\A_attack6.png">
                             <image-point name="front" x="0.842857" y="0.727273" />
                             <image-point name="attack01" x="0.82381" y="0.609091" />
+                            <image-point name="attack02" x="0.838095" y="0.727273" />
                             <collision-poly>
                                 <point x="0.166667" y="0.5" />
                                 <point x="0.366667" y="0.322727" />
@@ -462,6 +511,22 @@
                                 <point x="0.247619" y="0.768182" />
                             </collision-poly>
                         </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="P1attack02" sid="8833523228720873">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2668986185254983" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="P2attack02" sid="4448925918630561">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8329914175564188" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -840,12 +905,191 @@
             </effects>
             <texture original-source="C:\Users\deichling\Desktop\GAMES\GGJ2015\StlGameJam15\Sprites\fire.png" />
         </object-type>
+        <object-type name="Manticore_food" sid="7649292904355912">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="8600604263421631">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5922714857334137" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dropbox\Dropbox\STLGameJam2015\manticore_steak.png">
+                        <collision-poly>
+                            <point x="0.295" y="0.295" />
+                            <point x="0.5" y="0.115" />
+                            <point x="0.875" y="0.125" />
+                            <point x="0.98" y="0.5" />
+                            <point x="0.765" y="0.765" />
+                            <point x="0.5" y="0.855" />
+                            <point x="0.135" y="0.865" />
+                            <point x="0.02" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Bat_food" sid="6530013201744206">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="7677029049364607">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5902618154447544" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dropbox\Dropbox\STLGameJam2015\bat_wing.png">
+                        <collision-poly>
+                            <point x="0.295" y="0.295" />
+                            <point x="0.5" y="0.115" />
+                            <point x="0.875" y="0.125" />
+                            <point x="0.98" y="0.5" />
+                            <point x="0.765" y="0.765" />
+                            <point x="0.5" y="0.855" />
+                            <point x="0.135" y="0.865" />
+                            <point x="0.02" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Archer_food" sid="4017058592997193">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="9145862852145302">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2810193350070885" speed="5">
+                    <frame duration="1" hotspotX="0.557143" hotspotY="0.568627" original-source="D:\Dropbox\Dropbox\STLGameJam2015\archer_ribs.png">
+                        <collision-poly>
+                            <point x="0.192857" y="0.235294" />
+                            <point x="0.557143" y="0.143791" />
+                            <point x="0.928571" y="0.228758" />
+                            <point x="0.978571" y="0.568627" />
+                            <point x="0.764286" y="0.75817" />
+                            <point x="0.557143" y="0.96732" />
+                            <point x="0.214286" y="0.882353" />
+                            <point x="0.0857143" y="0.568627" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="player_food" sid="8462453560994507">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="6941910547584996">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1317767103189576" speed="5">
+                    <frame duration="1" hotspotX="0.676692" hotspotY="0.525424" original-source="D:\Dropbox\Dropbox\STLGameJam2015\firends_head.png">
+                        <collision-poly>
+                            <point x="0.150376" y="0.129944" />
+                            <point x="0.676692" y="0.0169492" />
+                            <point x="0.969925" y="0.305085" />
+                            <point x="0.954887" y="0.734463" />
+                            <point x="0.676692" y="0.983051" />
+                            <point x="0.233083" y="0.858757" />
+                            <point x="0.0150376" y="0.525424" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Audio" sid="8901901275689823">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="MS01" sid="3275647032136846">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="LastSpawnTime" sid="2885605404974151" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4365053513153434" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MS02" sid="4450583775716462">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="LastSpawnTime" sid="4935968239606865" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4664242874939955" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MS03" sid="22003157516173">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="LastSpawnTime" sid="1700338144642992" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1307979814822383" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MS04" sid="6692505021695005">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="LastSpawnTime" sid="2516330911817015" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="722473920282471" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MS05" sid="6493334030846622">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="LastSpawnTime" sid="1110031794868597" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3075222710047659" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Enemies" plugin-id="Sprite" sid="6268585446215248">
             <members>
                 <member>Fly</member>
                 <member>Manticore</member>
+                <member>Shooter</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="HP" sid="1315837513817523" type="number" />
+                <instance-variable name="InvulDuration" sid="1516154107693714" type="number" />
+            </instance-variables>
+        </family>
+        <family name="Players" plugin-id="Sprite" sid="5106465466691916">
+            <members>
+                <member>PlayerA</member>
+                <member>PlayerB</member>
+            </members>
+        </family>
+        <family name="Food" plugin-id="Sprite" sid="9556013726435387">
+            <members>
+                <member>Archer_food</member>
+                <member>Bat_food</member>
+                <member>Manticore_food</member>
+            </members>
+        </family>
+        <family name="PlayerAttack" plugin-id="Sprite" sid="3644987076788355">
+            <members>
+                <member>P1attack01</member>
+                <member>P1attack02</member>
+                <member>P2attack01</member>
+                <member>P2attack02</member>
             </members>
         </family>
     </families>
@@ -865,15 +1109,52 @@
         <event-sheet>Spawner.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="Mouse" uid="23" />
-        <global-instance type="Keyboard" uid="41" />
-        <global-instance type="Gamepad" uid="43">
+        <global-instance type="Mouse" uid="50" />
+        <global-instance type="Keyboard" uid="64" />
+        <global-instance type="Gamepad" uid="65">
             <properties>
                 <analog-deadzone>25</analog-deadzone>
             </properties>
         </global-instance>
+        <global-instance type="Audio" uid="66">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+                <speed-of-sound>5000</speed-of-sound>
+                <doppler-factor>1</doppler-factor>
+            </properties>
+        </global-instance>
     </global-instances>
-    <sounds-folder />
+    <sounds-folder>
+        <file name="roar.ogg" />
+        <file name="bat_01.ogg" />
+        <file name="bat_02.ogg" />
+        <file name="bat_03.ogg" />
+        <file name="timer_beep_01.ogg" />
+        <file name="timer_burp_04.ogg" />
+        <file name="archer_01.ogg" />
+        <file name="archer_02.ogg" />
+        <file name="archer_03.ogg" />
+        <file name="archer_05.ogg" />
+        <file name="archer_06.ogg" />
+        <file name="player_attack_03.ogg" />
+        <file name="player_attack_04.ogg" />
+        <file name="player_attack_05.ogg" />
+        <file name="player_hurt_01.ogg" />
+        <file name="player_hurt_03.ogg" />
+        <file name="player_hurt_04.ogg" />
+        <file name="player_hurt_05.ogg" />
+        <file name="player_hurt_06.ogg" />
+        <file name="player_hurt_07.ogg" />
+    </sounds-folder>
     <music-folder />
     <files-folder>
         <file-folder name="Icons">
