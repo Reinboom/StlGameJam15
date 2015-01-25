@@ -1109,9 +1109,9 @@
         <event-sheet>Spawner.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="Mouse" uid="41" />
-        <global-instance type="Keyboard" uid="43" />
-        <global-instance type="Gamepad" uid="50">
+        <global-instance type="Mouse" uid="50" />
+        <global-instance type="Keyboard" uid="64" />
+        <global-instance type="Gamepad" uid="65">
             <properties>
                 <analog-deadzone>25</analog-deadzone>
             </properties>

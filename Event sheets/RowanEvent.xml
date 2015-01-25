@@ -586,6 +586,23 @@
                                     <param id="1" name="Layer">3</param>
                                     <param id="2" name="Image point">0</param>
                                 </action>
+                                <action id="11" name="Set collisions enabled" sid="4251248745871348" type="Archer_food">
+                                    <param id="0" name="Collisions">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="414559859572835">
+                            <conditions>
+                                <condition id="11" inverted="1" name="Collisions enabled" sid="1769514135159324" type="Archer_food" />
+                                <condition id="-2" name="Compare Y" sid="7619780973876792" type="Archer_food">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Y co-ordinate">300</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="11" name="Set collisions enabled" sid="5041475475578437" type="Archer_food">
+                                    <param id="0" name="Collisions">1</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
