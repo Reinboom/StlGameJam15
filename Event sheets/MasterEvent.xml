@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>MasterEvent</name>
+    <events>
+        <variable constant="0" name="WaveNumber" sid="9678532229130141" static="0" type="number">1</variable>
+        <variable constant="0" name="Timer" sid="5099190665228987" static="0" type="number">0</variable>
+        <variable constant="0" name="P1energy" sid="3874536787699269" static="0" type="number">10000</variable>
+        <variable constant="0" name="P2energy" sid="7875450304951391" static="0" type="number">10000</variable>
+        <variable constant="0" name="Active" sid="1061668562272985" static="0" type="number">0</variable>
+        <variable constant="1" name="EVENT_TICKTIMER" sid="4940678777472776" static="0" type="number">2</variable>
+        <variable constant="1" name="Event_StartTimer" sid="8397428748328552" static="0" type="number">1</variable>
+        <variable constant="0" name="EventDispatcher" sid="7445380354857727" static="0" type="number">0</variable>
+        <variable constant="0" name="CountdownValue" sid="9366589685244386" static="0" type="number">5</variable>
+        <event-group description="" sid="5464605505791358" title="Startup">
+            <sub-events>
+                <event-block sid="2493231037579446">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="9669566269981626" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="9340259046633882" type="P1attack01" />
+                        <action id="-9" name="Destroy" sid="3604510652311234" type="P2attack01" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="3562958665195552">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="7489735751296178" type="System" />
+                <condition id="-8" name="Compare two values" sid="7266227741507129" type="System">
+                    <param id="0" name="First value">EventDispatcher</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">EVENT_STARTTIMER</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="9945541439388011" type="System">
+                    <param id="0" name="Variable">EventDispatcher</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="5398860653987715" type="System">
+                    <param id="0" name="Variable">CountdownValue</param>
+                    <param id="1" name="Value">5</param>
+                </action>
+                <action id="-9" name="Set value" sid="2312813512497488" type="System">
+                    <param id="0" name="Variable">Active</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Set text" sid="6847493607860906" type="Countdown">
+                    <param id="0" name="Text">&quot;&quot; &amp; CountdownValue</param>
+                </action>
+                <action id="-15" name="Set visible" sid="5821938155536999" type="Countdown">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="4072152202768999" type="CountdownBG">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="7024689507539286" type="System">
+                    <param id="0" name="Variable">EventDispatcher</param>
+                    <param id="1" name="Value">EVENT_TICKTIMER</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6202202927274654">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="4441504396640386" type="System" />
+                <condition id="-8" name="Compare two values" sid="3501812309138415" type="System">
+                    <param id="0" name="First value">EventDispatcher</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">EVENT_TICKTIMER</param>
+                </condition>
+                <condition id="-6" name="Every X seconds" sid="4560337344998692" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="5982303685700073" type="System">
+                    <param id="0" name="Variable">CountdownValue</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Set text" sid="2014049978268814" type="Countdown">
+                    <param id="0" name="Text">&quot;&quot; &amp; CountdownValue</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="8845403316857261">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="1323920070373343" type="System">
+                            <param id="0" name="First value">CountdownValue</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="1256468408753402" type="System">
+                            <param id="0" name="Variable">EventDispatcher</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="3463034244261154" type="Countdown">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="3542497788603206" type="CountdownBG">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="4667929815874477" type="System">
+                            <param id="0" name="Variable">Active</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="6934689127523856">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="1831142282426411" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="9130375297032278" type="System">
+                    <param id="0" name="Variable">EventDispatcher</param>
+                    <param id="1" name="Value">EVENT_STARTTIMER</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8928606867176312">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="7516637691965721" type="System" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="5044227038562855" type="P1attack01">
+                    <param id="0" name="Object">PlayerA</param>
+                    <param id="1" name="Image point (optional)">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="3177899177115972" title="Energy system">
+            <sub-events>
+                <event-block sid="9013425251336627">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="1002711958268487" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="5233147776763342" type="HUD_P1energy">
+                            <param id="0" name="Text">P1energy</param>
+                        </action>
+                        <action id="0" name="Set text" sid="7400790597298569" type="HUD_P2energy">
+                            <param id="0" name="Text">P2energy</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="6721657475607907" title="Timer">
+            <sub-events>
+                <event-block sid="1486349347674258">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="6567574354922856" type="System">
+                            <param id="0" name="Interval (seconds)">0.1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="6455221599639263" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Value">0.1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5445222547397631">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="7994849816988524" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="7200733918554643" type="Timer">
+                            <param id="0" name="Text">Timer</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <include>RyanEvent</include>
+        <include>RowanEvent</include>
+        <include>ReinaEvent</include>
+    </events>
+</c2eventsheet>

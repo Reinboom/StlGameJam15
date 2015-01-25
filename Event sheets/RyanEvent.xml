@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>RyanEvent</name>
+    <events>
+        <variable constant="0" name="ManticoreRand" sid="8479887988990122" static="0" type="number">0</variable>
+        <event-group description="" sid="7412510037064216" title="Enemies">
+            <sub-events>
+                <event-block sid="7730730911771224">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="3248047993580997" type="System">
+                            <param id="0" name="Interval (seconds)">5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="8957785876691869" type="Sprite">
+                            <param id="0" name="Object">Manticore</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="1396269258639417" title="Fire">
+            <sub-events>
+                <event-block sid="6013950520679555">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="7954042336171863" type="System">
+                            <param id="0" name="Interval (seconds)">2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="8251704715484145">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="3672204718838258" type="System">
+                                    <param id="0" name="Object">Manticore</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="1748427854485562" type="System">
+                                    <param id="0" name="Variable">ManticoreRand</param>
+                                    <param id="1" name="Value">random(0,1)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="6071190897242688">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="5647071013926229" type="System">
+                                            <param id="0" name="Variable">ManticoreRand</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0.5</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-14" name="Toggle boolean" sid="7265471195065021" type="Manticore">
+                                            <param id="0" name="Instance variable">Attacking</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="7619169280135223" type="Manticore">
+                                            <param id="0" name="Animation">&quot;Attack&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="165833487541265">
+            <conditions>
+                <condition id="4" name="On finished" sid="6354080770102843" type="Manticore">
+                    <param id="0" name="Animation">&quot;Attack&quot;</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="691815591626848" type="Manticore">
+                    <param id="0" name="Instance variable">Attacking</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="4268951522166334" type="Manticore">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="9860095322179617" type="Manticore">
+                    <param id="0" name="Object">ManticoreFire</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="6153870757394476">
+                    <conditions>
+                        <condition id="7" name="Is mirrored" sid="6061182626110675" type="Manticore" />
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="8280399855462142" type="ManticoreFire">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="912375994982108" type="System">
+                            <param id="0" name="Seconds">0.75</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="9714614114240771" type="ManticoreFire" />
+                        <action id="-14" name="Toggle boolean" sid="5474515094626275" type="Manticore">
+                            <param id="0" name="Instance variable">Attacking</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9915184472605559">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="3293116055572757" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="5923641740407427" type="System">
+                            <param id="0" name="Seconds">0.75</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="3017049391679283" type="ManticoreFire" />
+                        <action id="-14" name="Toggle boolean" sid="7061158667038132" type="Manticore">
+                            <param id="0" name="Instance variable">Attacking</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="9070134571685166">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="3746150746016347" type="Manticore">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="X co-ordinate">PlayerA.X + 50</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="9444148747002508" type="Manticore">
+                    <param id="0" name="Instance variable">Attacking</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="5515598726535937" type="Manticore">
+                    <param id="0" name="Control">0</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="7586243509638281" type="Manticore">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="778231321823881">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="6526313365017068" type="Manticore">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="X co-ordinate">PlayerA.X - 50</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="4235070845084744" type="Manticore">
+                    <param id="0" name="Instance variable">Attacking</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="2395740520297612" type="Manticore">
+                    <param id="0" name="Control">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="583730965249776" type="Manticore">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4574668216783125">
+            <conditions>
+                <condition id="-2" name="Compare Y" sid="1428582914243526" type="Manticore">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="Y co-ordinate">PlayerA.Y</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="4734466889768481" type="Manticore">
+                    <param id="0" name="Instance variable">Attacking</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="3222356568413638" type="Manticore">
+                    <param id="0" name="Control">2</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
