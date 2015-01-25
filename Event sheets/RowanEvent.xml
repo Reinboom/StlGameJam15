@@ -173,6 +173,11 @@
                                     <param id="1" name="Layer">3</param>
                                     <param id="2" name="Image point">1</param>
                                 </action>
+                                <action id="0" name="Spawn another object" sid="2115753368826954" type="PlayerA">
+                                    <param id="0" name="Object">P1attack02</param>
+                                    <param id="1" name="Layer">3</param>
+                                    <param id="2" name="Image point">2</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="155685365746743">
@@ -183,6 +188,7 @@
                             </conditions>
                             <actions>
                                 <action id="-9" name="Destroy" sid="1905703113225717" type="P1attack01" />
+                                <action id="-9" name="Destroy" sid="2750848478588436" type="P1attack02" />
                                 <action id="4" name="Set animation" sid="4688014618970729" type="PlayerA">
                                     <param id="0" name="Animation">&quot;walk&quot;</param>
                                     <param id="1" name="From">1</param>
@@ -194,6 +200,8 @@
                                 <condition behavior="Platform" id="9" name="On landed" sid="491840344891178" type="PlayerA" />
                             </conditions>
                             <actions>
+                                <action id="-9" name="Destroy" sid="7834789732180783" type="P1attack01" />
+                                <action id="-9" name="Destroy" sid="6968570824958812" type="P1attack02" />
                                 <action id="4" name="Set animation" sid="7371410306105146" type="PlayerA">
                                     <param id="0" name="Animation">&quot;idle&quot;</param>
                                     <param id="1" name="From">1</param>
@@ -208,6 +216,8 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="-9" name="Destroy" sid="3131325465077174" type="P1attack01" />
+                                <action id="-9" name="Destroy" sid="2169574193028294" type="P1attack02" />
                                 <action id="4" name="Set animation" sid="8682554315320627" type="PlayerA">
                                     <param id="0" name="Animation">&quot;walk&quot;</param>
                                     <param id="1" name="From">1</param>
@@ -219,6 +229,8 @@
                                 <condition behavior="Platform" id="7" name="On stopped" sid="327320277744347" type="PlayerA" />
                             </conditions>
                             <actions>
+                                <action id="-9" name="Destroy" sid="6744841189078546" type="P1attack01" />
+                                <action id="-9" name="Destroy" sid="979455573690273" type="P1attack02" />
                                 <action id="4" name="Set animation" sid="3558692446216767" type="PlayerA">
                                     <param id="0" name="Animation">&quot;idle&quot;</param>
                                     <param id="1" name="From">1</param>
@@ -336,14 +348,19 @@
                                     <param id="0" name="Animation">&quot;Attack&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
+                                <action id="-11" name="Subtract from" sid="27042844409465" type="System">
+                                    <param id="0" name="Variable">P2energy</param>
+                                    <param id="1" name="Value">20</param>
+                                </action>
                                 <action id="0" name="Spawn another object" sid="597866222351613" type="PlayerB">
                                     <param id="0" name="Object">P2attack01</param>
                                     <param id="1" name="Layer">3</param>
                                     <param id="2" name="Image point">1</param>
                                 </action>
-                                <action id="-11" name="Subtract from" sid="27042844409465" type="System">
-                                    <param id="0" name="Variable">P2energy</param>
-                                    <param id="1" name="Value">20</param>
+                                <action id="0" name="Spawn another object" sid="7027820624667019" type="PlayerB">
+                                    <param id="0" name="Object">P2attack02</param>
+                                    <param id="1" name="Layer">3</param>
+                                    <param id="2" name="Image point">2</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -355,6 +372,7 @@
                             </conditions>
                             <actions>
                                 <action id="-9" name="Destroy" sid="5618796237337945" type="P2attack01" />
+                                <action id="-9" name="Destroy" sid="5036249676872616" type="P2attack02" />
                                 <action id="4" name="Set animation" sid="4353011121728213" type="PlayerB">
                                     <param id="0" name="Animation">&quot;walk&quot;</param>
                                     <param id="1" name="From">1</param>
@@ -366,6 +384,8 @@
                                 <condition behavior="Platform" id="9" name="On landed" sid="1758212229312679" type="PlayerB" />
                             </conditions>
                             <actions>
+                                <action id="-9" name="Destroy" sid="2928406383570125" type="P2attack01" />
+                                <action id="-9" name="Destroy" sid="5812506488008347" type="P2attack02" />
                                 <action id="4" name="Set animation" sid="5303227586721487" type="PlayerB">
                                     <param id="0" name="Animation">&quot;idle&quot;</param>
                                     <param id="1" name="From">1</param>
@@ -380,6 +400,8 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="-9" name="Destroy" sid="3568609923843428" type="P2attack01" />
+                                <action id="-9" name="Destroy" sid="1342900359350349" type="P2attack02" />
                                 <action id="4" name="Set animation" sid="4233818705712418" type="PlayerB">
                                     <param id="0" name="Animation">&quot;walk&quot;</param>
                                     <param id="1" name="From">1</param>
@@ -391,6 +413,8 @@
                                 <condition behavior="Platform" id="7" name="On stopped" sid="5082663875433273" type="PlayerB" />
                             </conditions>
                             <actions>
+                                <action id="-9" name="Destroy" sid="5249525213402597" type="P2attack01" />
+                                <action id="-9" name="Destroy" sid="5853781624570361" type="P2attack02" />
                                 <action id="4" name="Set animation" sid="386709379737922" type="PlayerB">
                                     <param id="0" name="Animation">&quot;idle&quot;</param>
                                     <param id="1" name="From">1</param>
@@ -417,127 +441,90 @@
         </event-group>
         <event-group description="" sid="1868374437622833" title="Enemy Damage">
             <sub-events>
-                <event-block sid="6367045574058267">
+                <event-block sid="8537621045365794">
                     <conditions>
-                        <condition id="-14" name="Compare variable" sid="8270837338498575" type="System">
+                        <condition id="-6" name="Every X seconds" sid="4067000821017138" type="System">
+                            <param id="0" name="Interval (seconds)">0.05</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="7028517572295139" type="Enemies">
+                            <param id="0" name="Instance variable">InvulDuration</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0.01</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="1861581984365808" type="System">
                             <param id="0" name="Variable">Active</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
-                        <condition id="-11" name="For Each" sid="9036304444477666" type="System">
-                            <param id="0" name="Object">Enemies</param>
-                        </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="7157957730545073" type="Enemies">
+                            <param id="0" name="Instance variable">InvulDuration</param>
+                            <param id="1" name="Value">0.05</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="6190428304456147" type="Enemies">
+                            <param id="0" name="Opacity">Self.Opacity&gt;50?50:80</param>
+                        </action>
+                    </actions>
                     <sub-events>
-                        <event-block sid="8537621045365794">
+                        <event-block sid="9126658119936879">
                             <conditions>
-                                <condition id="-6" name="Every X seconds" sid="4067000821017138" type="System">
-                                    <param id="0" name="Interval (seconds)">0.05</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="7028517572295139" type="Enemies">
+                                <condition id="-7" name="Compare instance variable" sid="6523939284318728" type="Enemies">
                                     <param id="0" name="Instance variable">InvulDuration</param>
-                                    <param id="1" name="Comparison">4</param>
+                                    <param id="1" name="Comparison">3</param>
                                     <param id="2" name="Value">0.01</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-12" name="Subtract from" sid="7157957730545073" type="Enemies">
-                                    <param id="0" name="Instance variable">InvulDuration</param>
-                                    <param id="1" name="Value">0.05</param>
+                                <action id="-16" name="Set opacity" sid="590310994531883" type="Enemies">
+                                    <param id="0" name="Opacity">100</param>
                                 </action>
-                                <action id="-16" name="Set opacity" sid="6190428304456147" type="Enemies">
-                                    <param id="0" name="Opacity">Enemies.Opacity&gt;50?50:80</param>
-                                </action>
-                            </actions>
-                            <sub-events>
-                                <event-block sid="9126658119936879">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="6523939284318728" type="Enemies">
-                                            <param id="0" name="Instance variable">InvulDuration</param>
-                                            <param id="1" name="Comparison">3</param>
-                                            <param id="2" name="Value">0.01</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-16" name="Set opacity" sid="590310994531883" type="Enemies">
-                                            <param id="0" name="Opacity">100</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="864969436822926">
-                            <conditions>
-                                <condition id="0" name="On collision with another object" sid="9649266626024167" type="Enemies">
-                                    <param id="0" name="Object">P1attack01</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="6754123585768447" type="Enemies">
-                                    <param id="0" name="Instance variable">InvulDuration</param>
-                                    <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-12" name="Subtract from" sid="2136665348752273" type="Enemies">
-                                    <param id="0" name="Instance variable">HP</param>
-                                    <param id="1" name="Value">10</param>
-                                </action>
-                                <action id="-11" name="Add to" sid="3299617667010413" type="Enemies">
+                                <action id="-12" name="Subtract from" sid="3419918200304355" type="Enemies">
                                     <param id="0" name="Instance variable">InvulDuration</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
-                            <sub-events>
-                                <event-block sid="6493795384493763">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="5739691650671574" type="Enemies">
-                                            <param id="0" name="Instance variable">HP</param>
-                                            <param id="1" name="Comparison">3</param>
-                                            <param id="2" name="Value">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-9" name="Destroy" sid="5457278964073696" type="Enemies" />
-                                    </actions>
-                                </event-block>
-                            </sub-events>
                         </event-block>
-                        <event-block sid="4996185267359087">
+                    </sub-events>
+                </event-block>
+                <event-block sid="864969436822926">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="9649266626024167" type="Enemies">
+                            <param id="0" name="Object">PlayerAttack</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="6754123585768447" type="Enemies">
+                            <param id="0" name="Instance variable">InvulDuration</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0.01</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="7434764382860819" type="System">
+                            <param id="0" name="Variable">Active</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="2136665348752273" type="Enemies">
+                            <param id="0" name="Instance variable">HP</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="3299617667010413" type="Enemies">
+                            <param id="0" name="Instance variable">InvulDuration</param>
+                            <param id="1" name="Value">0.6</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="6493795384493763">
                             <conditions>
-                                <condition id="0" name="On collision with another object" sid="2337993539818516" type="Enemies">
-                                    <param id="0" name="Object">P2attack01</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="4217798849739502" type="Enemies">
-                                    <param id="0" name="Instance variable">InvulDuration</param>
+                                <condition id="-7" name="Compare instance variable" sid="5739691650671574" type="Enemies">
+                                    <param id="0" name="Instance variable">HP</param>
                                     <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Value">0</param>
+                                    <param id="2" name="Value">0.01</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-12" name="Subtract from" sid="2312076932126193" type="Enemies">
-                                    <param id="0" name="Instance variable">HP</param>
-                                    <param id="1" name="Value">10</param>
-                                </action>
-                                <action id="-11" name="Add to" sid="1397488232389077" type="Enemies">
-                                    <param id="0" name="Instance variable">InvulDuration</param>
-                                    <param id="1" name="Value">0.2</param>
-                                </action>
+                                <action id="-9" name="Destroy" sid="5457278964073696" type="Enemies" />
                             </actions>
-                            <sub-events>
-                                <event-block sid="1306968918077801">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="905541842953514" type="Enemies">
-                                            <param id="0" name="Instance variable">HP</param>
-                                            <param id="1" name="Comparison">3</param>
-                                            <param id="2" name="Value">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-9" name="Destroy" sid="2598393519298781" type="Enemies" />
-                                    </actions>
-                                </event-block>
-                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
