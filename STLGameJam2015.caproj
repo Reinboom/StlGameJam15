@@ -102,7 +102,7 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="3" loop="0" name="walk" pingpong="0" repeatcount="1" repeatto="0" sid="1609946132359755" speed="5">
+                    <animation framecount="3" loop="1" name="walk" pingpong="0" repeatcount="1" repeatto="0" sid="1609946132359755" speed="5">
                         <frame duration="1" hotspotX="0.333333" hotspotY="0.977273" original-source="D:\Dropbox\Dropbox\STLGameJam2015\A_walk1.png">
                             <collision-poly>
                                 <point x="0.161905" y="0.481818" />

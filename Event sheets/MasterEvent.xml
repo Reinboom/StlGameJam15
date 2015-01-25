@@ -7,7 +7,7 @@
         <variable constant="0" name="Timer" sid="5099190665228987" static="0" type="number">0</variable>
         <variable constant="0" name="P1energy" sid="3874536787699269" static="0" type="number">10000</variable>
         <variable constant="0" name="P2energy" sid="7875450304951391" static="0" type="number">10000</variable>
-        <variable constant="0" name="Active" sid="1061668562272985" static="0" type="number">0</variable>
+        <variable constant="0" name="Active" sid="1061668562272985" static="0" type="number">1</variable>
         <variable constant="1" name="EVENT_TICKTIMER" sid="4940678777472776" static="0" type="number">2</variable>
         <variable constant="1" name="Event_StartTimer" sid="8397428748328552" static="0" type="number">1</variable>
         <variable constant="0" name="EventDispatcher" sid="7445380354857727" static="0" type="number">0</variable>
@@ -25,7 +25,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="3562958665195552">
+        <event-block disabled="1" sid="3562958665195552">
             <conditions>
                 <condition id="-1" name="Every tick" sid="7489735751296178" type="System" />
                 <condition id="-8" name="Compare two values" sid="7266227741507129" type="System">

@@ -96,10 +96,6 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-13" name="Set boolean" sid="8763885906758536" type="PlayerA">
-                                    <param id="0" name="Instance variable">attack</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
                                 <action id="4" name="Set animation" sid="4010421682680106" type="PlayerA">
                                     <param id="0" name="Animation">&quot;Attack&quot;</param>
                                     <param id="1" name="From">1</param>
@@ -145,6 +141,39 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="1905703113225717" type="P1attack01" />
+                    </actions>
+                </event-block>
+                <event-block sid="5098653127614321">
+                    <conditions>
+                        <condition behavior="Platform" id="9" name="On landed" sid="491840344891178" type="PlayerA" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="7371410306105146" type="PlayerA">
+                            <param id="0" name="Animation">&quot;idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1977368036280061">
+                    <conditions>
+                        <condition behavior="Platform" id="8" name="On moved" sid="5845932721911274" type="PlayerA" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="8682554315320627" type="PlayerA">
+                            <param id="0" name="Animation">&quot;walk&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5810897595329985">
+                    <conditions>
+                        <condition behavior="Platform" id="7" name="On stopped" sid="327320277744347" type="PlayerA" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="3558692446216767" type="PlayerA">
+                            <param id="0" name="Animation">&quot;idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-group description="" sid="878026824111536" title="P2">
