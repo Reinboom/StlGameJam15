@@ -544,16 +544,16 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="563403913587361" speed="5">
-                        <frame duration="1" hotspotX="0.537778" hotspotY="0.456621" original-source="C:\Users\rgiuliany\Dropbox2\Dropbox\STLGameJam2015\Ryan\Sprites\manticore.png">
+                        <frame duration="1" hotspotX="0.772152" hotspotY="0.489583" original-source="C:\Users\rgiuliany\Dropbox2\Dropbox\STLGameJam2015\Ryan\Sprites\manticore.png">
                             <collision-poly>
-                                <point x="0.173333" y="0.178082" />
-                                <point x="0.497778" y="0.0410959" />
-                                <point x="0.582222" y="0.429224" />
-                                <point x="0.968889" y="0.497717" />
-                                <point x="0.768889" y="0.762557" />
-                                <point x="0.497778" y="0.936073" />
-                                <point x="0.262222" y="0.730594" />
-                                <point x="0.0755556" y="0.497717" />
+                                <point x="0.0316451" y="0.239583" />
+                                <point x="0.620253" y="0" />
+                                <point x="0.835443" y="0.515625" />
+                                <point x="1" y="0.598958" />
+                                <point x="1" y="0.848958" />
+                                <point x="0.71519" y="1" />
+                                <point x="0.379746" y="0.802084" />
+                                <point x="0.00632911" y="0.583333" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -611,9 +611,9 @@
                         <frame duration="1" hotspotX="0.439153" hotspotY="0.669231" original-source="C:\git\StlGameJam15\Sprites\manticore_base.png">
                             <image-point name="Mouth" x="0.997355" y="0.728205" />
                             <collision-poly>
-                                <point x="0" y="0.230874" />
-                                <point x="0.404468" y="0.0552512" />
-                                <point x="0.516167" y="0.552851" />
+                                <point x="0.137566" y="0.00779709" />
+                                <point x="0.534098" y="0.00653325" />
+                                <point x="0.791299" y="0.493877" />
                                 <point x="1" y="0.640663" />
                                 <point x="0.763081" y="0.980201" />
                                 <point x="0.409759" y="0.976923" />
@@ -624,14 +624,14 @@
                         <frame duration="1" hotspotX="0.508393" hotspotY="0.64011" original-source="C:\git\StlGameJam15\Sprites\manticore_walk1.png">
                             <image-point name="Mouth" x="0.992806" y="0.706044" />
                             <collision-poly>
-                                <point x="0.100719" y="0.195055" />
-                                <point x="0.46283" y="0.0192308" />
-                                <point x="0.642686" y="0.403846" />
-                                <point x="0.920863" y="0.60989" />
+                                <point x="0.00959233" y="0.282967" />
+                                <point x="0.263789" y="0.00824179" />
+                                <point x="0.589928" y="0.0384613" />
+                                <point x="0.988009" y="0.623626" />
                                 <point x="0.760192" y="0.950549" />
                                 <point x="0.48681" y="0.947802" />
                                 <point x="0.227818" y="0.925824" />
-                                <point x="0.119904" y="0.60989" />
+                                <point x="0.0647481" y="0.574176" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -655,7 +655,7 @@
                                 <point x="0.0237737" y="0.224347" />
                                 <point x="0.416416" y="0" />
                                 <point x="0.757718" y="0.41808" />
-                                <point x="0.987091" y="0.626832" />
+                                <point x="0.987091" y="0.618568" />
                                 <point x="0.819358" y="0.980716" />
                                 <point x="0.436101" y="0.972452" />
                                 <point x="0.205868" y="0.958678" />
