@@ -81,6 +81,12 @@
                             <param id="0" name="Animation">&quot;Default&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
+                        <action id="-16" name="Wait" sid="9559924218373068" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="11" name="Set collisions enabled" sid="7131518730145349" type="Shot">
+                            <param id="0" name="Collisions">1</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -142,6 +148,12 @@
                         <action id="4" name="Set animation" sid="6948422930683929" type="Shooter">
                             <param id="0" name="Animation">&quot;Default&quot;</param>
                             <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="2564650003972927" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="11" name="Set collisions enabled" sid="8843467075646688" type="Shot">
+                            <param id="0" name="Collisions">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -237,6 +249,39 @@
                     <param id="1" name="Layer">4</param>
                     <param id="2" name="Image point">1</param>
                 </action>
+            </actions>
+        </event-block>
+        <event-block sid="8677156923512158">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="8450355534676321" type="Shot">
+                    <param id="0" name="Object">P2attack01</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="1453554135897631" type="System">
+                    <param id="0" name="Variable">Active</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="4" name="Bounce off object" sid="7868038361584062" type="Shot">
+                    <param id="0" name="Object">P2attack01</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2833352204084512">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="7014548507868201" type="Shot">
+                    <param id="0" name="Object">Shooter</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="3039649990348044" type="System">
+                    <param id="0" name="Variable">Active</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="5704898140993102" type="Shooter" />
+                <action id="-9" name="Destroy" sid="7096832095730506" type="Shot" />
             </actions>
         </event-block>
     </events>
