@@ -194,11 +194,19 @@
                         <condition id="-1" name="Every tick" sid="1002711958268487" type="System" />
                     </conditions>
                     <actions>
+                        <action id="-9" name="Set value" sid="3915969900132799" type="System">
+                            <param id="0" name="Variable">P1energy</param>
+                            <param id="1" name="Value">P1energy&gt;0?P1energy:0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1648716536699051" type="System">
+                            <param id="0" name="Variable">P2energy</param>
+                            <param id="1" name="Value">P2energy&gt;0?P2energy:0</param>
+                        </action>
                         <action id="0" name="Set text" sid="5233147776763342" type="HUD_P1energy">
-                            <param id="0" name="Text">P1energy</param>
+                            <param id="0" name="Text">P1energy &amp; &quot; Energy&quot;</param>
                         </action>
                         <action id="0" name="Set text" sid="7400790597298569" type="HUD_P2energy">
-                            <param id="0" name="Text">P2energy</param>
+                            <param id="0" name="Text">&quot;Energy &quot; &amp; P2energy</param>
                         </action>
                         <action id="3" name="Set progress" sid="7035664947234939" type="P1bar">
                             <param id="0" name="Value">P1energy</param>

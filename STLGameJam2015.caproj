@@ -28,6 +28,8 @@
     </used-behaviors>
     <used-effects>
         <effect author="Scirra" id="burn">Burn</effect>
+        <effect author="Scirra" id="glowhorizontal">Glow Horizontal</effect>
+        <effect author="Scirra" id="glowvertical">Glow Vertical</effect>
         <effect author="Scirra" id="multiply">Multiply</effect>
         <effect author="Scirra" id="screen">Screen</effect>
         <effect author="Scirra" id="tint">Tint</effect>
@@ -62,9 +64,25 @@
         <object-folder name="HUD">
             <object-type name="HUD_P1energy" sid="280241306412675">
                 <plugin id="Text" />
+                <effects>
+                    <effect-type name="GlowHorizontal">
+                        <effect id="glowhorizontal" />
+                    </effect-type>
+                    <effect-type name="GlowVertical">
+                        <effect id="glowvertical" />
+                    </effect-type>
+                </effects>
             </object-type>
             <object-type name="HUD_P2energy" sid="180202042700913">
                 <plugin id="Text" />
+                <effects>
+                    <effect-type name="GlowHorizontal">
+                        <effect id="glowhorizontal" />
+                    </effect-type>
+                    <effect-type name="GlowVertical">
+                        <effect id="glowvertical" />
+                    </effect-type>
+                </effects>
             </object-type>
             <object-type name="Timer" sid="4879787006889489">
                 <plugin id="Text" />
