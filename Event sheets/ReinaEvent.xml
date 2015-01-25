@@ -7,7 +7,7 @@
             <conditions>
                 <condition id="-1" name="Compare X" sid="4074783463375436" type="Fly">
                     <param id="0" name="Comparison">5</param>
-                    <param id="1" name="X co-ordinate">abs(PlayerA.X-Self.X)&lt;abs(PlayerB.X-Self.X)?PlayerA.X:PlayerB.X</param>
+                    <param id="1" name="X co-ordinate">(P1energy&lt;=0)?PlayerB.X:(P2energy&lt;=0?PlayerA.X:(abs(PlayerA.X-Self.X)&lt;abs(PlayerB.X-Self.X)?PlayerA.X:PlayerB.X))</param>
                 </condition>
                 <condition id="-14" name="Compare variable" sid="9762492869536854" type="System">
                     <param id="0" name="Variable">Active</param>
@@ -30,7 +30,7 @@
             <conditions>
                 <condition id="-1" name="Compare X" sid="2465113687491725" type="Fly">
                     <param id="0" name="Comparison">2</param>
-                    <param id="1" name="X co-ordinate">abs(PlayerA.X-Self.X)&lt;abs(PlayerB.X-Self.X)?PlayerA.X:PlayerB.X</param>
+                    <param id="1" name="X co-ordinate">(P1energy&lt;=0)?PlayerB.X:(P2energy&lt;=0?PlayerA.X:(abs(PlayerA.X-Self.X)&lt;abs(PlayerB.X-Self.X)?PlayerA.X:PlayerB.X))</param>
                 </condition>
                 <condition id="-14" name="Compare variable" sid="1470935739109148" type="System">
                     <param id="0" name="Variable">Active</param>

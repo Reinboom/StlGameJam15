@@ -64,8 +64,8 @@
                             <param id="2" name="Image point">0</param>
                         </action>
                         <action id="-22" name="Set angle toward position" sid="5685512307487764" type="Shot">
-                            <param id="0" name="X">PlayerB.X</param>
-                            <param id="1" name="Y">PlayerB.Y - 60</param>
+                            <param id="0" name="X">((P2energy&lt;=0)?PlayerA.X:PlayerB.X)</param>
+                            <param id="1" name="Y">((P2energy&lt;=0)?PlayerA.Y:PlayerB.Y) - 60</param>
                         </action>
                         <action behavior="Bullet" id="0" name="Set speed" sid="164409965344298" type="Shot">
                             <param id="0" name="Speed">500</param>
@@ -132,8 +132,8 @@
                             <param id="2" name="Image point">0</param>
                         </action>
                         <action id="-22" name="Set angle toward position" sid="9846394140551188" type="Shot">
-                            <param id="0" name="X">PlayerB.X</param>
-                            <param id="1" name="Y">PlayerB.Y - 60</param>
+                            <param id="0" name="X">((P2energy&lt;=0)?PlayerA.X:PlayerB.X)</param>
+                            <param id="1" name="Y">((P2energy&lt;=0)?PlayerA.Y:PlayerB.Y) - 60</param>
                         </action>
                         <action behavior="Bullet" id="0" name="Set speed" sid="7032702337664075" type="Shot">
                             <param id="0" name="Speed">500</param>
