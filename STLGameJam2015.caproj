@@ -193,7 +193,7 @@
                         </frame>
                     </animation>
                     <animation framecount="8" loop="0" name="attack" pingpong="0" repeatcount="1" repeatto="0" sid="7794956096348113" speed="20">
-                        <frame duration="1" hotspotX="0.328571" hotspotY="0.981818" original-source="D:\Dropbox\Dropbox\STLGameJam2015\A_attack5.png">
+                        <frame duration="0.2" hotspotX="0.328571" hotspotY="0.981818" original-source="D:\Dropbox\Dropbox\STLGameJam2015\A_attack5.png">
                             <image-point name="attack01" x="0.809524" y="0.609091" />
                             <image-point name="attack02" x="0.82381" y="0.618182" />
                             <collision-poly>
@@ -392,7 +392,7 @@
                         </frame>
                     </animation>
                     <animation framecount="8" loop="0" name="attack" pingpong="0" repeatcount="1" repeatto="0" sid="2599911728812066" speed="20">
-                        <frame duration="1" hotspotX="0.333333" hotspotY="0.977273">
+                        <frame duration="0.2" hotspotX="0.333333" hotspotY="0.977273">
                             <image-point name="attack01" x="0.82381" y="0.609091" />
                             <image-point name="attack02" x="0.82381" y="0.618182" />
                             <collision-poly>
