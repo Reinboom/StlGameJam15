@@ -427,7 +427,7 @@
                                 <max-fall-speed>1000</max-fall-speed>
                                 <double-jump>Disabled</double-jump>
                                 <jump-sustain>0</jump-sustain>
-                                <default-controls>Yes</default-controls>
+                                <default-controls>No</default-controls>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -507,12 +507,12 @@
                                 <max-speed>250</max-speed>
                                 <acceleration>1700</acceleration>
                                 <deceleration>1700</deceleration>
-                                <jump-strength>400</jump-strength>
+                                <jump-strength>450</jump-strength>
                                 <gravity>1500</gravity>
                                 <max-fall-speed>1000</max-fall-speed>
                                 <double-jump>Disabled</double-jump>
                                 <jump-sustain>0</jump-sustain>
-                                <default-controls>Yes</default-controls>
+                                <default-controls>No</default-controls>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -673,7 +673,7 @@
                                 <max-fall-speed>1000</max-fall-speed>
                                 <double-jump>Disabled</double-jump>
                                 <jump-sustain>0</jump-sustain>
-                                <default-controls>Yes</default-controls>
+                                <default-controls>No</default-controls>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -693,7 +693,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="P1attack02" uid="52">
+                <instance type="P1attack02" uid="0">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -715,7 +715,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="P2attack02" uid="60">
+                <instance type="P2attack02" uid="1">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -897,7 +897,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ManticoreSting" uid="1">
+                <instance type="ManticoreSting" uid="2">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>

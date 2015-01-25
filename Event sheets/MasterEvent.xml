@@ -220,32 +220,6 @@
         <include>ReinaEvent</include>
         <include>DanEvent</include>
         <include>Spawner</include>
-        <event-block sid="7154299897932855">
-            <conditions>
-                <condition id="2" name="Key is down" sid="4373158695439311" type="Keyboard">
-                    <param id="0" name="Key">32 (Space)</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-13" name="Set boolean" sid="8228584784428009" type="PlayerA">
-                    <param id="0" name="Instance variable">attack</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-                <action id="4" name="Set animation" sid="9772537578530826" type="PlayerA">
-                    <param id="0" name="Animation">&quot;Attack&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-                <action id="-11" name="Subtract from" sid="5244401762310541" type="System">
-                    <param id="0" name="Variable">P1energy</param>
-                    <param id="1" name="Value">10</param>
-                </action>
-                <action id="0" name="Spawn another object" sid="9163803319639333" type="PlayerA">
-                    <param id="0" name="Object">P1attack01</param>
-                    <param id="1" name="Layer">3</param>
-                    <param id="2" name="Image point">1</param>
-                </action>
-            </actions>
-        </event-block>
         <event-group description="" sid="435609093654574" title="Stings">
             <sub-events>
                 <event-block sid="1031840227067126">

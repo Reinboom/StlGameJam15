@@ -99,7 +99,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ground01" uid="0">
+                <instance type="ground01" uid="3">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>

@@ -1116,7 +1116,7 @@
                 <analog-deadzone>25</analog-deadzone>
             </properties>
         </global-instance>
-        <global-instance type="Audio" uid="61">
+        <global-instance type="Audio" uid="66">
             <properties>
                 <timescale-audio>Off</timescale-audio>
                 <saveload>All</saveload>

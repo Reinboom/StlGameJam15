@@ -47,7 +47,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="ground01" uid="5">
+                <instance type="ground01" uid="7">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -76,7 +76,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ground01" uid="6">
+                <instance type="ground01" uid="8">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -105,7 +105,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ground01" uid="7">
+                <instance type="ground01" uid="9">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -134,7 +134,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ground01" uid="8">
+                <instance type="ground01" uid="10">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -163,7 +163,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ground01" uid="9">
+                <instance type="ground01" uid="15">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -229,7 +229,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="PlayerA" uid="10">
+                <instance type="PlayerA" uid="23">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>

@@ -176,7 +176,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="HUD_P1energy" uid="15">
+                <instance type="HUD_P1energy" uid="36">
                     <properties>
                         <text>P1energy</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -203,7 +203,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Manticore" uid="23">
+                <instance type="Manticore" uid="41">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -246,7 +246,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="FIre" uid="36">
+                <instance type="FIre" uid="43">
                     <properties>
                         <rate>50</rate>
                         <spray-cone>60</spray-cone>
