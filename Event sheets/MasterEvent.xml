@@ -7,9 +7,10 @@
         <variable constant="0" name="foodHPregen" sid="6533366525104373" static="0" type="number">100</variable>
         <variable constant="0" name="WaveNumber" sid="9678532229130141" static="0" type="number">0</variable>
         <variable constant="0" name="Timer" sid="5099190665228987" static="0" type="number">0</variable>
-        <variable constant="0" name="P1energy" sid="3874536787699269" static="0" type="number">5000</variable>
-        <variable constant="0" name="P2energy" sid="7875450304951391" static="0" type="number">5000</variable>
+        <variable constant="0" name="P1energy" sid="3874536787699269" static="0" type="number">500</variable>
+        <variable constant="0" name="P2energy" sid="7875450304951391" static="0" type="number">500</variable>
         <variable constant="0" name="Active" sid="1061668562272985" static="0" type="number">1</variable>
+        <variable constant="1" name="EVENT_ENDGAME" sid="3870930475365028" static="0" type="number">3</variable>
         <variable constant="1" name="EVENT_TICKTIMER" sid="4940678777472776" static="0" type="number">2</variable>
         <variable constant="1" name="Event_StartTimer" sid="8397428748328552" static="0" type="number">1</variable>
         <variable constant="1" name="BASE_COUNTDOWN" sid="6514639830458763" static="0" type="number">4</variable>
@@ -225,6 +226,11 @@
                         <condition id="-6" name="Every X seconds" sid="6567574354922856" type="System">
                             <param id="0" name="Interval (seconds)">0.1</param>
                         </condition>
+                        <condition id="-14" inverted="1" name="Compare variable" sid="2119838047378711" type="System">
+                            <param id="0" name="Variable">EventDispatcher</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">EVENT_ENDGAME</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-10" name="Add to" sid="6455221599639263" type="System">
@@ -236,6 +242,11 @@
                 <event-block sid="5445222547397631">
                     <conditions>
                         <condition id="-1" name="Every tick" sid="7994849816988524" type="System" />
+                        <condition id="-14" inverted="1" name="Compare variable" sid="7373259703672102" type="System">
+                            <param id="0" name="Variable">EventDispatcher</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">EVENT_ENDGAME</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="0" name="Set text" sid="7200733918554643" type="Timer">
@@ -545,11 +556,6 @@
             <sub-events>
                 <event-block sid="4673449138233424">
                     <conditions>
-                        <condition id="-14" name="Compare variable" sid="2215518622166816" type="System">
-                            <param id="0" name="Variable">Active</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
                         <condition id="-14" name="Compare variable" sid="3586748991227465" type="System">
                             <param id="0" name="Variable">P1energy</param>
                             <param id="1" name="Comparison">3</param>
@@ -562,12 +568,48 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action disabled="1" id="-9" name="Set value" sid="5011986416963095" type="System">
+                        <action id="-9" name="Set value" sid="5011986416963095" type="System">
+                            <param id="0" name="Variable">EventDispatcher</param>
+                            <param id="1" name="Value">EVENT_ENDGAME</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="2940559668815776" type="System">
                             <param id="0" name="Variable">Active</param>
                             <param id="1" name="Value">0</param>
                         </action>
-                        <action id="-26" name="Restart layout" sid="8868935468591004" type="System" />
                     </actions>
+                </event-block>
+                <event-block sid="2780757420252504">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="7275275150627175" type="System">
+                            <param id="0" name="Variable">EventDispatcher</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">EVENT_ENDGAME</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="5349532869737421" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="1356609422786022">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="6495003256088722" type="System">
+                                    <param id="0" name="Object">Enemies</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="2727290085438925" type="Enemies" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="2920568245846488">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="6309669313530791" type="System">
+                                    <param id="0" name="Object">Food</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="4905363838110229" type="Food" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
