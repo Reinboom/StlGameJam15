@@ -165,6 +165,7 @@
                             <image-point name="Hit point" x="0.366667" y="0.622727" />
                             <image-point name="Imagepoint 2" x="0.5" y="0.5" />
                             <image-point name="Imagepoint 3" x="0.357143" y="0.622727" />
+                            <image-point name="Imagepoint 4" x="0.357143" y="0.640909" />
                             <collision-poly>
                                 <point x="0.147619" y="0.481818" />
                                 <point x="0.361905" y="0.322727" />
@@ -180,6 +181,7 @@
                             <image-point name="Hit point" x="0.366667" y="0.622727" />
                             <image-point name="Imagepoint 2" x="0.5" y="0.5" />
                             <image-point name="Imagepoint 3" x="0.366667" y="0.636364" />
+                            <image-point name="Imagepoint 4" x="0.347619" y="0.654545" />
                             <collision-poly>
                                 <point x="0.152381" y="0.486364" />
                                 <point x="0.338095" y="0.318182" />
