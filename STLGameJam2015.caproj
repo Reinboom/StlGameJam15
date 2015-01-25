@@ -1003,6 +1003,61 @@
         <object-type name="Audio" sid="8901901275689823">
             <plugin id="Audio" />
         </object-type>
+        <object-type name="MS01" sid="3275647032136846">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="LastSpawnTime" sid="2885605404974151" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4365053513153434" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MS02" sid="4450583775716462">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="LastSpawnTime" sid="4935968239606865" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4664242874939955" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MS03" sid="22003157516173">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="LastSpawnTime" sid="1700338144642992" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1307979814822383" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MS04" sid="6692505021695005">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="LastSpawnTime" sid="2516330911817015" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="722473920282471" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MS05" sid="6493334030846622">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="LastSpawnTime" sid="1110031794868597" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3075222710047659" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Enemies" plugin-id="Sprite" sid="6268585446215248">
