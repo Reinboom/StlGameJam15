@@ -172,6 +172,11 @@
                     <param id="0" name="Variable">P1energy</param>
                     <param id="1" name="Value">10</param>
                 </action>
+                <action id="0" name="Spawn another object" sid="6192473230733792" type="Shot">
+                    <param id="0" name="Object">FIre</param>
+                    <param id="1" name="Layer">4</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
             </actions>
         </event-block>
     </events>

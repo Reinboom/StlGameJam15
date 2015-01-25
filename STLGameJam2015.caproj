@@ -12,6 +12,7 @@
     <used-plugins>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
@@ -24,7 +25,9 @@
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects>
+        <effect author="Scirra" id="burn">Burn</effect>
         <effect author="Scirra" id="tint">Tint</effect>
+        <effect author="Scirra" id="warpradial">Warp Radial</effect>
     </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
@@ -824,6 +827,18 @@
         </object-type>
         <object-type name="DebugOut" sid="8685092805807869">
             <plugin id="Text" />
+        </object-type>
+        <object-type name="FIre" sid="1155862986703744">
+            <plugin id="Particles" />
+            <effects>
+                <effect-type name="Burn">
+                    <effect id="burn" />
+                </effect-type>
+                <effect-type name="WarpRadial">
+                    <effect id="warpradial" />
+                </effect-type>
+            </effects>
+            <texture original-source="C:\Users\deichling\Desktop\GAMES\GGJ2015\StlGameJam15\Sprites\fire.png" />
         </object-type>
     </object-folder>
     <families>
