@@ -316,7 +316,7 @@
                                 <action id="0" name="Play" sid="698578724823718" type="Audio">
                                     <param id="0" name="Audio file">roar</param>
                                     <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">0</param>
+                                    <param id="3" name="Volume">-10</param>
                                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
                             </actions>
@@ -411,7 +411,7 @@
                                 </action>
                                 <action id="7" name="Play (by name)" sid="6563812586917169" type="Audio">
                                     <param id="0" name="Folder">0</param>
-                                    <param id="1" name="Audio file name">choose(&quot;archer_01&quot;,&quot;archer_02&quot;,&quot;archer_03&quot;,&quot;archer_05&quot;,&quot;archer_06&quot;)</param>
+                                    <param id="1" name="Audio file name">choose(&quot;archer_01&quot;,&quot;archer_02&quot;,&quot;archer_03&quot;,&quot;archer_06&quot;)</param>
                                     <param id="3" name="Loop">0</param>
                                     <param id="4" name="Volume">0</param>
                                     <param id="2" name="Tag (optional)">&quot;&quot;</param>
@@ -483,7 +483,7 @@
                                 <action id="0" name="Play" sid="1607388390334768" type="Audio">
                                     <param id="0" name="Audio file">timer_burp_04</param>
                                     <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">-10</param>
+                                    <param id="3" name="Volume">-25</param>
                                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
                             </actions>
@@ -530,6 +530,36 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="6022904769564009" title="Game Over">
+            <sub-events>
+                <event-block sid="4673449138233424">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="2215518622166816" type="System">
+                            <param id="0" name="Variable">Active</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="3586748991227465" type="System">
+                            <param id="0" name="Variable">P1energy</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="9588501514130398" type="System">
+                            <param id="0" name="Variable">P2energy</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="-9" name="Set value" sid="5011986416963095" type="System">
+                            <param id="0" name="Variable">Active</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-26" name="Restart layout" sid="8868935468591004" type="System" />
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>

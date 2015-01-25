@@ -778,9 +778,9 @@
                         </action>
                         <action id="7" name="Play (by name)" sid="8980514594139676" type="Audio">
                             <param id="0" name="Folder">0</param>
-                            <param id="1" name="Audio file name">choose(&quot;player_hurt_01&quot;,&quot;player_hurt_03&quot;,&quot;player_hurt_04&quot;,&quot;player_hurt_05&quot;,&quot;player_hurt_06&quot;,&quot;player_hurt_07&quot;)</param>
+                            <param id="1" name="Audio file name">choose(&quot;player_hurt_04&quot;,&quot;player_hurt_06&quot;,&quot;player_hurt_07&quot;)</param>
                             <param id="3" name="Loop">0</param>
-                            <param id="4" name="Volume">-10</param>
+                            <param id="4" name="Volume">-15</param>
                             <param id="2" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                         <action id="0" name="Spawn another object" sid="6467043807351765" type="PlayerA">
@@ -811,9 +811,9 @@
                         </action>
                         <action id="7" name="Play (by name)" sid="5994405001445873" type="Audio">
                             <param id="0" name="Folder">0</param>
-                            <param id="1" name="Audio file name">choose(&quot;player_hurt_01&quot;,&quot;player_hurt_03&quot;,&quot;player_hurt_04&quot;,&quot;player_hurt_05&quot;,&quot;player_hurt_06&quot;,&quot;player_hurt_07&quot;)</param>
+                            <param id="1" name="Audio file name">choose(&quot;player_hurt_04&quot;,&quot;player_hurt_06&quot;,&quot;player_hurt_07&quot;)</param>
                             <param id="3" name="Loop">0</param>
-                            <param id="4" name="Volume">-10</param>
+                            <param id="4" name="Volume">-15</param>
                             <param id="2" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                         <action id="0" name="Spawn another object" sid="1408432173892851" type="PlayerB">
@@ -872,7 +872,7 @@
                         <action id="-9" name="Destroy" sid="8150800665944847" type="P2attack02" />
                     </actions>
                 </event-block>
-                <event-block sid="1401573608808136">
+                <event-block disabled="1" sid="1401573608808136">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="5691874769577392" type="System">
                             <param id="0" name="Variable">P2energy</param>

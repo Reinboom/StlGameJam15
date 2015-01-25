@@ -1123,6 +1123,28 @@
         <file name="player_hurt_05.ogg" />
         <file name="player_hurt_06.ogg" />
         <file name="player_hurt_07.ogg" />
+        <file name="background_music_loop.ogg" />
+        <file name="bat_die_01.ogg" />
+        <file name="bat_screech_01.ogg" />
+        <file name="bat_screech_02.ogg" />
+        <file name="game_over_01.ogg" />
+        <file name="game_over_02.ogg" />
+        <file name="mant_die_01.ogg" />
+        <file name="mant_die_02.ogg" />
+        <file name="mant_fire_01.ogg" />
+        <file name="mant_fire_02.ogg" />
+        <file name="mant_fire_03.ogg" />
+        <file name="mant_fire_04.ogg" />
+        <file name="player_die_01.ogg" />
+        <file name="player_die_02.ogg" />
+        <file name="player_die_03.ogg" />
+        <file name="player_die_04.ogg" />
+        <file name="player_die_05.ogg" />
+        <file name="player_food_01.ogg" />
+        <file name="player_food_02.ogg" />
+        <file name="player_food_03.ogg" />
+        <file name="player_food_04.ogg" />
+        <file name="toasty.ogg" />
     </sounds-folder>
     <music-folder />
     <files-folder>
