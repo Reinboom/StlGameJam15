@@ -264,6 +264,11 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">3</param>
                         </condition>
+                        <condition id="-14" name="Compare variable" sid="9238786781121689" type="System">
+                            <param id="0" name="Variable">HasEnemy_Mant</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-3" name="Set position" sid="2169421296152341" type="ManticoreSting">
@@ -307,6 +312,11 @@
                             <param id="0" name="Variable">CountdownValue</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">2</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="3187033708309077" type="System">
+                            <param id="0" name="Variable">HasEnemy_Fly</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -353,6 +363,11 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
+                        <condition id="-14" name="Compare variable" sid="3609325011813983" type="System">
+                            <param id="0" name="Variable">HasEnemy_Arch</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-3" name="Set position" sid="9335091787612835" type="ShooterSting">
@@ -391,21 +406,53 @@
                             <param id="2" name="Value">1</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-3" name="Set position" sid="4725518252079074" type="ManticoreSting">
-                            <param id="0" name="X">lerp(ManticoreSting.X,-300,0.1)</param>
-                            <param id="1" name="Y">ManticoreSting.Y</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="540975968930125" type="MutabatSting">
-                            <param id="0" name="X">lerp(MutabatSting.X,1600,0.1)</param>
-                            <param id="1" name="Y">MutabatSting.Y</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="7202669236845705" type="ShooterSting">
-                            <param id="0" name="X">ShooterSting.X</param>
-                            <param id="1" name="Y">lerp(ShooterSting.Y,-370,0.1)</param>
-                        </action>
-                    </actions>
+                    <actions />
                     <sub-events>
+                        <event-block sid="9981530606409128">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="729455863476725" type="System">
+                                    <param id="0" name="Variable">HasEnemy_Mant</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="4725518252079074" type="ManticoreSting">
+                                    <param id="0" name="X">lerp(ManticoreSting.X,-300,0.1)</param>
+                                    <param id="1" name="Y">ManticoreSting.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7483088318128089">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="2834429230572739" type="System">
+                                    <param id="0" name="Variable">HasEnemy_Fly</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="540975968930125" type="MutabatSting">
+                                    <param id="0" name="X">lerp(MutabatSting.X,1600,0.1)</param>
+                                    <param id="1" name="Y">MutabatSting.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9468683878905474">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="61463187062484" type="System">
+                                    <param id="0" name="Variable">HasEnemy_Arch</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="7202669236845705" type="ShooterSting">
+                                    <param id="0" name="X">ShooterSting.X</param>
+                                    <param id="1" name="Y">lerp(ShooterSting.Y,-370,0.1)</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="4328830009100902">
                             <conditions>
                                 <condition id="-4" name="Trigger once while true" sid="2641806596891105" type="System" />
