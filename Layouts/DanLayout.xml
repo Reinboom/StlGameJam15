@@ -320,6 +320,7 @@
                         <timeout>1</timeout>
                     </properties>
                     <effect-instances>
+                        <effect-instance type="Burn" />
                         <effect-instance type="Warp">
                             <parameters>
                                 <x-amplitude>5</x-amplitude>

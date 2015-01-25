@@ -843,7 +843,7 @@
                         <action id="-9" name="Destroy" sid="2782684783949619" type="PlayerA" />
                         <action id="-9" name="Set value" sid="7683570862007549" type="System">
                             <param id="0" name="Variable">skullHPregen</param>
-                            <param id="1" name="Value">150</param>
+                            <param id="1" name="Value">500</param>
                         </action>
                     </actions>
                 </event-block>
@@ -864,7 +864,7 @@
                         <action id="-9" name="Destroy" sid="9712806213897707" type="PlayerB" />
                         <action id="-9" name="Set value" sid="2343483804414694" type="System">
                             <param id="0" name="Variable">skullHPregen</param>
-                            <param id="1" name="Value">500</param>
+                            <param id="1" name="Value">1000</param>
                         </action>
                     </actions>
                 </event-block>
