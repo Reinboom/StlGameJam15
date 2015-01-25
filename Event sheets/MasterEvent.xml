@@ -180,5 +180,6 @@
         <include>RyanEvent</include>
         <include>RowanEvent</include>
         <include>ReinaEvent</include>
+        <include>Spawner</include>
     </events>
 </c2eventsheet>

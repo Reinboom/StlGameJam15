@@ -15,6 +15,11 @@
                                     <param id="2" name="Comparison">4</param>
                                     <param id="3" name="Value">0</param>
                                 </condition>
+                                <condition id="-14" name="Compare variable" sid="6195463339003224" type="System">
+                                    <param id="0" name="Variable">Active</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action behavior="Platform" id="7" name="Simulate control" sid="7685068460528416" type="PlayerA">
@@ -37,6 +42,11 @@
                                     <param id="2" name="Comparison">2</param>
                                     <param id="3" name="Value">0</param>
                                 </condition>
+                                <condition id="-14" name="Compare variable" sid="2496960497741501" type="System">
+                                    <param id="0" name="Variable">Active</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action behavior="Platform" id="7" name="Simulate control" sid="2029589053504767" type="PlayerA">
@@ -57,6 +67,11 @@
                                     <param id="0" name="Gamepad">0</param>
                                     <param id="1" name="Button">0</param>
                                 </condition>
+                                <condition id="-14" name="Compare variable" sid="6757913403561075" type="System">
+                                    <param id="0" name="Variable">Active</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action behavior="Platform" id="7" name="Simulate control" sid="5396403792967482" type="PlayerA">
@@ -73,6 +88,11 @@
                                 <condition id="6" name="On button pressed" sid="149715851912532" type="Gamepad">
                                     <param id="0" name="Gamepad">0</param>
                                     <param id="1" name="Button">2</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="7540881782429318" type="System">
+                                    <param id="0" name="Variable">Active</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -137,6 +157,11 @@
                                     <param id="2" name="Comparison">4</param>
                                     <param id="3" name="Value">0</param>
                                 </condition>
+                                <condition id="-14" name="Compare variable" sid="3361859306532944" type="System">
+                                    <param id="0" name="Variable">Active</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action behavior="Platform" id="7" name="Simulate control" sid="7685068460528416" type="PlayerB">
@@ -159,6 +184,11 @@
                                     <param id="2" name="Comparison">2</param>
                                     <param id="3" name="Value">0</param>
                                 </condition>
+                                <condition id="-14" name="Compare variable" sid="9713023454584623" type="System">
+                                    <param id="0" name="Variable">Active</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action behavior="Platform" id="7" name="Simulate control" sid="2029589053504767" type="PlayerB">
@@ -179,6 +209,11 @@
                                     <param id="0" name="Gamepad">1</param>
                                     <param id="1" name="Button">0</param>
                                 </condition>
+                                <condition id="-14" name="Compare variable" sid="9865565818126421" type="System">
+                                    <param id="0" name="Variable">Active</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action behavior="Platform" id="7" name="Simulate control" sid="5396403792967482" type="PlayerB">
@@ -195,6 +230,11 @@
                                 <condition id="6" name="On button pressed" sid="6634852089118278" type="Gamepad">
                                     <param id="0" name="Gamepad">1</param>
                                     <param id="1" name="Button">2</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="9814262901422259" type="System">
+                                    <param id="0" name="Variable">Active</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
                                 </condition>
                             </conditions>
                             <actions>
