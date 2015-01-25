@@ -52,5 +52,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/HEX_ASSET_/" />
         <folder expanded="1" path="animation-folder/Sprite/" />
         <folder expanded="1" path="animation-folder/Sprite2/" />
+        <folder expanded="1" path="animation-folder/ManticoreSting/" />
+        <folder expanded="1" path="animation-folder/MutabatSting/" />
     </folders-expanded>
 </c2uistate>

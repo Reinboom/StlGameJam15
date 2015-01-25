@@ -22,6 +22,9 @@
                     <actions>
                         <action id="-9" name="Destroy" sid="9340259046633882" type="P1attack01" />
                         <action id="-9" name="Destroy" sid="3604510652311234" type="P2attack01" />
+                        <action id="7" name="Set mirrored" sid="9481449995641143" type="MutabatSting">
+                            <param id="0" name="State">0</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -201,5 +204,47 @@
                 </action>
             </actions>
         </event-block>
+        <event-group description="" sid="435609093654574" title="Stings">
+            <sub-events>
+                <event-block sid="2262905604943163">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="3628037924521262" type="System">
+                            <param id="0" name="Variable">Active</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="2202616512185539" type="ManticoreSting">
+                            <param id="0" name="X">lerp(ManticoreSting.X,240,0.1)</param>
+                            <param id="1" name="Y">ManticoreSting.Y</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="8552817173820525" type="MutabatSting">
+                            <param id="0" name="X">lerp(MutabatSting.X,1050,0.1)</param>
+                            <param id="1" name="Y">MutabatSting.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5695887303221534">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="1358984319160901" type="System">
+                            <param id="0" name="Variable">Active</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="4725518252079074" type="ManticoreSting">
+                            <param id="0" name="X">lerp(ManticoreSting.X,-300,0.1)</param>
+                            <param id="1" name="Y">ManticoreSting.Y</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="540975968930125" type="MutabatSting">
+                            <param id="0" name="X">lerp(MutabatSting.X,1600,0.1)</param>
+                            <param id="1" name="Y">MutabatSting.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

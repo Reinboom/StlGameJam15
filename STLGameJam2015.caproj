@@ -820,6 +820,22 @@
         <object-type name="DebugOut" sid="8685092805807869">
             <plugin id="Text" />
         </object-type>
+        <object-type name="ManticoreSting" sid="8743203945768678">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6087793301509701" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dropbox\Dropbox\STLGameJam2015\manticore_splash.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MutabatSting" sid="8611287465609231">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1307369791090668" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dropbox\Dropbox\STLGameJam2015\dread_bat_splash.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Enemies" plugin-id="Sprite" sid="6268585446215248">
