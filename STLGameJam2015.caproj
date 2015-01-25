@@ -28,8 +28,10 @@
     </used-behaviors>
     <used-effects>
         <effect author="Scirra" id="burn">Burn</effect>
+        <effect author="Scirra" id="multiply">Multiply</effect>
         <effect author="Scirra" id="tint">Tint</effect>
         <effect author="Brad Larson" id="vignette">Vignette</effect>
+        <effect author="Scirra" id="warp">Warp</effect>
         <effect author="Scirra" id="warpradial">Warp Radial</effect>
     </used-effects>
     <configurations>
@@ -568,7 +570,8 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6335300207053731" speed="5">
-                        <frame duration="1" hotspotX="0.285714" hotspotY="0.73913" original-source="C:\Users\deichling\Desktop\GAMES\GGJ2015\StlGameJam15\Sprites\arrow.png">
+                        <frame duration="1" hotspotX="0.43956" hotspotY="0.478261" original-source="C:\Users\deichling\Desktop\GAMES\GGJ2015\StlGameJam15\Sprites\arrow.png">
+                            <image-point name="Head" x="1.03297" y="0.478261" />
                             <collision-poly>
                                 <point x="1" y="0" />
                                 <point x="1" y="1" />
@@ -896,11 +899,11 @@
         <object-type name="FIre" sid="1155862986703744">
             <plugin id="Particles" />
             <effects>
-                <effect-type name="Burn">
-                    <effect id="burn" />
-                </effect-type>
                 <effect-type name="WarpRadial">
                     <effect id="warpradial" />
+                </effect-type>
+                <effect-type name="Multiply">
+                    <effect id="multiply" />
                 </effect-type>
             </effects>
             <texture original-source="C:\Users\deichling\Desktop\GAMES\GGJ2015\StlGameJam15\Sprites\fire.png" />
@@ -1057,6 +1060,18 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="Hit" sid="1733785262747615">
+            <plugin id="Particles" />
+            <effects>
+                <effect-type name="Burn">
+                    <effect id="burn" />
+                </effect-type>
+                <effect-type name="Warp">
+                    <effect id="warp" />
+                </effect-type>
+            </effects>
+            <texture />
         </object-type>
     </object-folder>
     <families>

@@ -60,8 +60,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>871</x>
-                        <y>407</y>
+                        <x>541</x>
+                        <y>419</y>
                         <z>0</z>
                         <width>120</width>
                         <height>120</height>
@@ -170,8 +170,8 @@
                         <width>108.960525513</width>
                         <height>13.225000381</height>
                         <depth>0</depth>
-                        <hotspotX>0.285714298</hotspotX>
-                        <hotspotY>0.739130437</hotspotY>
+                        <hotspotX>0.439560443</hotspotX>
+                        <hotspotY>0.478260875</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -271,7 +271,6 @@
                         <timeout>1</timeout>
                     </properties>
                     <effect-instances>
-                        <effect-instance type="Burn" />
                         <effect-instance type="WarpRadial">
                             <parameters>
                                 <amplitude>0.05</amplitude>
@@ -279,12 +278,65 @@
                                 <speed>2</speed>
                             </parameters>
                         </effect-instance>
+                        <effect-instance type="Multiply" />
                     </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>329</x>
                         <y>4</y>
+                        <z>0</z>
+                        <width>128</width>
+                        <height>128</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Hit" uid="67">
+                    <properties>
+                        <rate>50</rate>
+                        <spray-cone>360</spray-cone>
+                        <type>One-shot</type>
+                        <initial-particle-properties></initial-particle-properties>
+                        <speed>200</speed>
+                        <size>32</size>
+                        <opacity>100</opacity>
+                        <grow-rate>0</grow-rate>
+                        <x-randomiser>0</x-randomiser>
+                        <y-randomiser>0</y-randomiser>
+                        <speed-randomiser->0</speed-randomiser->
+                        <size-randomiser>0</size-randomiser>
+                        <grow-rate-randomiser>0</grow-rate-randomiser>
+                        <particle-lifetime-properties></particle-lifetime-properties>
+                        <acceleration>-150</acceleration>
+                        <gravity>7</gravity>
+                        <angle-randomiser>0</angle-randomiser>
+                        <speed-randomiser>800</speed-randomiser>
+                        <opacity-randomiser>0</opacity-randomiser>
+                        <destroy-mode>Fade to invisible</destroy-mode>
+                        <timeout>1</timeout>
+                    </properties>
+                    <effect-instances>
+                        <effect-instance type="Burn" />
+                        <effect-instance type="Warp">
+                            <parameters>
+                                <x-amplitude>5</x-amplitude>
+                                <x-frequency>25</x-frequency>
+                                <x-speed>1</x-speed>
+                                <y-amplitude>5</y-amplitude>
+                                <y-frequency>25</y-frequency>
+                                <y-speed>1</y-speed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>624</x>
+                        <y>-84</y>
                         <z>0</z>
                         <width>128</width>
                         <height>128</height>
