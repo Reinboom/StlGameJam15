@@ -303,14 +303,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>411</x>
-                        <y>567</y>
+                        <x>354.100402832</x>
+                        <y>623.846191406</y>
                         <z>0</z>
-                        <width>184.213851929</width>
-                        <height>106.741134644</height>
+                        <width>171.162368774</width>
+                        <height>183.825469971</height>
                         <depth>0</depth>
-                        <hotspotX>0.239130437</hotspotX>
-                        <hotspotY>0.15384616</hotspotY>
+                        <hotspotX>0.333333343</hotspotX>
+                        <hotspotY>0.977272749</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
