@@ -398,6 +398,13 @@
                                     <param id="3" name="Volume">-10</param>
                                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
+                                <action id="7" name="Play (by name)" sid="6563812586917169" type="Audio">
+                                    <param id="0" name="Folder">0</param>
+                                    <param id="1" name="Audio file name">choose(&quot;archer_01&quot;,&quot;archer_02&quot;,&quot;archer_03&quot;,&quot;archer_05&quot;,&quot;archer_06&quot;)</param>
+                                    <param id="3" name="Loop">0</param>
+                                    <param id="4" name="Volume">0</param>
+                                    <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
