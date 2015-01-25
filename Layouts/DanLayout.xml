@@ -86,7 +86,7 @@
                                 <max-speed>300</max-speed>
                                 <acceleration>1700</acceleration>
                                 <deceleration>1700</deceleration>
-                                <jump-strength>500</jump-strength>
+                                <jump-strength>650</jump-strength>
                                 <gravity>1500</gravity>
                                 <max-fall-speed>1000</max-fall-speed>
                                 <double-jump>Disabled</double-jump>

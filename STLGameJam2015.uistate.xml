@@ -11,13 +11,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout active="1" order="0">MasterLayout</layout>
-        <layout order="3">ReinaLayout</layout>
-        <layout order="7">DanLayout</layout>
-        <event-sheet order="1">MasterEvent</event-sheet>
-        <event-sheet order="2">RowanEvent</event-sheet>
-        <event-sheet order="4">Spawner</event-sheet>
-        <event-sheet order="5">RyanEvent</event-sheet>
-        <event-sheet order="6">ReinaEvent</event-sheet>
+        <event-sheet order="1">DanEvent</event-sheet>
+        <event-sheet order="2">ReinaEvent</event-sheet>
+        <event-sheet order="3">RowanEvent</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -31,7 +27,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
         <folder expanded="1" path="object-folder/HUD/" />
-        <folder expanded="0" path="object-folder/Players/" />
+        <folder expanded="1" path="object-folder/Players/" />
         <folder expanded="1" path="object-folder/Enemies/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />

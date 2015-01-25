@@ -871,6 +871,10 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="TiledBackground" sid="35022861200084">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
     </object-folder>
     <families>
         <family name="Enemies" plugin-id="Sprite" sid="6268585446215248">
