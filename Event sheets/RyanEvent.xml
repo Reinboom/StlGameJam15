@@ -66,11 +66,6 @@
                                             <param id="1" name="Comparison">4</param>
                                             <param id="2" name="Value">0.5</param>
                                         </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="566952338954793" type="Manticore">
-                                            <param id="0" name="Instance variable">InvulDuration</param>
-                                            <param id="1" name="Comparison">3</param>
-                                            <param id="2" name="Value">0.1</param>
-                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="-14" name="Toggle boolean" sid="7265471195065021" type="Manticore">
@@ -156,11 +151,6 @@
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">1</param>
                 </condition>
-                <condition id="-7" name="Compare instance variable" sid="7872926008126493" type="Manticore">
-                    <param id="0" name="Instance variable">InvulDuration</param>
-                    <param id="1" name="Comparison">3</param>
-                    <param id="2" name="Value">0.1</param>
-                </condition>
             </conditions>
             <actions>
                 <action behavior="Platform" id="7" name="Simulate control" sid="5515598726535937" type="Manticore">
@@ -185,11 +175,6 @@
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">1</param>
                 </condition>
-                <condition id="-7" name="Compare instance variable" sid="5591535423088864" type="Manticore">
-                    <param id="0" name="Instance variable">InvulDuration</param>
-                    <param id="1" name="Comparison">3</param>
-                    <param id="2" name="Value">0.1</param>
-                </condition>
             </conditions>
             <actions>
                 <action behavior="Platform" id="7" name="Simulate control" sid="2395740520297612" type="Manticore">
@@ -213,11 +198,6 @@
                     <param id="0" name="Variable">Active</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">1</param>
-                </condition>
-                <condition id="-7" name="Compare instance variable" sid="6946012747936983" type="Manticore">
-                    <param id="0" name="Instance variable">InvulDuration</param>
-                    <param id="1" name="Comparison">3</param>
-                    <param id="2" name="Value">0.1</param>
                 </condition>
             </conditions>
             <actions>

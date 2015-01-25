@@ -194,6 +194,7 @@
                     <animation framecount="8" loop="0" name="attack" pingpong="0" repeatcount="1" repeatto="0" sid="7794956096348113" speed="20">
                         <frame duration="1" hotspotX="0.328571" hotspotY="0.981818" original-source="D:\Dropbox\Dropbox\STLGameJam2015\A_attack5.png">
                             <image-point name="attack01" x="0.809524" y="0.609091" />
+                            <image-point name="attack02" x="0.82381" y="0.618182" />
                             <collision-poly>
                                 <point x="0.166667" y="0.5" />
                                 <point x="0.366667" y="0.322727" />
@@ -207,6 +208,7 @@
                         </frame>
                         <frame duration="1" hotspotX="0.328571" hotspotY="0.981818" original-source="D:\Dropbox\Dropbox\STLGameJam2015\A_attack2.png">
                             <image-point name="attack01" x="0.647619" y="0.318182" />
+                            <image-point name="attack02" x="0.685714" y="0.231818" />
                             <collision-poly>
                                 <point x="0.166667" y="0.5" />
                                 <point x="0.366667" y="0.322727" />
@@ -220,6 +222,7 @@
                         </frame>
                         <frame duration="1" hotspotX="0.328571" hotspotY="0.981818" original-source="D:\Dropbox\Dropbox\STLGameJam2015\A_attack1.png">
                             <image-point name="attack01" x="0.542857" y="0.254545" />
+                            <image-point name="attack02" x="0.557143" y="0.136364" />
                             <collision-poly>
                                 <point x="0.166667" y="0.5" />
                                 <point x="0.366667" y="0.322727" />
@@ -233,6 +236,7 @@
                         </frame>
                         <frame duration="1" hotspotX="0.328571" hotspotY="0.981818" original-source="D:\Dropbox\Dropbox\STLGameJam2015\A_attack2.png">
                             <image-point name="attack01" x="0.642857" y="0.309091" />
+                            <image-point name="attack02" x="0.690476" y="0.195455" />
                             <collision-poly>
                                 <point x="0.166667" y="0.5" />
                                 <point x="0.366667" y="0.322727" />
@@ -246,6 +250,7 @@
                         </frame>
                         <frame duration="1" hotspotX="0.328571" hotspotY="0.981818" original-source="D:\Dropbox\Dropbox\STLGameJam2015\A_attack3.png">
                             <image-point name="attack01" x="0.733333" y="0.395455" />
+                            <image-point name="attack02" x="0.804762" y="0.295455" />
                             <collision-poly>
                                 <point x="0.166667" y="0.5" />
                                 <point x="0.366667" y="0.322727" />
@@ -259,6 +264,7 @@
                         </frame>
                         <frame duration="1" hotspotX="0.328571" hotspotY="0.981818" original-source="D:\Dropbox\Dropbox\STLGameJam2015\A_attack4.png">
                             <image-point name="attack01" x="0.785714" y="0.495455" />
+                            <image-point name="attack02" x="0.885714" y="0.431818" />
                             <collision-poly>
                                 <point x="0.166667" y="0.5" />
                                 <point x="0.366667" y="0.322727" />
@@ -272,6 +278,7 @@
                         </frame>
                         <frame duration="1" hotspotX="0.328571" hotspotY="0.981818" original-source="D:\Dropbox\Dropbox\STLGameJam2015\A_attack5.png">
                             <image-point name="attack01" x="0.814286" y="0.609091" />
+                            <image-point name="attack02" x="0.847619" y="0.604545" />
                             <collision-poly>
                                 <point x="0.166667" y="0.5" />
                                 <point x="0.366667" y="0.322727" />
@@ -285,6 +292,7 @@
                         </frame>
                         <frame duration="1" hotspotX="0.328571" hotspotY="0.981818" original-source="D:\Dropbox\Dropbox\STLGameJam2015\A_attack6.png">
                             <image-point name="attack01" x="0.809524" y="0.722727" />
+                            <image-point name="attack02" x="0.838095" y="0.727273" />
                             <collision-poly>
                                 <point x="0.166667" y="0.5" />
                                 <point x="0.366667" y="0.322727" />
@@ -385,6 +393,7 @@
                     <animation framecount="8" loop="0" name="attack" pingpong="0" repeatcount="1" repeatto="0" sid="2599911728812066" speed="20">
                         <frame duration="1" hotspotX="0.333333" hotspotY="0.977273">
                             <image-point name="attack01" x="0.82381" y="0.609091" />
+                            <image-point name="attack02" x="0.82381" y="0.618182" />
                             <collision-poly>
                                 <point x="0.166667" y="0.5" />
                                 <point x="0.366667" y="0.322727" />
@@ -399,6 +408,7 @@
                         <frame duration="1" hotspotX="0.333333" hotspotY="0.977273">
                             <image-point name="front" x="0.652381" y="0.304545" />
                             <image-point name="attack01" x="0.82381" y="0.609091" />
+                            <image-point name="attack02" x="0.685714" y="0.231818" />
                             <collision-poly>
                                 <point x="0.166667" y="0.5" />
                                 <point x="0.366667" y="0.322727" />
@@ -413,6 +423,7 @@
                         <frame duration="1" hotspotX="0.333333" hotspotY="0.977273" original-source="D:\Dropbox\Dropbox\STLGameJam2015\A_attack1.png">
                             <image-point name="front" x="0.547619" y="0.254545" />
                             <image-point name="attack01" x="0.82381" y="0.609091" />
+                            <image-point name="attack02" x="0.557143" y="0.136364" />
                             <collision-poly>
                                 <point x="0.166667" y="0.5" />
                                 <point x="0.366667" y="0.322727" />
@@ -427,6 +438,7 @@
                         <frame duration="1" hotspotX="0.333333" hotspotY="0.977273" original-source="D:\Dropbox\Dropbox\STLGameJam2015\A_attack2.png">
                             <image-point name="front" x="0.647619" y="0.309091" />
                             <image-point name="attack01" x="0.82381" y="0.609091" />
+                            <image-point name="attack02" x="0.690476" y="0.195455" />
                             <collision-poly>
                                 <point x="0.166667" y="0.5" />
                                 <point x="0.366667" y="0.322727" />
@@ -441,6 +453,7 @@
                         <frame duration="1" hotspotX="0.333333" hotspotY="0.977273" original-source="D:\Dropbox\Dropbox\STLGameJam2015\A_attack3.png">
                             <image-point name="front" x="0.733333" y="0.386364" />
                             <image-point name="attack01" x="0.82381" y="0.609091" />
+                            <image-point name="attack02" x="0.804762" y="0.295455" />
                             <collision-poly>
                                 <point x="0.166667" y="0.5" />
                                 <point x="0.366667" y="0.322727" />
@@ -455,6 +468,7 @@
                         <frame duration="1" hotspotX="0.333333" hotspotY="0.977273" original-source="D:\Dropbox\Dropbox\STLGameJam2015\A_attack4.png">
                             <image-point name="front" x="0.804762" y="0.495455" />
                             <image-point name="attack01" x="0.82381" y="0.609091" />
+                            <image-point name="attack02" x="0.885714" y="0.431818" />
                             <collision-poly>
                                 <point x="0.166667" y="0.5" />
                                 <point x="0.366667" y="0.322727" />
@@ -469,6 +483,7 @@
                         <frame duration="1" hotspotX="0.333333" hotspotY="0.977273" original-source="D:\Dropbox\Dropbox\STLGameJam2015\A_attack5.png">
                             <image-point name="front" x="0.82381" y="0.6" />
                             <image-point name="attack01" x="0.82381" y="0.609091" />
+                            <image-point name="attack02" x="0.847619" y="0.604545" />
                             <collision-poly>
                                 <point x="0.166667" y="0.5" />
                                 <point x="0.366667" y="0.322727" />
@@ -483,6 +498,7 @@
                         <frame duration="1" hotspotX="0.333333" hotspotY="0.977273" original-source="D:\Dropbox\Dropbox\STLGameJam2015\A_attack6.png">
                             <image-point name="front" x="0.842857" y="0.727273" />
                             <image-point name="attack01" x="0.82381" y="0.609091" />
+                            <image-point name="attack02" x="0.838095" y="0.727273" />
                             <collision-poly>
                                 <point x="0.166667" y="0.5" />
                                 <point x="0.366667" y="0.322727" />
@@ -494,6 +510,22 @@
                                 <point x="0.247619" y="0.768182" />
                             </collision-poly>
                         </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="P1attack02" sid="8833523228720873">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2668986185254983" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="P2attack02" sid="4448925918630561">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8329914175564188" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -986,6 +1018,14 @@
                 <member>Archer_food</member>
                 <member>Bat_food</member>
                 <member>Manticore_food</member>
+            </members>
+        </family>
+        <family name="PlayerAttack" plugin-id="Sprite" sid="3644987076788355">
+            <members>
+                <member>P1attack01</member>
+                <member>P1attack02</member>
+                <member>P2attack01</member>
+                <member>P2attack02</member>
             </members>
         </family>
     </families>
