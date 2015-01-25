@@ -83,7 +83,7 @@
                     <behavior-instances>
                         <behavior-instance type="Platform">
                             <properties>
-                                <max-speed>330</max-speed>
+                                <max-speed>150</max-speed>
                                 <acceleration>300</acceleration>
                                 <deceleration>1500</deceleration>
                                 <jump-strength>650</jump-strength>
@@ -92,7 +92,7 @@
                                 <double-jump>Disabled</double-jump>
                                 <jump-sustain>0</jump-sustain>
                                 <default-controls>No</default-controls>
-                                <initial-state>Enabled</initial-state>
+                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -102,8 +102,8 @@
                         <x>375</x>
                         <y>456</y>
                         <z>0</z>
-                        <width>88.548629761</width>
-                        <height>91.359695435</height>
+                        <width>150</width>
+                        <height>150</height>
                         <depth>0</depth>
                         <hotspotX>0.439153433</hotspotX>
                         <hotspotY>0.669230759</hotspotY>

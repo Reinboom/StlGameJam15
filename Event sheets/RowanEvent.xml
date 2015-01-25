@@ -111,177 +111,278 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="6708019874262093">
+                        <event-block sid="155685365746743">
                             <conditions>
-                                <condition id="-11" name="For Each" sid="3857408024453704" type="System">
-                                    <param id="0" name="Object">Enemies</param>
+                                <condition id="4" name="On finished" sid="5782308921566412" type="PlayerA">
+                                    <param id="0" name="Animation">&quot;Attack&quot;</param>
                                 </condition>
                             </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="3168774545854836">
-                                    <conditions>
-                                        <condition id="0" name="On collision with another object" sid="1198890913123632" type="Enemies">
-                                            <param id="0" name="Object">P1attack01</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-9" name="Destroy" sid="9613374254392163" type="Manticore" />
-                                    </actions>
-                                </event-block>
-                            </sub-events>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="1905703113225717" type="P1attack01" />
+                                <action id="4" name="Set animation" sid="4688014618970729" type="PlayerA">
+                                    <param id="0" name="Animation">&quot;walk&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5098653127614321">
+                            <conditions>
+                                <condition behavior="Platform" id="9" name="On landed" sid="491840344891178" type="PlayerA" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="7371410306105146" type="PlayerA">
+                                    <param id="0" name="Animation">&quot;idle&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1977368036280061">
+                            <conditions>
+                                <condition behavior="Platform" id="0" name="Is moving" sid="5845932721911274" type="PlayerA" />
+                                <condition id="2" inverted="1" name="Is playing" sid="1897877956472845" type="PlayerA">
+                                    <param id="0" name="Animation">&quot;attack&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="8682554315320627" type="PlayerA">
+                                    <param id="0" name="Animation">&quot;walk&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5810897595329985">
+                            <conditions>
+                                <condition behavior="Platform" id="7" name="On stopped" sid="327320277744347" type="PlayerA" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="3558692446216767" type="PlayerA">
+                                    <param id="0" name="Animation">&quot;idle&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2406421045367484">
+                            <conditions>
+                                <condition behavior="Platform" id="3" name="Is jumping" sid="1370916697552242" type="PlayerA" />
+                                <condition id="2" inverted="1" name="Is playing" sid="7507447663327716" type="PlayerA">
+                                    <param id="0" name="Animation">&quot;attack&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="3903349600522213" type="PlayerA">
+                                    <param id="0" name="Animation">&quot;jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-block sid="155685365746743">
-                    <conditions>
-                        <condition id="4" name="On finished" sid="5782308921566412" type="PlayerA">
-                            <param id="0" name="Animation">&quot;Attack&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="1905703113225717" type="P1attack01" />
-                    </actions>
-                </event-block>
-                <event-block sid="5098653127614321">
-                    <conditions>
-                        <condition behavior="Platform" id="9" name="On landed" sid="491840344891178" type="PlayerA" />
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="7371410306105146" type="PlayerA">
-                            <param id="0" name="Animation">&quot;idle&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="1977368036280061">
-                    <conditions>
-                        <condition behavior="Platform" id="8" name="On moved" sid="5845932721911274" type="PlayerA" />
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="8682554315320627" type="PlayerA">
-                            <param id="0" name="Animation">&quot;walk&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="5810897595329985">
-                    <conditions>
-                        <condition behavior="Platform" id="7" name="On stopped" sid="327320277744347" type="PlayerA" />
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="3558692446216767" type="PlayerA">
-                            <param id="0" name="Animation">&quot;idle&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-group description="" sid="878026824111536" title="P2">
                     <sub-events>
-                        <event-block sid="1501192794354451">
+                        <event-block sid="3940913708660809">
                             <conditions>
-                                <condition id="5" name="Compare axis" sid="8641253728350165" type="Gamepad">
+                                <condition id="5" name="Compare axis" sid="4400863547182596" type="Gamepad">
                                     <param id="0" name="Gamepad">1</param>
                                     <param id="1" name="Axis">0</param>
                                     <param id="2" name="Comparison">4</param>
                                     <param id="3" name="Value">0</param>
                                 </condition>
-                                <condition id="-14" name="Compare variable" sid="3361859306532944" type="System">
+                                <condition id="-14" name="Compare variable" sid="269025918524922" type="System">
                                     <param id="0" name="Variable">Active</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">1</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="Platform" id="7" name="Simulate control" sid="7685068460528416" type="PlayerB">
+                                <action behavior="Platform" id="7" name="Simulate control" sid="9633053166585735" type="PlayerB">
                                     <param id="0" name="Control">1</param>
                                 </action>
-                                <action id="7" name="Set mirrored" sid="1540866373711713" type="PlayerB">
+                                <action id="7" name="Set mirrored" sid="139399939466355" type="PlayerB">
                                     <param id="0" name="State">1</param>
                                 </action>
-                                <action id="-11" name="Subtract from" sid="9651363698910198" type="System">
+                                <action id="-11" name="Subtract from" sid="7880598920490528" type="System">
                                     <param id="0" name="Variable">P2energy</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="8225399583218624">
+                        <event-block sid="5025241984320216">
                             <conditions>
-                                <condition id="5" name="Compare axis" sid="1445963113213119" type="Gamepad">
+                                <condition id="5" name="Compare axis" sid="3201009137546904" type="Gamepad">
                                     <param id="0" name="Gamepad">1</param>
                                     <param id="1" name="Axis">0</param>
                                     <param id="2" name="Comparison">2</param>
                                     <param id="3" name="Value">0</param>
                                 </condition>
-                                <condition id="-14" name="Compare variable" sid="9713023454584623" type="System">
+                                <condition id="-14" name="Compare variable" sid="8163014999634277" type="System">
                                     <param id="0" name="Variable">Active</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">1</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="Platform" id="7" name="Simulate control" sid="2029589053504767" type="PlayerB">
+                                <action behavior="Platform" id="7" name="Simulate control" sid="2763790544928448" type="PlayerB">
                                     <param id="0" name="Control">0</param>
                                 </action>
-                                <action id="7" name="Set mirrored" sid="9688659617419302" type="PlayerB">
+                                <action id="7" name="Set mirrored" sid="5862768888458725" type="PlayerB">
                                     <param id="0" name="State">0</param>
                                 </action>
-                                <action id="-11" name="Subtract from" sid="4445260854024938" type="System">
+                                <action id="-11" name="Subtract from" sid="1211816771065098" type="System">
                                     <param id="0" name="Variable">P2energy</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="9585722316493501">
+                        <event-block sid="7409232911976264">
                             <conditions>
-                                <condition id="3" name="Is button down" sid="5055749297543932" type="Gamepad">
+                                <condition id="3" name="Is button down" sid="9157928351483122" type="Gamepad">
                                     <param id="0" name="Gamepad">1</param>
                                     <param id="1" name="Button">0</param>
                                 </condition>
-                                <condition id="-14" name="Compare variable" sid="9865565818126421" type="System">
+                                <condition id="-14" name="Compare variable" sid="5572395629013628" type="System">
                                     <param id="0" name="Variable">Active</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">1</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="Platform" id="7" name="Simulate control" sid="5396403792967482" type="PlayerB">
+                                <action behavior="Platform" id="7" name="Simulate control" sid="9463929030556773" type="PlayerB">
                                     <param id="0" name="Control">2</param>
                                 </action>
-                                <action id="-11" name="Subtract from" sid="615287144842113" type="System">
+                                <action id="-11" name="Subtract from" sid="4909024068602667" type="System">
                                     <param id="0" name="Variable">P2energy</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="3666356404053842">
+                        <event-block sid="9872003805273517">
                             <conditions>
-                                <condition id="6" name="On button pressed" sid="6634852089118278" type="Gamepad">
+                                <condition id="6" name="On button pressed" sid="1036022705142561" type="Gamepad">
                                     <param id="0" name="Gamepad">1</param>
                                     <param id="1" name="Button">2</param>
                                 </condition>
-                                <condition id="-14" name="Compare variable" sid="9814262901422259" type="System">
+                                <condition id="-14" name="Compare variable" sid="5586696042038546" type="System">
                                     <param id="0" name="Variable">Active</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">1</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-16" name="Wait" sid="9617162727494926" type="System">
-                                    <param id="0" name="Seconds">0.1</param>
+                                <action id="4" name="Set animation" sid="9871916293306573" type="PlayerB">
+                                    <param id="0" name="Animation">&quot;Attack&quot;</param>
+                                    <param id="1" name="From">1</param>
                                 </action>
-                                <action id="-11" name="Subtract from" sid="9983042012974968" type="System">
-                                    <param id="0" name="Variable">P1energy</param>
-                                    <param id="1" name="Value">2</param>
+                                <action id="0" name="Spawn another object" sid="597866222351613" type="PlayerB">
+                                    <param id="0" name="Object">P2attack01</param>
+                                    <param id="1" name="Layer">3</param>
+                                    <param id="2" name="Image point">1</param>
                                 </action>
-                                <action id="-11" name="Subtract from" sid="9305031722018019" type="System">
+                                <action id="-11" name="Subtract from" sid="27042844409465" type="System">
                                     <param id="0" name="Variable">P2energy</param>
                                     <param id="1" name="Value">10</param>
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="9153055984679123">
+                            <conditions>
+                                <condition id="4" name="On finished" sid="1874649080985765" type="PlayerB">
+                                    <param id="0" name="Animation">&quot;Attack&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="5618796237337945" type="P2attack01" />
+                                <action id="4" name="Set animation" sid="4353011121728213" type="PlayerB">
+                                    <param id="0" name="Animation">&quot;walk&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7912923120630939">
+                            <conditions>
+                                <condition behavior="Platform" id="9" name="On landed" sid="1758212229312679" type="PlayerB" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="5303227586721487" type="PlayerB">
+                                    <param id="0" name="Animation">&quot;idle&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8208005178549314">
+                            <conditions>
+                                <condition behavior="Platform" id="0" name="Is moving" sid="1850412630298487" type="PlayerB" />
+                                <condition id="2" inverted="1" name="Is playing" sid="443914848077765" type="PlayerB">
+                                    <param id="0" name="Animation">&quot;attack&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="4233818705712418" type="PlayerB">
+                                    <param id="0" name="Animation">&quot;walk&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2017805503550592">
+                            <conditions>
+                                <condition behavior="Platform" id="7" name="On stopped" sid="5082663875433273" type="PlayerB" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="386709379737922" type="PlayerB">
+                                    <param id="0" name="Animation">&quot;idle&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1668197602720108">
+                            <conditions>
+                                <condition behavior="Platform" id="3" name="Is jumping" sid="6253744077853842" type="PlayerB" />
+                                <condition id="2" inverted="1" name="Is playing" sid="9702558621108809" type="PlayerB">
+                                    <param id="0" name="Animation">&quot;attack&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="9163008551921982" type="PlayerB">
+                                    <param id="0" name="Animation">&quot;jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="1868374437622833" title="Enemy Damage">
+            <sub-events>
+                <event-block sid="6367045574058267">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="9036304444477666" type="System">
+                            <param id="0" name="Object">Enemies</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="864969436822926">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="9649266626024167" type="Enemies">
+                                    <param id="0" name="Object">P1attack01</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="5457278964073696" type="Enemies" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="4996185267359087">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="2337993539818516" type="Enemies">
+                                    <param id="0" name="Object">P2attack01</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="90659590540585" type="Enemies" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
             </sub-events>
         </event-group>
     </events>

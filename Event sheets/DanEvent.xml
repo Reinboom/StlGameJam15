@@ -2,5 +2,21 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>DanEvent</name>
-    <events />
+    <events>
+        <event-block sid="5092268509985301">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="2898767502857249" type="Shooter">
+                    <param id="0" name="Instance variable">Cooldown</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="7143050435620161" type="Shooter">
+                    <param id="0" name="Instance variable">Cooldown</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
 </c2eventsheet>
