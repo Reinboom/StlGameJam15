@@ -10,13 +10,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1" order="0">MasterLayout</layout>
-        <layout order="3">RyanLayout</layout>
-        <layout order="7">ReinaLayout</layout>
+        <layout order="0">MasterLayout</layout>
+        <layout order="3">ReinaLayout</layout>
         <event-sheet order="1">MasterEvent</event-sheet>
         <event-sheet order="2">RowanEvent</event-sheet>
-        <event-sheet order="4">RyanEvent</event-sheet>
-        <event-sheet order="5">DanEvent</event-sheet>
+        <event-sheet order="4">Spawner</event-sheet>
+        <event-sheet active="1" order="5">RyanEvent</event-sheet>
         <event-sheet order="6">ReinaEvent</event-sheet>
     </open-tabs>
     <properties>
@@ -25,14 +24,14 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="0" name="Window Size" />
         <property expanded="1" name="Configuration Settings" />
     </properties>
-    <families-expanded root="0">
-        <family expanded="0" name="Enemies" />
+    <families-expanded root="1">
+        <family expanded="1" name="Enemies" />
     </families-expanded>
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
-        <folder expanded="0" path="object-folder/HUD/" />
-        <folder expanded="1" path="object-folder/Players/" />
-        <folder expanded="1" path="object-folder/Enemies/" />
+        <folder expanded="1" path="object-folder/HUD/" />
+        <folder expanded="0" path="object-folder/Players/" />
+        <folder expanded="0" path="object-folder/Enemies/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="1" path="file-folder/" />

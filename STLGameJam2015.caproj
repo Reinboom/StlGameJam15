@@ -17,6 +17,7 @@
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
+        <plugin author="Scirra" id="progressbar" version="1">Progress bar</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
@@ -827,6 +828,12 @@
         </object-type>
         <object-type name="DebugOut" sid="8685092805807869">
             <plugin id="Text" />
+        </object-type>
+        <object-type name="P1bar" sid="3362967607292967">
+            <plugin id="progressbar" />
+        </object-type>
+        <object-type name="P2bar" sid="7483075009389222">
+            <plugin id="progressbar" />
         </object-type>
         <object-type name="FIre" sid="1155862986703744">
             <plugin id="Particles" />
