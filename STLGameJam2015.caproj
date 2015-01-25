@@ -1038,6 +1038,8 @@
         <file name="bat_01.ogg" />
         <file name="bat_02.ogg" />
         <file name="bat_03.ogg" />
+        <file name="timer_beep_01.ogg" />
+        <file name="timer_burp_04.ogg" />
     </sounds-folder>
     <music-folder />
     <files-folder>

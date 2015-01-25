@@ -14,6 +14,11 @@
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">1</param>
                 </condition>
+                <condition id="-7" name="Compare instance variable" sid="3729193512591916" type="Fly">
+                    <param id="0" name="Instance variable">InvulDuration</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0.1</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="7" name="Set mirrored" sid="781713191089636" type="Fly">
@@ -36,6 +41,11 @@
                     <param id="0" name="Variable">Active</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="4342140440381889" type="Fly">
+                    <param id="0" name="Instance variable">InvulDuration</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0.1</param>
                 </condition>
             </conditions>
             <actions>

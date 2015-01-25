@@ -261,8 +261,7 @@
             <use-render-cells>0</use-render-cells>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
-            <instances>
-            </instances>
+            <instances />
             <effects />
         </layer>
         <layer name="Players" sid="2752264876903719">
