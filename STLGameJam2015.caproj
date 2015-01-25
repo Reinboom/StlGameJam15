@@ -133,7 +133,9 @@
                     <animation framecount="1" loop="0" name="idle" pingpong="0" repeatcount="1" repeatto="0" sid="1804788812696061" speed="5">
                         <frame duration="1" hotspotX="0.333333" hotspotY="0.977273" original-source="D:\Dropbox\Dropbox\STLGameJam2015\A_attack5.png">
                             <image-point name="Imagepoint 1" x="0.809524" y="0.627273" />
-                            <image-point name="Imagepoint 4" x="0.361905" y="0.622727" />
+                            <image-point name="Imagepoint 2" x="0.37619" y="0.486364" />
+                            <image-point name="Imagepoint 3" x="0.295238" y="0.531818" />
+                            <image-point name="Imagepoint 4" x="0.357143" y="0.627273" />
                             <collision-poly>
                                 <point x="0.157143" y="0.495454" />
                                 <point x="0.32381" y="0.313636" />
@@ -148,7 +150,10 @@
                     </animation>
                     <animation framecount="3" loop="1" name="walk" pingpong="0" repeatcount="1" repeatto="0" sid="1609946132359755" speed="5">
                         <frame duration="1" hotspotX="0.333333" hotspotY="0.977273" original-source="D:\Dropbox\Dropbox\STLGameJam2015\A_walk1.png">
-                            <image-point name="Imagepoint 4" x="0.352381" y="0.636364" />
+                            <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                            <image-point name="Imagepoint 2" x="0.342857" y="0.468182" />
+                            <image-point name="Imagepoint 3" x="0.238095" y="0.495455" />
+                            <image-point name="Imagepoint 4" x="0.366667" y="0.631818" />
                             <collision-poly>
                                 <point x="0.161905" y="0.481818" />
                                 <point x="0.361905" y="0.318182" />
@@ -195,7 +200,10 @@
                     </animation>
                     <animation framecount="1" loop="0" name="jump" pingpong="0" repeatcount="1" repeatto="0" sid="8011106656858992" speed="5">
                         <frame duration="1" hotspotX="0.333333" hotspotY="0.977273" original-source="D:\Dropbox\Dropbox\STLGameJam2015\A_jump.png">
-                            <image-point name="Imagepoint 4" x="0.380952" y="0.65" />
+                            <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                            <image-point name="Imagepoint 2" x="0.37619" y="0.468182" />
+                            <image-point name="Imagepoint 3" x="0.266667" y="0.509091" />
+                            <image-point name="Imagepoint 4" x="0.361905" y="0.622727" />
                             <collision-poly>
                                 <point x="0.157143" y="0.486364" />
                                 <point x="0.32381" y="0.318182" />
@@ -212,7 +220,8 @@
                         <frame duration="0.2" hotspotX="0.328571" hotspotY="0.981818" original-source="D:\Dropbox\Dropbox\STLGameJam2015\A_attack5.png">
                             <image-point name="attack01" x="0.809524" y="0.609091" />
                             <image-point name="attack02" x="0.82381" y="0.618182" />
-                            <image-point name="Imagepoint 4" x="0.366667" y="0.65" />
+                            <image-point name="Imagepoint 3" x="0.266667" y="0.563636" />
+                            <image-point name="Imagepoint 4" x="0.361905" y="0.622727" />
                             <collision-poly>
                                 <point x="0.166667" y="0.5" />
                                 <point x="0.366667" y="0.322727" />
@@ -227,7 +236,8 @@
                         <frame duration="1" hotspotX="0.328571" hotspotY="0.981818" original-source="D:\Dropbox\Dropbox\STLGameJam2015\A_attack2.png">
                             <image-point name="attack01" x="0.647619" y="0.318182" />
                             <image-point name="attack02" x="0.685714" y="0.231818" />
-                            <image-point name="Imagepoint 4" x="0.366667" y="0.65" />
+                            <image-point name="Imagepoint 3" x="0.266667" y="0.563636" />
+                            <image-point name="Imagepoint 4" x="0.361905" y="0.622727" />
                             <collision-poly>
                                 <point x="0.166667" y="0.5" />
                                 <point x="0.366667" y="0.322727" />
@@ -242,7 +252,8 @@
                         <frame duration="1" hotspotX="0.328571" hotspotY="0.981818" original-source="D:\Dropbox\Dropbox\STLGameJam2015\A_attack1.png">
                             <image-point name="attack01" x="0.542857" y="0.254545" />
                             <image-point name="attack02" x="0.557143" y="0.136364" />
-                            <image-point name="Imagepoint 4" x="0.366667" y="0.65" />
+                            <image-point name="Imagepoint 3" x="0.261905" y="0.522727" />
+                            <image-point name="Imagepoint 4" x="0.357143" y="0.640909" />
                             <collision-poly>
                                 <point x="0.166667" y="0.5" />
                                 <point x="0.366667" y="0.322727" />
@@ -257,7 +268,8 @@
                         <frame duration="1" hotspotX="0.328571" hotspotY="0.981818" original-source="D:\Dropbox\Dropbox\STLGameJam2015\A_attack2.png">
                             <image-point name="attack01" x="0.642857" y="0.309091" />
                             <image-point name="attack02" x="0.690476" y="0.195455" />
-                            <image-point name="Imagepoint 4" x="0.366667" y="0.65" />
+                            <image-point name="Imagepoint 3" x="0.280952" y="0.536364" />
+                            <image-point name="Imagepoint 4" x="0.366667" y="0.636364" />
                             <collision-poly>
                                 <point x="0.166667" y="0.5" />
                                 <point x="0.366667" y="0.322727" />
@@ -272,7 +284,8 @@
                         <frame duration="1" hotspotX="0.328571" hotspotY="0.981818" original-source="D:\Dropbox\Dropbox\STLGameJam2015\A_attack3.png">
                             <image-point name="attack01" x="0.733333" y="0.395455" />
                             <image-point name="attack02" x="0.804762" y="0.295455" />
-                            <image-point name="Imagepoint 4" x="0.366667" y="0.65" />
+                            <image-point name="Imagepoint 3" x="0.257143" y="0.568182" />
+                            <image-point name="Imagepoint 4" x="0.352381" y="0.636364" />
                             <collision-poly>
                                 <point x="0.166667" y="0.5" />
                                 <point x="0.366667" y="0.322727" />
@@ -287,7 +300,8 @@
                         <frame duration="1" hotspotX="0.328571" hotspotY="0.981818" original-source="D:\Dropbox\Dropbox\STLGameJam2015\A_attack4.png">
                             <image-point name="attack01" x="0.785714" y="0.495455" />
                             <image-point name="attack02" x="0.885714" y="0.431818" />
-                            <image-point name="Imagepoint 4" x="0.366667" y="0.65" />
+                            <image-point name="Imagepoint 3" x="0.304762" y="0.472727" />
+                            <image-point name="Imagepoint 4" x="0.357143" y="0.631818" />
                             <collision-poly>
                                 <point x="0.166667" y="0.5" />
                                 <point x="0.366667" y="0.322727" />
@@ -302,7 +316,8 @@
                         <frame duration="1" hotspotX="0.328571" hotspotY="0.981818" original-source="D:\Dropbox\Dropbox\STLGameJam2015\A_attack5.png">
                             <image-point name="attack01" x="0.814286" y="0.609091" />
                             <image-point name="attack02" x="0.847619" y="0.604545" />
-                            <image-point name="Imagepoint 4" x="0.366667" y="0.65" />
+                            <image-point name="Imagepoint 3" x="0.271429" y="0.559091" />
+                            <image-point name="Imagepoint 4" x="0.347619" y="0.631818" />
                             <collision-poly>
                                 <point x="0.166667" y="0.5" />
                                 <point x="0.366667" y="0.322727" />
@@ -317,7 +332,8 @@
                         <frame duration="1" hotspotX="0.328571" hotspotY="0.981818" original-source="D:\Dropbox\Dropbox\STLGameJam2015\A_attack6.png">
                             <image-point name="attack01" x="0.809524" y="0.722727" />
                             <image-point name="attack02" x="0.838095" y="0.727273" />
-                            <image-point name="Imagepoint 4" x="0.366667" y="0.65" />
+                            <image-point name="Imagepoint 3" x="0.266667" y="0.572727" />
+                            <image-point name="Imagepoint 4" x="0.352381" y="0.645455" />
                             <collision-poly>
                                 <point x="0.166667" y="0.5" />
                                 <point x="0.366667" y="0.322727" />
@@ -351,7 +367,9 @@
                     <animation framecount="1" loop="0" name="idle" pingpong="0" repeatcount="1" repeatto="0" sid="7889369409105061" speed="5">
                         <frame duration="1" hotspotX="0.333333" hotspotY="0.977273" original-source="D:\Dropbox\Dropbox\STLGameJam2015\A_attack6.png">
                             <image-point name="front" x="0.92381" y="0.613636" />
-                            <image-point name="Imagepoint 4" x="0.357143" y="0.613636" />
+                            <image-point name="Imagepoint 2" x="0.5" y="0.5" />
+                            <image-point name="Imagepoint 3" x="0.261905" y="0.545455" />
+                            <image-point name="Imagepoint 4" x="0.361905" y="0.631818" />
                             <collision-poly>
                                 <point x="0.157143" y="0.495454" />
                                 <point x="0.32381" y="0.313636" />
@@ -366,7 +384,10 @@
                     </animation>
                     <animation framecount="3" loop="1" name="walk" pingpong="0" repeatcount="1" repeatto="0" sid="4945562967192243" speed="5">
                         <frame duration="1" hotspotX="0.333333" hotspotY="0.977273" original-source="D:\Dropbox\Dropbox\STLGameJam2015\A_walk1.png">
-                            <image-point name="Imagepoint 4" x="0.361905" y="0.622727" />
+                            <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                            <image-point name="Imagepoint 2" x="0.5" y="0.5" />
+                            <image-point name="Imagepoint 3" x="0.27619" y="0.513636" />
+                            <image-point name="Imagepoint 4" x="0.352381" y="0.654545" />
                             <collision-poly>
                                 <point x="0.161905" y="0.481818" />
                                 <point x="0.361905" y="0.318182" />
@@ -413,7 +434,10 @@
                     </animation>
                     <animation framecount="1" loop="0" name="jump" pingpong="0" repeatcount="1" repeatto="0" sid="7296236261687859" speed="5">
                         <frame duration="1" hotspotX="0.333333" hotspotY="0.977273" original-source="D:\Dropbox\Dropbox\STLGameJam2015\A_jump.png">
-                            <image-point name="Imagepoint 4" x="0.361905" y="0.645455" />
+                            <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                            <image-point name="Imagepoint 2" x="0.27619" y="0.540909" />
+                            <image-point name="Imagepoint 3" x="0.266667" y="0.645455" />
+                            <image-point name="Imagepoint 4" x="0.357143" y="0.640909" />
                             <collision-poly>
                                 <point x="0.157143" y="0.486364" />
                                 <point x="0.32381" y="0.318182" />
@@ -447,6 +471,7 @@
                             <image-point name="front" x="0.652381" y="0.304545" />
                             <image-point name="attack01" x="0.82381" y="0.609091" />
                             <image-point name="attack02" x="0.685714" y="0.231818" />
+                            <image-point name="Imagepoint 4" x="0.361905" y="0.659091" />
                             <collision-poly>
                                 <point x="0.166667" y="0.5" />
                                 <point x="0.366667" y="0.322727" />
@@ -462,6 +487,7 @@
                             <image-point name="front" x="0.547619" y="0.254545" />
                             <image-point name="attack01" x="0.82381" y="0.609091" />
                             <image-point name="attack02" x="0.557143" y="0.136364" />
+                            <image-point name="Imagepoint 4" x="0.361905" y="0.65" />
                             <collision-poly>
                                 <point x="0.166667" y="0.5" />
                                 <point x="0.366667" y="0.322727" />
@@ -477,6 +503,7 @@
                             <image-point name="front" x="0.647619" y="0.309091" />
                             <image-point name="attack01" x="0.82381" y="0.609091" />
                             <image-point name="attack02" x="0.690476" y="0.195455" />
+                            <image-point name="Imagepoint 4" x="0.342857" y="0.640909" />
                             <collision-poly>
                                 <point x="0.166667" y="0.5" />
                                 <point x="0.366667" y="0.322727" />
@@ -492,6 +519,7 @@
                             <image-point name="front" x="0.733333" y="0.386364" />
                             <image-point name="attack01" x="0.82381" y="0.609091" />
                             <image-point name="attack02" x="0.804762" y="0.295455" />
+                            <image-point name="Imagepoint 4" x="0.347619" y="0.640909" />
                             <collision-poly>
                                 <point x="0.166667" y="0.5" />
                                 <point x="0.366667" y="0.322727" />
@@ -507,6 +535,7 @@
                             <image-point name="front" x="0.804762" y="0.495455" />
                             <image-point name="attack01" x="0.82381" y="0.609091" />
                             <image-point name="attack02" x="0.885714" y="0.431818" />
+                            <image-point name="Imagepoint 4" x="0.342857" y="0.645455" />
                             <collision-poly>
                                 <point x="0.166667" y="0.5" />
                                 <point x="0.366667" y="0.322727" />
@@ -522,6 +551,7 @@
                             <image-point name="front" x="0.82381" y="0.6" />
                             <image-point name="attack01" x="0.82381" y="0.609091" />
                             <image-point name="attack02" x="0.847619" y="0.604545" />
+                            <image-point name="Imagepoint 4" x="0.361905" y="0.640909" />
                             <collision-poly>
                                 <point x="0.166667" y="0.5" />
                                 <point x="0.366667" y="0.322727" />
@@ -537,6 +567,7 @@
                             <image-point name="front" x="0.842857" y="0.727273" />
                             <image-point name="attack01" x="0.82381" y="0.609091" />
                             <image-point name="attack02" x="0.838095" y="0.727273" />
+                            <image-point name="Imagepoint 4" x="0.347619" y="0.640909" />
                             <collision-poly>
                                 <point x="0.166667" y="0.5" />
                                 <point x="0.366667" y="0.322727" />
