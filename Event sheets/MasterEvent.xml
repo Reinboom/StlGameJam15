@@ -256,6 +256,10 @@
                             <param id="0" name="X">lerp(MutabatSting.X,1050,0.1)</param>
                             <param id="1" name="Y">MutabatSting.Y</param>
                         </action>
+                        <action id="-3" name="Set position" sid="3269299797554019" type="ShooterSting">
+                            <param id="0" name="X">ShooterSting.X</param>
+                            <param id="1" name="Y">lerp(ShooterSting.Y,400,0.1)</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="5695887303221534">
@@ -274,6 +278,10 @@
                         <action id="-3" name="Set position" sid="540975968930125" type="MutabatSting">
                             <param id="0" name="X">lerp(MutabatSting.X,1600,0.1)</param>
                             <param id="1" name="Y">MutabatSting.Y</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="7202669236845705" type="ShooterSting">
+                            <param id="0" name="X">ShooterSting.X</param>
+                            <param id="1" name="Y">lerp(ShooterSting.Y,-370,0.1)</param>
                         </action>
                     </actions>
                 </event-block>
