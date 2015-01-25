@@ -302,7 +302,7 @@
                         <type>One-shot</type>
                         <initial-particle-properties></initial-particle-properties>
                         <speed>25</speed>
-                        <size>32</size>
+                        <size>48</size>
                         <opacity>100</opacity>
                         <grow-rate>5</grow-rate>
                         <x-randomiser>0</x-randomiser>
@@ -320,7 +320,7 @@
                         <timeout>1</timeout>
                     </properties>
                     <effect-instances>
-                        <effect-instance type="Burn" />
+                        <effect-instance type="Screen" />
                         <effect-instance type="Warp">
                             <parameters>
                                 <x-amplitude>5</x-amplitude>
@@ -332,7 +332,7 @@
                             </parameters>
                         </effect-instance>
                     </effect-instances>
-                    <blend-mode>1</blend-mode>
+                    <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>693</x>

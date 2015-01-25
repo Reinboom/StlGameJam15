@@ -29,6 +29,7 @@
     <used-effects>
         <effect author="Scirra" id="burn">Burn</effect>
         <effect author="Scirra" id="multiply">Multiply</effect>
+        <effect author="Scirra" id="screen">Screen</effect>
         <effect author="Scirra" id="tint">Tint</effect>
         <effect author="Brad Larson" id="vignette">Vignette</effect>
         <effect author="Scirra" id="warp">Warp</effect>
@@ -1004,8 +1005,8 @@
         <object-type name="Hit" sid="1733785262747615">
             <plugin id="Particles" />
             <effects>
-                <effect-type name="Burn">
-                    <effect id="burn" />
+                <effect-type name="Screen">
+                    <effect id="screen" />
                 </effect-type>
                 <effect-type name="Warp">
                     <effect id="warp" />
