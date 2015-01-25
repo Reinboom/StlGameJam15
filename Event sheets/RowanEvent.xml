@@ -135,7 +135,7 @@
                                                 </action>
                                                 <action id="-11" name="Subtract from" sid="8884263382485883" type="System">
                                                     <param id="0" name="Variable">P1energy</param>
-                                                    <param id="1" name="Value">20</param>
+                                                    <param id="1" name="Value">15</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -398,7 +398,7 @@
                                                 </action>
                                                 <action id="-11" name="Subtract from" sid="4501729554703341" type="System">
                                                     <param id="0" name="Variable">P2energy</param>
-                                                    <param id="1" name="Value">20</param>
+                                                    <param id="1" name="Value">15</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -845,6 +845,8 @@
                             <param id="0" name="Variable">skullHPregen</param>
                             <param id="1" name="Value">500</param>
                         </action>
+                        <action id="-9" name="Destroy" sid="2861458144822891" type="P1attack01" />
+                        <action id="-9" name="Destroy" sid="5245227917621986" type="P1attack02" />
                     </actions>
                 </event-block>
                 <event-block sid="8687236793192411">
@@ -866,6 +868,8 @@
                             <param id="0" name="Variable">skullHPregen</param>
                             <param id="1" name="Value">1000</param>
                         </action>
+                        <action id="-9" name="Destroy" sid="7645310602689129" type="P2attack01" />
+                        <action id="-9" name="Destroy" sid="8150800665944847" type="P2attack02" />
                     </actions>
                 </event-block>
                 <event-block sid="1401573608808136">
