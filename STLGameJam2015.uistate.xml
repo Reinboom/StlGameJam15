@@ -25,6 +25,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </properties>
     <families-expanded root="1">
         <family expanded="1" name="Enemies" />
+        <family expanded="0" name="Players" />
+        <family expanded="0" name="Food" />
     </families-expanded>
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
@@ -37,6 +39,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/ShooterSting/" />
+        <folder expanded="1" path="animation-folder/ManticoreSting/" />
+        <folder expanded="1" path="animation-folder/MutabatSting/" />
         <folder expanded="1" path="animation-folder/P1attack01/" />
         <folder expanded="1" path="animation-folder/P2attack01/" />
         <folder expanded="1" path="animation-folder/PlayerA/" />
@@ -50,8 +55,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/HEX_ASSET_/" />
         <folder expanded="1" path="animation-folder/Sprite/" />
         <folder expanded="1" path="animation-folder/Sprite2/" />
-        <folder expanded="1" path="animation-folder/ManticoreSting/" />
-        <folder expanded="1" path="animation-folder/MutabatSting/" />
-        <folder expanded="1" path="animation-folder/ShooterSting/" />
+        <folder expanded="1" path="animation-folder/Manticore_food/" />
+        <folder expanded="1" path="animation-folder/Bat_food/" />
+        <folder expanded="1" path="animation-folder/Archer_food/" />
+        <folder expanded="1" path="animation-folder/player_food/" />
     </folders-expanded>
 </c2uistate>
