@@ -78,6 +78,8 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <HP>20</HP>
+                        <InvulDuration>0</InvulDuration>
                         <Attacking>false</Attacking>
                     </instance-variables>
                     <behavior-instances>

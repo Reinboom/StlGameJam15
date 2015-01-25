@@ -264,6 +264,24 @@
                             <param id="1" name="Y">ManticoreSting.Y</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="5566895484814589">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="2497901618921382" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="3463765093895093" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="0" name="Play" sid="8597638856237435" type="Audio">
+                                    <param id="0" name="Audio file">roar</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="3372573137579776">
                     <conditions>
@@ -284,6 +302,25 @@
                             <param id="1" name="Y">MutabatSting.Y</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="5608088408420635">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="8745345482830065" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="1604297706661206" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="7" name="Play (by name)" sid="1290093152936704" type="Audio">
+                                    <param id="0" name="Folder">0</param>
+                                    <param id="1" name="Audio file name">choose(&quot;bat_01&quot;,&quot;bat_02&quot;,&quot;bat_03&quot;)</param>
+                                    <param id="3" name="Loop">0</param>
+                                    <param id="4" name="Volume">0</param>
+                                    <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="2612444123258935">
                     <conditions>

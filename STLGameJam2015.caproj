@@ -10,6 +10,7 @@
     <unique-id>2m2oqhlgof90t</unique-id>
     <saved-with-version>19500</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
@@ -962,6 +963,9 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Audio" sid="8901901275689823">
+            <plugin id="Audio" />
+        </object-type>
     </object-folder>
     <families>
         <family name="Enemies" plugin-id="Sprite" sid="6268585446215248">
@@ -970,6 +974,10 @@
                 <member>Manticore</member>
                 <member>Shooter</member>
             </members>
+            <instance-variables>
+                <instance-variable name="HP" sid="1315837513817523" type="number" />
+                <instance-variable name="InvulDuration" sid="1516154107693714" type="number" />
+            </instance-variables>
         </family>
         <family name="Players" plugin-id="Sprite" sid="5106465466691916">
             <members>
@@ -1008,8 +1016,29 @@
                 <analog-deadzone>25</analog-deadzone>
             </properties>
         </global-instance>
+        <global-instance type="Audio" uid="52">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+                <speed-of-sound>5000</speed-of-sound>
+                <doppler-factor>1</doppler-factor>
+            </properties>
+        </global-instance>
     </global-instances>
-    <sounds-folder />
+    <sounds-folder>
+        <file name="roar.ogg" />
+        <file name="bat_01.ogg" />
+        <file name="bat_02.ogg" />
+        <file name="bat_03.ogg" />
+    </sounds-folder>
     <music-folder />
     <files-folder>
         <file-folder name="Icons">
