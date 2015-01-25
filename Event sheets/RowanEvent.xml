@@ -568,16 +568,33 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Spawn another object" sid="5416868956743512" type="PlayerA">
+                        <action id="0" name="Spawn another object" sid="5416868956743512" type="PlayerB">
                             <param id="0" name="Object">player_food</param>
                             <param id="1" name="Layer">3</param>
                             <param id="2" name="Image point">0</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="9712806213897707" type="PlayerA" />
+                        <action id="-9" name="Destroy" sid="9712806213897707" type="PlayerB" />
                         <action id="-9" name="Set value" sid="2343483804414694" type="System">
                             <param id="0" name="Variable">skullHPregen</param>
                             <param id="1" name="Value">500</param>
                         </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1401573608808136">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="5691874769577392" type="System">
+                            <param id="0" name="Variable">P2energy</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="8011335866254914" type="System">
+                            <param id="0" name="Variable">P1energy</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Restart layout" sid="641883126996576" type="System" />
                     </actions>
                 </event-block>
             </sub-events>

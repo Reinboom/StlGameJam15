@@ -11,10 +11,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout order="0">MasterLayout</layout>
+        <event-sheet order="1">MasterEvent</event-sheet>
         <event-sheet order="2">DanEvent</event-sheet>
         <event-sheet order="3">ReinaEvent</event-sheet>
         <event-sheet active="1" order="4">RowanEvent</event-sheet>
-        <event-sheet order="1">MasterEvent</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
