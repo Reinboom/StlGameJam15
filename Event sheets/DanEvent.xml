@@ -3,17 +3,6 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>DanEvent</name>
     <events>
-        <event-block sid="7928905355932167">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="7626664361997162" type="System" />
-            </conditions>
-            <actions>
-                <action id="-9" name="Set value" sid="7497152428884927" type="System">
-                    <param id="0" name="Variable">P1energy</param>
-                    <param id="1" name="Value">1000</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="5092268509985301">
             <conditions>
                 <condition id="-7" name="Compare instance variable" sid="2898767502857249" type="Shooter">
@@ -33,7 +22,7 @@
             <conditions>
                 <condition id="-1" name="Compare X" sid="5947535312737255" type="Shooter">
                     <param id="0" name="Comparison">5</param>
-                    <param id="1" name="X co-ordinate">PlayerA.X + 200</param>
+                    <param id="1" name="X co-ordinate">PlayerA.X + 50</param>
                 </condition>
                 <condition id="-7" name="Compare instance variable" sid="8359434340734653" type="Shooter">
                     <param id="0" name="Instance variable">Cooldown</param>
@@ -75,9 +64,101 @@
                             <param id="0" name="Instance variable">Cooldown</param>
                             <param id="1" name="Value">200</param>
                         </action>
+                        <action id="4" name="Set animation" sid="913663894724424" type="Shooter">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="1976275472332323">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="7555771333015228" type="Shooter">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="X co-ordinate">PlayerA.X - 50</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="4043902549714433" type="Shooter">
+                    <param id="0" name="Instance variable">Cooldown</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="5861921744888555" type="Shooter">
+                    <param id="0" name="Animation">&quot;Shoot&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="5517025335332817">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="6353163295752649" type="Shooter">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">11</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="4256494305005623" type="Shooter">
+                            <param id="0" name="Object">Shot</param>
+                            <param id="1" name="Layer">4</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-22" name="Set angle toward position" sid="9846394140551188" type="Shot">
+                            <param id="0" name="X">PlayerA.X</param>
+                            <param id="1" name="Y">PlayerA.Y - 60</param>
+                        </action>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="7032702337664075" type="Shot">
+                            <param id="0" name="Speed">500</param>
+                        </action>
+                        <action behavior="Bullet" id="2" name="Set gravity" sid="3612721904665202" type="Shot">
+                            <param id="0" name="Gravity">5</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="4889895813966777" type="Shooter">
+                            <param id="0" name="Instance variable">Cooldown</param>
+                            <param id="1" name="Value">200</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="6948422930683929" type="Shooter">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="8511342081314064">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="2110377738404815" type="Shooter">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="X co-ordinate">PlayerA.X + 50</param>
+                </condition>
+                <condition id="-1" name="Compare X" sid="6855704527554704" type="Shooter">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="X co-ordinate">PlayerA.X</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="4705336087872941" type="Shooter">
+                    <param id="0" name="Control">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8372338346395792">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="6488675933317986" type="Shooter">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="X co-ordinate">PlayerA.X</param>
+                </condition>
+                <condition id="-1" name="Compare X" sid="2739710670063029" type="Shooter">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="X co-ordinate">PlayerA.X - 50</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="2726777926226004" type="Shooter">
+                    <param id="0" name="Control">0</param>
+                </action>
+            </actions>
         </event-block>
         <event-block sid="1081944151638574">
             <conditions>
@@ -90,16 +171,6 @@
                 <action id="-11" name="Subtract from" sid="5919543057300581" type="System">
                     <param id="0" name="Variable">P1energy</param>
                     <param id="1" name="Value">10</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="9460040009632505">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="1299058768106269" type="System" />
-            </conditions>
-            <actions>
-                <action id="0" name="Set text" sid="7382237696683927" type="HUD_P1energy">
-                    <param id="0" name="Text">P1energy</param>
                 </action>
             </actions>
         </event-block>
