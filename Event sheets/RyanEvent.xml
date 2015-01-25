@@ -141,7 +141,7 @@
             <conditions>
                 <condition id="-1" name="Compare X" sid="3746150746016347" type="Manticore">
                     <param id="0" name="Comparison">5</param>
-                    <param id="1" name="X co-ordinate">PlayerA.X + 50</param>
+                    <param id="1" name="X co-ordinate">((P1energy&lt;=0)?PlayerB.X:PlayerA.X)+50</param>
                 </condition>
                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="9444148747002508" type="Manticore">
                     <param id="0" name="Instance variable">Attacking</param>
@@ -165,7 +165,7 @@
             <conditions>
                 <condition id="-1" name="Compare X" sid="6526313365017068" type="Manticore">
                     <param id="0" name="Comparison">2</param>
-                    <param id="1" name="X co-ordinate">PlayerA.X - 50</param>
+                    <param id="1" name="X co-ordinate">((P1energy&lt;=0)?PlayerB.X:PlayerA.X)-50</param>
                 </condition>
                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="4235070845084744" type="Manticore">
                     <param id="0" name="Instance variable">Attacking</param>
@@ -189,7 +189,7 @@
             <conditions>
                 <condition id="-2" name="Compare Y" sid="1428582914243526" type="Manticore">
                     <param id="0" name="Comparison">2</param>
-                    <param id="1" name="Y co-ordinate">PlayerA.Y</param>
+                    <param id="1" name="Y co-ordinate">((P1energy&lt;=0)?PlayerB.Y:PlayerA.Y)</param>
                 </condition>
                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="4734466889768481" type="Manticore">
                     <param id="0" name="Instance variable">Attacking</param>

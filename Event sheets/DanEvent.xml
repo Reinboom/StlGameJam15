@@ -27,7 +27,7 @@
             <conditions>
                 <condition id="-1" name="Compare X" sid="5947535312737255" type="Shooter">
                     <param id="0" name="Comparison">5</param>
-                    <param id="1" name="X co-ordinate">PlayerB.X + 50</param>
+                    <param id="1" name="X co-ordinate">((P2energy&lt;=0)?PlayerA.X:PlayerB.X)+50</param>
                 </condition>
                 <condition id="-7" name="Compare instance variable" sid="8359434340734653" type="Shooter">
                     <param id="0" name="Instance variable">Cooldown</param>
@@ -95,7 +95,7 @@
             <conditions>
                 <condition id="-1" name="Compare X" sid="7555771333015228" type="Shooter">
                     <param id="0" name="Comparison">3</param>
-                    <param id="1" name="X co-ordinate">PlayerB.X - 50</param>
+                    <param id="1" name="X co-ordinate">((P2energy&lt;=0)?PlayerA.X:PlayerB.X)-50</param>
                 </condition>
                 <condition id="-7" name="Compare instance variable" sid="4043902549714433" type="Shooter">
                     <param id="0" name="Instance variable">Cooldown</param>
