@@ -425,34 +425,42 @@
         </event-group>
         <event-group description="" sid="2115187462696421" title="Vignette">
             <sub-events>
+                <variable constant="0" name="TotalEnergy" sid="1197931906061148" static="0" type="number">0</variable>
                 <event-block sid="3198266169590242">
                     <conditions>
                         <condition id="-1" name="Every tick" sid="9944921944745345" type="System" />
-                        <condition id="-14" name="Compare variable" sid="9501866839898182" type="System">
-                            <param id="0" name="Variable">P1energy</param>
-                            <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Value">1500</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="6547599967552281" type="System">
-                            <param id="0" name="Variable">P2energy</param>
-                            <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Value">1500</param>
-                        </condition>
                     </conditions>
                     <actions>
-                        <action id="-32" name="Set layer effect parameter" sid="4883054809767318" type="System">
-                            <param id="0" name="Layer">2</param>
-                            <param id="1" name="Effect">&quot;Vignette&quot;</param>
-                            <param id="2" name="Parameter index">0</param>
-                            <param id="3" name="Value">50*((P1energy+P1energy)/7000)</param>
-                        </action>
-                        <action id="-32" name="Set layer effect parameter" sid="12261714114891" type="System">
-                            <param id="0" name="Layer">2</param>
-                            <param id="1" name="Effect">&quot;Vignette&quot;</param>
-                            <param id="2" name="Parameter index">1</param>
-                            <param id="3" name="Value">80*((P1energy+P1energy)/7000)</param>
+                        <action id="-9" name="Set value" sid="9365090737467437" type="System">
+                            <param id="0" name="Variable">TotalEnergy</param>
+                            <param id="1" name="Value">P1energy + P2energy</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="5921453098077165">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="9501866839898182" type="System">
+                                    <param id="0" name="Variable">TotalEnergy</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">1000</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-32" name="Set layer effect parameter" sid="4883054809767318" type="System">
+                                    <param id="0" name="Layer">2</param>
+                                    <param id="1" name="Effect">&quot;Vignette&quot;</param>
+                                    <param id="2" name="Parameter index">0</param>
+                                    <param id="3" name="Value">85*(((P1energy+P2energy) - 1000)/19000) +20</param>
+                                </action>
+                                <action id="-32" name="Set layer effect parameter" sid="12261714114891" type="System">
+                                    <param id="0" name="Layer">2</param>
+                                    <param id="1" name="Effect">&quot;Vignette&quot;</param>
+                                    <param id="2" name="Parameter index">1</param>
+                                    <param id="3" name="Value">85*(((P1energy+P2energy) - 1000)/19000) +35</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>

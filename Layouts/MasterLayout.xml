@@ -239,8 +239,8 @@
                     <effect id="vignette" />
                     <effect-instance type="Vignette">
                         <parameters>
-                            <end-radius>0.8</end-radius>
-                            <start-radius>0.5</start-radius>
+                            <end-radius>0.2</end-radius>
+                            <start-radius>0.1</start-radius>
                         </parameters>
                     </effect-instance>
                 </effect-type>
