@@ -12,10 +12,12 @@
     <used-plugins>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
+        <plugin author="Scirra" id="progressbar" version="1">Progress bar</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
@@ -24,7 +26,9 @@
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects>
+        <effect author="Scirra" id="burn">Burn</effect>
         <effect author="Scirra" id="tint">Tint</effect>
+        <effect author="Scirra" id="warpradial">Warp Radial</effect>
     </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
@@ -500,7 +504,7 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6335300207053731" speed="5">
-                        <frame duration="1" hotspotX="0.289474" hotspotY="0.75" original-source="C:\Users\deichling\Desktop\GAMES\GGJ2015\StlGameJam15\Sprites\arrow.png">
+                        <frame duration="1" hotspotX="0.285714" hotspotY="0.73913" original-source="C:\Users\deichling\Desktop\GAMES\GGJ2015\StlGameJam15\Sprites\arrow.png">
                             <collision-poly>
                                 <point x="1" y="0" />
                                 <point x="1" y="1" />
@@ -602,17 +606,22 @@
                 <instance-variables>
                     <instance-variable name="Cooldown" sid="8211551026481285" type="number" />
                 </instance-variables>
+                <behaviors>
+                    <behavior-type name="Platform" sid="3181002586330805">
+                        <behavior id="Platform" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4357240374351507" speed="13">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\deichling\Desktop\GAMES\GGJ2015\StlGameJam15\Sprites\archer_01.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\deichling\Desktop\GAMES\GGJ2015\StlGameJam15\Sprites\archer_02.png">
                             <collision-poly>
-                                <point x="0.431641" y="0.15625" />
-                                <point x="0.601563" y="0.15625" />
-                                <point x="0.802734" y="0.455078" />
-                                <point x="0.611328" y="0.908203" />
-                                <point x="0.371094" y="0.90625" />
-                                <point x="0.285156" y="0.701172" />
-                                <point x="0.0898438" y="0.464844" />
+                                <point x="0.444974" y="0.0629167" />
+                                <point x="0.64823" y="0.0266667" />
+                                <point x="0.929401" y="0.408411" />
+                                <point x="0.711328" y="1" />
+                                <point x="0.391094" y="1" />
+                                <point x="0.225156" y="0.701172" />
+                                <point x="0.0365105" y="0.431511" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -820,6 +829,24 @@
         <object-type name="DebugOut" sid="8685092805807869">
             <plugin id="Text" />
         </object-type>
+        <object-type name="P1bar" sid="3362967607292967">
+            <plugin id="progressbar" />
+        </object-type>
+        <object-type name="P2bar" sid="7483075009389222">
+            <plugin id="progressbar" />
+        </object-type>
+        <object-type name="FIre" sid="1155862986703744">
+            <plugin id="Particles" />
+            <effects>
+                <effect-type name="Burn">
+                    <effect id="burn" />
+                </effect-type>
+                <effect-type name="WarpRadial">
+                    <effect id="warpradial" />
+                </effect-type>
+            </effects>
+            <texture original-source="C:\Users\deichling\Desktop\GAMES\GGJ2015\StlGameJam15\Sprites\fire.png" />
+        </object-type>
         <object-type name="ManticoreSting" sid="8743203945768678">
             <plugin id="Sprite" />
             <animation-folder>
@@ -842,6 +869,7 @@
             <members>
                 <member>Fly</member>
                 <member>Manticore</member>
+                <member>Shooter</member>
             </members>
         </family>
     </families>
@@ -861,9 +889,9 @@
         <event-sheet>Spawner.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="Mouse" uid="23" />
-        <global-instance type="Keyboard" uid="41" />
-        <global-instance type="Gamepad" uid="43">
+        <global-instance type="Mouse" uid="41" />
+        <global-instance type="Keyboard" uid="43" />
+        <global-instance type="Gamepad" uid="50">
             <properties>
                 <analog-deadzone>25</analog-deadzone>
             </properties>

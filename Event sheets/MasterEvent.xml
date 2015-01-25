@@ -22,6 +22,18 @@
                     <actions>
                         <action id="-9" name="Destroy" sid="9340259046633882" type="P1attack01" />
                         <action id="-9" name="Destroy" sid="3604510652311234" type="P2attack01" />
+                        <action id="4" name="Set maximum" sid="1300012942863496" type="P1bar">
+                            <param id="0" name="Maximum">P1energy</param>
+                        </action>
+                        <action id="4" name="Set maximum" sid="8180495352682572" type="P2bar">
+                            <param id="0" name="Maximum">P2energy</param>
+                        </action>
+                        <action id="3" name="Set progress" sid="5503520947151167" type="P1bar">
+                            <param id="0" name="Value">P1energy</param>
+                        </action>
+                        <action id="3" name="Set progress" sid="6598266594263739" type="P2bar">
+                            <param id="0" name="Value">P2energy</param>
+                        </action>
                         <action id="7" name="Set mirrored" sid="9481449995641143" type="MutabatSting">
                             <param id="0" name="State">0</param>
                         </action>
@@ -112,6 +124,20 @@
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="2852698172221653">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="8439295163596624" type="System">
+                                    <param id="0" name="Object">Manticore</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="349102900712576" type="Manticore">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-block>
@@ -142,6 +168,12 @@
                         </action>
                         <action id="0" name="Set text" sid="7400790597298569" type="HUD_P2energy">
                             <param id="0" name="Text">P2energy</param>
+                        </action>
+                        <action id="3" name="Set progress" sid="7035664947234939" type="P1bar">
+                            <param id="0" name="Value">P1energy</param>
+                        </action>
+                        <action id="3" name="Set progress" sid="6493156580381555" type="P2bar">
+                            <param id="0" name="Value">P2energy</param>
                         </action>
                     </actions>
                 </event-block>
@@ -177,6 +209,7 @@
         <include>RyanEvent</include>
         <include>RowanEvent</include>
         <include>ReinaEvent</include>
+        <include>DanEvent</include>
         <include>Spawner</include>
         <event-block sid="7154299897932855">
             <conditions>
