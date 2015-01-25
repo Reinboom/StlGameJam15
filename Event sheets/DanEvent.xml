@@ -82,7 +82,7 @@
                             <param id="1" name="From">1</param>
                         </action>
                         <action id="-16" name="Wait" sid="9559924218373068" type="System">
-                            <param id="0" name="Seconds">1</param>
+                            <param id="0" name="Seconds">0.15</param>
                         </action>
                         <action id="11" name="Set collisions enabled" sid="7131518730145349" type="Shot">
                             <param id="0" name="Collisions">1</param>
@@ -150,7 +150,7 @@
                             <param id="1" name="From">1</param>
                         </action>
                         <action id="-16" name="Wait" sid="2564650003972927" type="System">
-                            <param id="0" name="Seconds">1</param>
+                            <param id="0" name="Seconds">0.15</param>
                         </action>
                         <action id="11" name="Set collisions enabled" sid="8843467075646688" type="Shot">
                             <param id="0" name="Collisions">1</param>

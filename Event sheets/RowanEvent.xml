@@ -790,7 +790,7 @@
                         <action id="0" name="Spawn another object" sid="6467043807351765" type="PlayerA">
                             <param id="0" name="Object">Hit</param>
                             <param id="1" name="Layer">4</param>
-                            <param id="2" name="Image point">2</param>
+                            <param id="2" name="Image point">3</param>
                         </action>
                         <action id="-8" name="Set angle" sid="6162705321736817" type="Hit">
                             <param id="0" name="Angle">270</param>
@@ -823,7 +823,7 @@
                         <action id="0" name="Spawn another object" sid="1408432173892851" type="PlayerB">
                             <param id="0" name="Object">Hit</param>
                             <param id="1" name="Layer">4</param>
-                            <param id="2" name="Image point">2</param>
+                            <param id="2" name="Image point">3</param>
                         </action>
                         <action id="-8" name="Set angle" sid="6866372713914825" type="Hit">
                             <param id="0" name="Angle">270</param>
