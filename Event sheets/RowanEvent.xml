@@ -3,13 +3,13 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>RowanEvent</name>
     <events>
+        <variable constant="1" name="DELAYBETWEENVALIDATIONS" sid="3844916209078925" static="0" type="number">0.1</variable>
+        <variable constant="0" name="ValidDamageMoveP1" sid="9699880534858793" static="0" type="number">0</variable>
+        <variable constant="0" name="ValidDamageAttackP1" sid="534314246401222" static="0" type="number">0</variable>
+        <variable constant="0" name="ValidDamageMoveP2" sid="5141321776105938" static="0" type="number">0</variable>
+        <variable constant="0" name="ValidDamageAttackP2" sid="5505870164822597" static="0" type="number">0</variable>
         <event-group description="" sid="5276489665577781" title="Players">
             <sub-events>
-                <variable constant="1" name="DelayBetweenValidations" sid="3844916209078925" static="0" type="number">0.5</variable>
-                <variable constant="0" name="ValidDamageMoveP1" sid="9699880534858793" static="0" type="number">0</variable>
-                <variable constant="0" name="ValidDamageAttackP1" sid="534314246401222" static="0" type="number">0</variable>
-                <variable constant="0" name="ValidDamageMoveP2" sid="5141321776105938" static="0" type="number">0</variable>
-                <variable constant="0" name="ValidDamageAttackP2" sid="5505870164822597" static="0" type="number">0</variable>
                 <event-block sid="4710575267950932">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="8564449412751559" type="PlayerA">
@@ -93,7 +93,7 @@
                                             <param id="1" name="Button">2</param>
                                         </condition>
                                         <condition id="2" name="Key is down" sid="6630162526445529" type="Keyboard">
-                                            <param id="0" name="Key">32 (Space)</param>
+                                            <param id="0" name="Key">77 (M)</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -349,11 +349,14 @@
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block sid="9872003805273517">
+                                <event-block any="1" sid="9872003805273517">
                                     <conditions>
                                         <condition id="6" name="On button pressed" sid="1036022705142561" type="Gamepad">
                                             <param id="0" name="Gamepad">1</param>
                                             <param id="1" name="Button">2</param>
+                                        </condition>
+                                        <condition id="2" name="Key is down" sid="6382013837356838" type="Keyboard">
+                                            <param id="0" name="Key">32 (Space)</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -401,11 +404,14 @@
                                         </event-block>
                                     </sub-events>
                                 </event-block>
-                                <event-block sid="7409232911976264">
+                                <event-block any="1" sid="7409232911976264">
                                     <conditions>
                                         <condition id="3" name="Is button down" sid="9157928351483122" type="Gamepad">
                                             <param id="0" name="Gamepad">1</param>
                                             <param id="1" name="Button">0</param>
+                                        </condition>
+                                        <condition id="2" name="Key is down" sid="4636581112454609" type="Keyboard">
+                                            <param id="0" name="Key">87 (W)</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -435,13 +441,16 @@
                                         </event-block>
                                     </sub-events>
                                 </event-block>
-                                <event-block sid="5025241984320216">
+                                <event-block any="1" sid="5025241984320216">
                                     <conditions>
                                         <condition id="5" name="Compare axis" sid="3201009137546904" type="Gamepad">
                                             <param id="0" name="Gamepad">1</param>
                                             <param id="1" name="Axis">0</param>
                                             <param id="2" name="Comparison">2</param>
                                             <param id="3" name="Value">0</param>
+                                        </condition>
+                                        <condition id="2" name="Key is down" sid="9870174397816908" type="Keyboard">
+                                            <param id="0" name="Key">65 (A)</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -474,13 +483,16 @@
                                         </event-block>
                                     </sub-events>
                                 </event-block>
-                                <event-block sid="3940913708660809">
+                                <event-block any="1" sid="3940913708660809">
                                     <conditions>
                                         <condition id="5" name="Compare axis" sid="4400863547182596" type="Gamepad">
                                             <param id="0" name="Gamepad">1</param>
                                             <param id="1" name="Axis">0</param>
                                             <param id="2" name="Comparison">4</param>
                                             <param id="3" name="Value">0</param>
+                                        </condition>
+                                        <condition id="2" name="Key is down" sid="7393116505390142" type="Keyboard">
+                                            <param id="0" name="Key">68 (D)</param>
                                         </condition>
                                     </conditions>
                                     <actions>
