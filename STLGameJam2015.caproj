@@ -28,6 +28,7 @@
     <used-effects>
         <effect author="Scirra" id="burn">Burn</effect>
         <effect author="Scirra" id="tint">Tint</effect>
+        <effect author="Brad Larson" id="vignette">Vignette</effect>
         <effect author="Scirra" id="warpradial">Warp Radial</effect>
     </used-effects>
     <configurations>
@@ -63,6 +64,36 @@
             </object-type>
             <object-type name="Timer" sid="4879787006889489">
                 <plugin id="Text" />
+            </object-type>
+            <object-type name="ShooterSting" sid="2793402428605806">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9683841262445257" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dropbox\Dropbox\STLGameJam2015\archerSplash.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ManticoreSting" sid="8743203945768678">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6087793301509701" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dropbox\Dropbox\STLGameJam2015\manticore_splash.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="MutabatSting" sid="8611287465609231">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1307369791090668" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dropbox\Dropbox\STLGameJam2015\dread_bat_splash.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="P2bar" sid="7483075009389222">
+                <plugin id="progressbar" />
+            </object-type>
+            <object-type name="P1bar" sid="3362967607292967">
+                <plugin id="progressbar" />
             </object-type>
         </object-folder>
         <object-folder name="Players">
@@ -829,12 +860,6 @@
         <object-type name="DebugOut" sid="8685092805807869">
             <plugin id="Text" />
         </object-type>
-        <object-type name="P1bar" sid="3362967607292967">
-            <plugin id="progressbar" />
-        </object-type>
-        <object-type name="P2bar" sid="7483075009389222">
-            <plugin id="progressbar" />
-        </object-type>
         <object-type name="FIre" sid="1155862986703744">
             <plugin id="Particles" />
             <effects>
@@ -847,33 +872,95 @@
             </effects>
             <texture original-source="C:\Users\deichling\Desktop\GAMES\GGJ2015\StlGameJam15\Sprites\fire.png" />
         </object-type>
-        <object-type name="ManticoreSting" sid="8743203945768678">
+        <object-type name="Manticore_food" sid="7649292904355912">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="8600604263421631">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6087793301509701" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dropbox\Dropbox\STLGameJam2015\manticore_splash.png" />
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5922714857334137" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dropbox\Dropbox\STLGameJam2015\manticore_steak.png">
+                        <collision-poly>
+                            <point x="0.295" y="0.295" />
+                            <point x="0.5" y="0.115" />
+                            <point x="0.875" y="0.125" />
+                            <point x="0.98" y="0.5" />
+                            <point x="0.765" y="0.765" />
+                            <point x="0.5" y="0.855" />
+                            <point x="0.135" y="0.865" />
+                            <point x="0.02" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="MutabatSting" sid="8611287465609231">
+        <object-type name="Bat_food" sid="6530013201744206">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="7677029049364607">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1307369791090668" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dropbox\Dropbox\STLGameJam2015\dread_bat_splash.png" />
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5902618154447544" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dropbox\Dropbox\STLGameJam2015\bat_wing.png">
+                        <collision-poly>
+                            <point x="0.295" y="0.295" />
+                            <point x="0.5" y="0.115" />
+                            <point x="0.875" y="0.125" />
+                            <point x="0.98" y="0.5" />
+                            <point x="0.765" y="0.765" />
+                            <point x="0.5" y="0.855" />
+                            <point x="0.135" y="0.865" />
+                            <point x="0.02" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="ShooterSting" sid="2793402428605806">
+        <object-type name="Archer_food" sid="4017058592997193">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="9145862852145302">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9683841262445257" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dropbox\Dropbox\STLGameJam2015\archerSplash.png" />
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2810193350070885" speed="5">
+                    <frame duration="1" hotspotX="0.557143" hotspotY="0.568627" original-source="D:\Dropbox\Dropbox\STLGameJam2015\archer_ribs.png">
+                        <collision-poly>
+                            <point x="0.192857" y="0.235294" />
+                            <point x="0.557143" y="0.143791" />
+                            <point x="0.928571" y="0.228758" />
+                            <point x="0.978571" y="0.568627" />
+                            <point x="0.764286" y="0.75817" />
+                            <point x="0.557143" y="0.96732" />
+                            <point x="0.214286" y="0.882353" />
+                            <point x="0.0857143" y="0.568627" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="TiledBackground" sid="35022861200084">
-            <plugin id="TiledBg" />
-            <texture />
+        <object-type name="player_food" sid="8462453560994507">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1317767103189576" speed="5">
+                    <frame duration="1" hotspotX="0.676692" hotspotY="0.525424" original-source="D:\Dropbox\Dropbox\STLGameJam2015\firends_head.png">
+                        <collision-poly>
+                            <point x="0.150376" y="0.129944" />
+                            <point x="0.676692" y="0.0169492" />
+                            <point x="0.969925" y="0.305085" />
+                            <point x="0.954887" y="0.734463" />
+                            <point x="0.676692" y="0.983051" />
+                            <point x="0.233083" y="0.858757" />
+                            <point x="0.0150376" y="0.525424" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families>
@@ -882,6 +969,19 @@
                 <member>Fly</member>
                 <member>Manticore</member>
                 <member>Shooter</member>
+            </members>
+        </family>
+        <family name="Players" plugin-id="Sprite" sid="5106465466691916">
+            <members>
+                <member>PlayerA</member>
+                <member>PlayerB</member>
+            </members>
+        </family>
+        <family name="Food" plugin-id="Sprite" sid="9556013726435387">
+            <members>
+                <member>Archer_food</member>
+                <member>Bat_food</member>
+                <member>Manticore_food</member>
             </members>
         </family>
     </families>

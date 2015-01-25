@@ -5,6 +5,68 @@
     <events>
         <event-group description="" sid="5276489665577781" title="Players">
             <sub-events>
+                <event-block sid="4710575267950932">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="8564449412751559" type="PlayerA">
+                            <param id="0" name="Object">Food</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="6628701582592378" type="Food" />
+                        <action id="-10" name="Add to" sid="2056334523873627" type="System">
+                            <param id="0" name="Variable">P1energy</param>
+                            <param id="1" name="Value">foodHPregen</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="5389357582292797" type="System">
+                            <param id="0" name="Variable">foodHPregen</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7386479662921756">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="9096722573910107" type="PlayerB">
+                            <param id="0" name="Object">Food</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="929191056905832" type="Food" />
+                        <action id="-10" name="Add to" sid="657430473409978" type="System">
+                            <param id="0" name="Variable">P2energy</param>
+                            <param id="1" name="Value">foodHPregen</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="1753698367694018" type="System">
+                            <param id="0" name="Variable">foodHPregen</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7320349071968795">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="5891147945941792" type="PlayerA">
+                            <param id="0" name="Object">player_food</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="2202651195475588" type="System">
+                            <param id="0" name="Variable">P1energy</param>
+                            <param id="1" name="Value">skullHPregen</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6313365028730598">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="3835213188376757" type="PlayerB">
+                            <param id="0" name="Object">player_food</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="9339457997241915" type="System">
+                            <param id="0" name="Variable">P2energy</param>
+                            <param id="1" name="Value">skullHPregen</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-group description="" sid="3002114179264881" title="P1">
                     <sub-events>
                         <event-block sid="1501192794354451">
@@ -30,7 +92,7 @@
                                 </action>
                                 <action id="-11" name="Subtract from" sid="3894052817631705" type="System">
                                     <param id="0" name="Variable">P1energy</param>
-                                    <param id="1" name="Value">1</param>
+                                    <param id="1" name="Value">2</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -57,7 +119,7 @@
                                 </action>
                                 <action id="-11" name="Subtract from" sid="3917556202926591" type="System">
                                     <param id="0" name="Variable">P1energy</param>
-                                    <param id="1" name="Value">1</param>
+                                    <param id="1" name="Value">2</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -79,7 +141,7 @@
                                 </action>
                                 <action id="-11" name="Subtract from" sid="4681639872506912" type="System">
                                     <param id="0" name="Variable">P1energy</param>
-                                    <param id="1" name="Value">1</param>
+                                    <param id="1" name="Value">2</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -102,7 +164,7 @@
                                 </action>
                                 <action id="-11" name="Subtract from" sid="9631748600508372" type="System">
                                     <param id="0" name="Variable">P1energy</param>
-                                    <param id="1" name="Value">10</param>
+                                    <param id="1" name="Value">20</param>
                                 </action>
                                 <action id="0" name="Spawn another object" sid="3427694942365923" type="PlayerA">
                                     <param id="0" name="Object">P1attack01</param>
@@ -202,7 +264,7 @@
                                 </action>
                                 <action id="-11" name="Subtract from" sid="7880598920490528" type="System">
                                     <param id="0" name="Variable">P2energy</param>
-                                    <param id="1" name="Value">1</param>
+                                    <param id="1" name="Value">2</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -229,7 +291,7 @@
                                 </action>
                                 <action id="-11" name="Subtract from" sid="1211816771065098" type="System">
                                     <param id="0" name="Variable">P2energy</param>
-                                    <param id="1" name="Value">1</param>
+                                    <param id="1" name="Value">2</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -251,7 +313,7 @@
                                 </action>
                                 <action id="-11" name="Subtract from" sid="4909024068602667" type="System">
                                     <param id="0" name="Variable">P2energy</param>
-                                    <param id="1" name="Value">1</param>
+                                    <param id="1" name="Value">2</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -279,7 +341,7 @@
                                 </action>
                                 <action id="-11" name="Subtract from" sid="27042844409465" type="System">
                                     <param id="0" name="Variable">P2energy</param>
-                                    <param id="1" name="Value">10</param>
+                                    <param id="1" name="Value">20</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -387,6 +449,136 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="3543209435114531">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="7463882473803056" type="System">
+                            <param id="0" name="Variable">Active</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="29849713058955">
+                            <conditions>
+                                <condition id="-19" name="On destroyed" sid="4482848598544649" type="Manticore" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="4771860073998723" type="Manticore">
+                                    <param id="0" name="Object">Manticore_food</param>
+                                    <param id="1" name="Layer">3</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1670619093576317">
+                            <conditions>
+                                <condition id="-19" name="On destroyed" sid="2236876644361339" type="Fly" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="8673090261514754" type="Fly">
+                                    <param id="0" name="Object">Bat_food</param>
+                                    <param id="1" name="Layer">3</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2849034304058133">
+                            <conditions>
+                                <condition id="-19" name="On destroyed" sid="1695621347022637" type="Shooter" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="1881597371050256" type="Shooter">
+                                    <param id="0" name="Object">Archer_food</param>
+                                    <param id="1" name="Layer">3</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="4628823115743774" title="Player Damage">
+            <sub-events>
+                <event-block sid="488412273038886">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="7756430013458627" type="Enemies">
+                            <param id="0" name="Object">PlayerA</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="663770782598269" type="System">
+                            <param id="0" name="Variable">Active</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="5637018457321949" type="System">
+                            <param id="0" name="Variable">P1energy</param>
+                            <param id="1" name="Value">50</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="397786739385999">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="2829209675703458" type="Enemies">
+                            <param id="0" name="Object">PlayerB</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="3887769618163599" type="System">
+                            <param id="0" name="Variable">Active</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="9672147650607256" type="System">
+                            <param id="0" name="Variable">P2energy</param>
+                            <param id="1" name="Value">50</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5110728546208478">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="2452540358390996" type="System">
+                            <param id="0" name="Variable">P1energy</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="5941075014366812" type="PlayerA">
+                            <param id="0" name="Object">player_food</param>
+                            <param id="1" name="Layer">3</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="2782684783949619" type="PlayerA" />
+                        <action id="-9" name="Set value" sid="7683570862007549" type="System">
+                            <param id="0" name="Variable">skullHPregen</param>
+                            <param id="1" name="Value">150</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8687236793192411">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="8223721450932651" type="System">
+                            <param id="0" name="Variable">P2energy</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="5416868956743512" type="PlayerA">
+                            <param id="0" name="Object">player_food</param>
+                            <param id="1" name="Layer">3</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="9712806213897707" type="PlayerA" />
+                        <action id="-9" name="Set value" sid="2343483804414694" type="System">
+                            <param id="0" name="Variable">skullHPregen</param>
+                            <param id="1" name="Value">500</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
