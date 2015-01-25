@@ -381,7 +381,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>545</x>
-                        <y>151</y>
+                        <y>81</y>
                         <z>0</z>
                         <width>200</width>
                         <height>104</height>
@@ -404,7 +404,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>21</x>
-                        <y>153</y>
+                        <y>83</y>
                         <z>0</z>
                         <width>418</width>
                         <height>32</height>
@@ -418,7 +418,7 @@
                         <text>P1energy</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-27,400,0</font>
-                        <color>0,0,0</color>
+                        <color>0,153,204</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
@@ -429,7 +429,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>28</x>
-                        <y>188</y>
+                        <y>118</y>
                         <z>0</z>
                         <width>135</width>
                         <height>60</height>
@@ -452,7 +452,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>831</x>
-                        <y>155</y>
+                        <y>85</y>
                         <z>0</z>
                         <width>418</width>
                         <height>32</height>
@@ -466,7 +466,7 @@
                         <text>P2energy</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-27,400,0</font>
-                        <color>0,0,0</color>
+                        <color>51,153,204</color>
                         <horizontal-alignment>Right</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
@@ -477,7 +477,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>1098</x>
-                        <y>188</y>
+                        <y>118</y>
                         <z>0</z>
                         <width>147</width>
                         <height>60</height>

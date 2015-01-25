@@ -10,12 +10,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">MasterLayout</layout>
+        <layout active="1" order="0">MasterLayout</layout>
         <layout order="3">ReinaLayout</layout>
         <event-sheet order="1">MasterEvent</event-sheet>
         <event-sheet order="2">RowanEvent</event-sheet>
         <event-sheet order="4">Spawner</event-sheet>
-        <event-sheet active="1" order="5">RyanEvent</event-sheet>
+        <event-sheet order="5">RyanEvent</event-sheet>
         <event-sheet order="6">ReinaEvent</event-sheet>
     </open-tabs>
     <properties>
