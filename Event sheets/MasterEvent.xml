@@ -535,13 +535,13 @@
                             </conditions>
                             <actions>
                                 <action id="-32" name="Set layer effect parameter" sid="4883054809767318" type="System">
-                                    <param id="0" name="Layer">2</param>
+                                    <param id="0" name="Layer">5</param>
                                     <param id="1" name="Effect">&quot;Vignette&quot;</param>
                                     <param id="2" name="Parameter index">0</param>
                                     <param id="3" name="Value">85*(((P1energy+P2energy) - 1000)/19000) +20</param>
                                 </action>
                                 <action id="-32" name="Set layer effect parameter" sid="12261714114891" type="System">
-                                    <param id="0" name="Layer">2</param>
+                                    <param id="0" name="Layer">5</param>
                                     <param id="1" name="Effect">&quot;Vignette&quot;</param>
                                     <param id="2" name="Parameter index">1</param>
                                     <param id="3" name="Value">85*(((P1energy+P2energy) - 1000)/19000) +35</param>
