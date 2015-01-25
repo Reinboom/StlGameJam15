@@ -15,6 +15,11 @@
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">1</param>
                 </condition>
+                <condition id="-7" name="Compare instance variable" sid="9213387818757541" type="Shooter">
+                    <param id="0" name="Instance variable">InvulDuration</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0.1</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="-12" name="Subtract from" sid="7143050435620161" type="Shooter">
@@ -38,6 +43,11 @@
                     <param id="0" name="Variable">Active</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="5556081771995171" type="Shooter">
+                    <param id="0" name="Instance variable">InvulDuration</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0.1</param>
                 </condition>
             </conditions>
             <actions>
@@ -100,6 +110,11 @@
                     <param id="0" name="Variable">Active</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="940031949304258" type="Shooter">
+                    <param id="0" name="Instance variable">InvulDuration</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0.1</param>
                 </condition>
             </conditions>
             <actions>

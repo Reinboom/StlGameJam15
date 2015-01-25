@@ -243,6 +243,18 @@
                                     <param id="0" name="Variable">EventDispatcher</param>
                                     <param id="1" name="Value">EVENT_STARTTIMER</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="3898340281612494" type="System">
+                                    <param id="0" name="Variable">HasEnemy_Arch</param>
+                                    <param id="1" name="Value">ToSpawn_Arch</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="2591217160091248" type="System">
+                                    <param id="0" name="Variable">HasEnemy_Fly</param>
+                                    <param id="1" name="Value">ToSpawn_Fly</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="5582383898109167" type="System">
+                                    <param id="0" name="Variable">HasEnemy_Mant</param>
+                                    <param id="1" name="Value">ToSpawn_Mant</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="5362319002415611">
